@@ -9,3 +9,11 @@ please feel free to open an issue or submit a pull request.
 2. **Use a numeric prefix** to control the order within a section (e.g. `03-weapons.md`). Files are sorted alphabetically, so `01-` always appears before `02-`.
 3. **Start your file with a `# Title` heading.** This is used as the page title in the navigation — keep it concise.
 4. **Submit a pull request.** The navigation is auto-generated on deploy, so you don't need to edit `mkdocs.yml`.
+
+### Graphics
+The in-game renderer supports most markdown features (tables, images, etc.), as well as inline SVG diagrams via fenced code blocks:
+````markdown
+```svg
+<svg ...>...</svg>
+```
+````
