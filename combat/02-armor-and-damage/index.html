@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Armor & Damage - StarMade Guides</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Armor \u0026 Damage";
+        var mkdocs_page_input_path = "combat/02-armor-and-damage.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> StarMade Guides
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ai And Fleets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/00-overview/">AI and Fleets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/01-ai-systems/">AI Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/02-fleets/">Fleets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Building</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/00-overview/">Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/01-advanced-building/">Advanced Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/02-docking-and-turrets/">Docking & Turrets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Combat</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../00-overview/">Combat Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../01-shields/">Shields</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Armor & Damage</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#damage-types">Damage Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#armor-blocks">Armor Blocks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-armor-works">How Armor Works</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#key-takeaways">Key takeaways</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practical-implications">Practical Implications</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#effect-blocks-and-damage-type-shifting">Effect Blocks and Damage Type Shifting</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/00-overview/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/01-introduction/">Introduction to StarMade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/02-hud-and-interface/">HUD & Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/03-basic-controls/">Basic Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/04-character-movement/">Character Movement</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logic</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/00-overview/">Logic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/01-logic-basics/">Logic: Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/02-logic-gates/">Logic: Gates</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Manufacturing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/00-overview/">Manufacturing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/01-crafting-basics/">Crafting Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/02-factories/">Factories & Production</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Multiplayer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/00-overview/">Multiplayer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/01-factions/">Factions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/02-catalog-and-blueprints/">Catalog & Blueprints</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ships</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/00-overview/">Ships</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/01-ship-basics/">Ship Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/02-building-a-ship/">Building a Ship</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/03-ship-systems/">Ship Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/04-reactors/">Reactors and Stabilizers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/05-chambers/">Reactor Chambers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/06-weapons/">Weapons</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">World</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/00-overview/">World</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/01-navigation/">Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/02-resources-and-mining/">Resources & Mining</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">StarMade Guides</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Combat</li>
+      <li class="breadcrumb-item active">Armor & Damage</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="armor-damage">Armor &amp; Damage</h1>
+<p>Understanding armor and damage types is essential for both building durable ships and designing effective weapons.</p>
+<h2 id="damage-types">Damage Types</h2>
+<p>All damage in StarMade is split across three types:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kinetic</strong></td>
+<td>Physical impact; most effective against physical structures</td>
+</tr>
+<tr>
+<td><strong>Heat</strong></td>
+<td>Thermal damage; bypasses some resistances</td>
+</tr>
+<tr>
+<td><strong>EM</strong></td>
+<td>Electromagnetic; most effective against electronics and shields</td>
+</tr>
+</tbody>
+</table>
+<p>Different weapons deal different mixes of these types. The <strong>Damage Beam</strong>, for example, is heavily EM (≈50% EM, ≈33% Heat, ≈17% Kinetic), making it more effective against shield-heavy targets. Effect blocks connected to a weapon computer can shift its damage type distribution.</p>
+<h2 id="armor-blocks">Armor Blocks</h2>
+<p><strong>Basic Armor</strong> blocks provide structural protection. They come in multiple colours (Grey, White, Dark Grey, Black, and many more) and shapes (full block, wedge, corner, hepta, tetra, 1/4, 1/2, 3/4 slab) for hull construction.</p>
+<p>All armour variants have the same combat stats per block; the shape variants are purely for aesthetics and hull smoothing.</p>
+<blockquote>
+<p>Higher-tier armor blocks offer greater HP per block but are more expensive to craft.</p>
+</blockquote>
+<h2 id="how-armor-works">How Armor Works</h2>
+<p>Armor uses an <strong>exponential formula</strong> to determine how much damage passes through:</p>
+<pre><code>Damage dealt = D² / (A³ + D)
+</code></pre>
+<p>Where <code>D</code> = incoming damage per shot and <code>A</code> = total armor HP in the path of the shot.</p>
+<h3 id="key-takeaways">Key takeaways</h3>
+<ul>
+<li><strong>Small hits are almost completely absorbed.</strong> A wall of armor is nearly impenetrable against many weak shots.</li>
+<li><strong>Massive single hits penetrate.</strong> A weapon doing more than 20× the armor block's HP bypasses it entirely via <strong>overpenetration</strong>.</li>
+<li><strong>Depth doesn't multiply</strong> — armor blocks in a line each absorb independently; there is no stacking bonus for wall thickness beyond the sum of individual block HP.</li>
+<li><strong>Non-armor blocks</strong> (hull, system blocks) are unprotected but overpenetration still requires at least 2,500 damage per shot to punch through them directly.</li>
+</ul>
+<h2 id="practical-implications">Practical Implications</h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Best approach</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Defending against many small rapid-fire hits</td>
+<td>Thick armor wall; LMG and sustained beams struggle</td>
+</tr>
+<tr>
+<td>Defending against high-damage burst weapons</td>
+<td>Harder to block; armor is bypassed at high D</td>
+</tr>
+<tr>
+<td>Attacking armored ships</td>
+<td>Use high-damage burst combos (Charge Cannon, Bomb, Artillery) to reach overpenetration threshold</td>
+</tr>
+<tr>
+<td>Attacking unarmored ships</td>
+<td>Any weapon works; shields are the main barrier</td>
+</tr>
+</tbody>
+</table>
+<h2 id="effect-blocks-and-damage-type-shifting">Effect Blocks and Damage Type Shifting</h2>
+<p>Linking <strong>effect blocks</strong> to a weapon computer shifts the weapon's Kinetic/Heat/EM distribution. Different armor tiers and special block types may have varying resistances to each damage type — this is exposed in the block properties panel in build mode.</p>
+<blockquote>
+<p>Effect block combinations and exact resistances are configurable on servers and may vary.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../01-shields/" class="btn btn-neutral float-left" title="Shields"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../getting-started/00-overview/" class="btn btn-neutral float-right" title="Getting Started">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../01-shields/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../getting-started/00-overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

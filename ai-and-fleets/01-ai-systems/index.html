@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>AI Systems - StarMade Guides</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "AI Systems";
+        var mkdocs_page_input_path = "ai-and-fleets/01-ai-systems.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> StarMade Guides
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ai And Fleets</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../00-overview/">AI and Fleets</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">AI Systems</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#ship-turret-ai">Ship &amp; Turret AI</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#targeting-behaviour">Targeting Behaviour</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#remote-activation-via-structure-panel">Remote Activation via Structure Panel</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ai-crew">AI Crew</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#hiring-crew">Hiring Crew</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#commanding-crew">Commanding Crew</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#assigning-crew-to-a-ship-setting-home">Assigning Crew to a Ship (Setting Home)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#crew-management-panel">Crew Management Panel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#limits">Limits</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../02-fleets/">Fleets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Building</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/00-overview/">Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/01-advanced-building/">Advanced Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/02-docking-and-turrets/">Docking & Turrets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Combat</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/00-overview/">Combat Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/01-shields/">Shields</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/02-armor-and-damage/">Armor & Damage</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/00-overview/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/01-introduction/">Introduction to StarMade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/02-hud-and-interface/">HUD & Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/03-basic-controls/">Basic Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/04-character-movement/">Character Movement</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logic</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/00-overview/">Logic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/01-logic-basics/">Logic: Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/02-logic-gates/">Logic: Gates</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Manufacturing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/00-overview/">Manufacturing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/01-crafting-basics/">Crafting Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/02-factories/">Factories & Production</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Multiplayer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/00-overview/">Multiplayer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/01-factions/">Factions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/02-catalog-and-blueprints/">Catalog & Blueprints</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ships</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/00-overview/">Ships</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/01-ship-basics/">Ship Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/02-building-a-ship/">Building a Ship</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/03-ship-systems/">Ship Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/04-reactors/">Reactors and Stabilizers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/05-chambers/">Reactor Chambers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/06-weapons/">Weapons</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">World</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/00-overview/">World</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/01-navigation/">Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/02-resources-and-mining/">Resources & Mining</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">StarMade Guides</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Ai And Fleets</li>
+      <li class="breadcrumb-item active">AI Systems</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ai-systems">AI Systems</h1>
+<p>StarMade has two distinct AI systems: <strong>ship/turret AI</strong> controlled by the AI Module block, and <strong>AI Crew</strong> — NPC companions you can hire and command.</p>
+<hr />
+<h2 id="ship-turret-ai">Ship &amp; Turret AI</h2>
+<p>The AI Module block allows a ship or turret to operate autonomously.</p>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li><strong>One AI Module</strong> per ship (only one is allowed — protect it well).</li>
+<li>Faction membership is strongly recommended so the AI knows who its enemies are. The AI can operate without a faction, but enemy identification is less reliable.</li>
+</ul>
+<h3 id="setup">Setup</h3>
+<ol>
+<li>Place an <strong>AI Module</strong> on the ship in build mode.</li>
+<li>Press <code>R</code> on the AI module to open its configuration panel.</li>
+<li>Set the <strong>mode</strong>: Ship (uses thrusters to manoeuvre) or Turret (does not use thrusters, rotates in place).</li>
+<li>Set the <strong>targeting behaviour</strong> (see below).</li>
+<li>Tick <strong>Activate</strong> to enable the AI.</li>
+</ol>
+<blockquote>
+<p><strong>Warning:</strong> Entering the ship core <strong>disables the AI</strong> instantly. You must re-enable it each time you exit the core.</p>
+</blockquote>
+<h3 id="targeting-behaviour">Targeting Behaviour</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aim at Any</strong></td>
+<td>Attacks any enemy entity within range</td>
+</tr>
+<tr>
+<td><strong>Aim at Selected Target</strong></td>
+<td>Targets only the entity selected by the host ship's pilot (turrets only)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="remote-activation-via-structure-panel">Remote Activation via Structure Panel</h3>
+<p>You don't need to walk to the AI module each time. From inside the host ship:</p>
+<ol>
+<li>Press <code>Delete</code> to open the Structure Panel.</li>
+<li>Find the docked entity you want to control.</li>
+<li>Enable or disable its AI from there.</li>
+</ol>
+<p>You can also <strong>toggle all docked entities at once</strong> from the Structure Panel.</p>
+<hr />
+<h2 id="ai-crew">AI Crew</h2>
+<p>AI Crew are NPC characters you can hire and give direct commands to.</p>
+<h3 id="hiring-crew">Hiring Crew</h3>
+<p>Crew is hired from <strong>Advanced Shops</strong> — these are special NPC stations found:
+- In the starting sector of new worlds
+- Rarely throughout the universe (check the navigation panel for Trading Guild NPCs)</p>
+<p>Talk to the NPC at an advanced shop (<code>R</code>) to hire up to <strong>5 active crew members</strong>. You can have more total crew by assigning some to a ship as their home base.</p>
+<h3 id="commanding-crew">Commanding Crew</h3>
+<p>Press the <strong>AI Control key</strong> (default: check your key bindings — listed in the HUD as AI Control) to open the crew command panel. Select a crew member from the list on the left and issue commands.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Follow me</td>
+<td>Crew member follows your character</td>
+</tr>
+<tr>
+<td>Wait here</td>
+<td>Crew member stays at current location</td>
+</tr>
+<tr>
+<td>Go to point</td>
+<td>Crew member moves to a position you designate</td>
+</tr>
+</tbody>
+</table>
+<h3 id="assigning-crew-to-a-ship-setting-home">Assigning Crew to a Ship (Setting Home)</h3>
+<p>Crew members have a <strong>home</strong> — a ship or station they belong to. By default they spawn near where you hired them. To reassign a crew member to your ship:</p>
+<ol>
+<li>Tell the crew member to <strong>Follow You</strong>.</li>
+<li>Go to your ship.</li>
+<li>Tell the crew member to <strong>Go to a Point</strong> on your ship.</li>
+</ol>
+<p>The ship is now their home and they will move with it when it travels.</p>
+<h3 id="crew-management-panel">Crew Management Panel</h3>
+<p>Press the <strong>AI Config Panel key</strong> (check key bindings) to open the full crew panel. In the <strong>Crew</strong> tab you can:
+- Rename crew members
+- Remove crew members
+- Adjust individual behaviour settings</p>
+<h3 id="limits">Limits</h3>
+<ul>
+<li>You can only have <strong>5 crew members</strong> under direct active command at a time.</li>
+<li>Crew assigned to a ship as their home do not count against this limit while they are stationed there.</li>
+<li>Discharge crew to their ship to free up active command slots.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../00-overview/" class="btn btn-neutral float-left" title="AI and Fleets"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../02-fleets/" class="btn btn-neutral float-right" title="Fleets">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../00-overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../02-fleets/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

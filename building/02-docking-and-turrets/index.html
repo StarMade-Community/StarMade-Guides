@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Docking & Turrets - StarMade Guides</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Docking \u0026 Turrets";
+        var mkdocs_page_input_path = "building/02-docking-and-turrets.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> StarMade Guides
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ai And Fleets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/00-overview/">AI and Fleets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/01-ai-systems/">AI Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/02-fleets/">Fleets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Building</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../00-overview/">Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../01-advanced-building/">Advanced Building</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Docking & Turrets</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#rail-blocks">Rail Blocks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#docking-a-ship">Docking a Ship</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mass-limits">Mass Limits</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#undocking">Undocking</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#turrets">Turrets</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#turret-design-rules">Turret Design Rules</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#enabling-ai-on-a-turret">Enabling AI on a Turret</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ai-targeting-modes">AI Targeting Modes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#automatic-docking-pickup-system">Automatic Docking (Pickup System)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#moving-rails">Moving Rails</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Combat</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/00-overview/">Combat Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/01-shields/">Shields</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/02-armor-and-damage/">Armor & Damage</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/00-overview/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/01-introduction/">Introduction to StarMade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/02-hud-and-interface/">HUD & Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/03-basic-controls/">Basic Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/04-character-movement/">Character Movement</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logic</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/00-overview/">Logic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/01-logic-basics/">Logic: Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/02-logic-gates/">Logic: Gates</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Manufacturing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/00-overview/">Manufacturing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/01-crafting-basics/">Crafting Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/02-factories/">Factories & Production</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Multiplayer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/00-overview/">Multiplayer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/01-factions/">Factions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/02-catalog-and-blueprints/">Catalog & Blueprints</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ships</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/00-overview/">Ships</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/01-ship-basics/">Ship Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/02-building-a-ship/">Building a Ship</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/03-ship-systems/">Ship Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/04-reactors/">Reactors and Stabilizers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/05-chambers/">Reactor Chambers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/06-weapons/">Weapons</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">World</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/00-overview/">World</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/01-navigation/">Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/02-resources-and-mining/">Resources & Mining</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">StarMade Guides</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Building</li>
+      <li class="breadcrumb-item active">Docking & Turrets</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="docking-turrets">Docking &amp; Turrets</h1>
+<p>StarMade uses a <strong>rail-based docking system</strong>. Ships dock to rail blocks on stations or other ships using a <strong>Rail Docker</strong> block. This system handles rigid docking, rotating turrets, moving platforms, automated cargo transfer, and carrier hangar docking.</p>
+<h2 id="rail-blocks">Rail Blocks</h2>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rail Docker</strong></td>
+<td>Placed on the ship being docked; the connector end</td>
+</tr>
+<tr>
+<td><strong>Rail Basic</strong></td>
+<td>Standard docking/track rail placed on the host structure</td>
+</tr>
+<tr>
+<td><strong>Rail Turret Axis</strong></td>
+<td>Lets a docked ship rotate along one axis; chain two for full 360°</td>
+</tr>
+<tr>
+<td><strong>Rail Rotator (CW / CCW)</strong></td>
+<td>Moves a docked ship in a circular path</td>
+</tr>
+<tr>
+<td><strong>Rail Mass Enhancer</strong></td>
+<td>Increases the mass a rail can support</td>
+</tr>
+<tr>
+<td><strong>Rail Speed Controller</strong></td>
+<td>Controls movement speed along a rail</td>
+</tr>
+<tr>
+<td><strong>Rail Load / Rail Unload</strong></td>
+<td>Transfers cargo between a docked ship and connected storage</td>
+</tr>
+<tr>
+<td><strong>Pickup Rail + Pickup Point</strong></td>
+<td>Automatically docks ships that fly into the detection area</td>
+</tr>
+</tbody>
+</table>
+<h2 id="docking-a-ship">Docking a Ship</h2>
+<ol>
+<li>Place a <strong>Rail Docker</strong> on your ship. The <strong>arrow</strong> on its top face points toward the docking direction — it must align with the arrow on the target rail block.</li>
+<li>Equip the <strong>Rail Docking Beam</strong> in a weapon slot via the weapons panel.</li>
+<li>Fly your ship close to a <strong>Rail Basic</strong> (or other dockable rail) on the host structure.</li>
+<li>Aim at the rail block and <strong>fire</strong> to connect.</li>
+</ol>
+<blockquote>
+<p><strong>Tip:</strong> The Rail Docker's arrow must face toward the target block. Use the orientation tool (<code>Left Alt</code> → Orientation) to adjust it.</p>
+</blockquote>
+<h2 id="mass-limits">Mass Limits</h2>
+<p>Each rail block supports <strong>50 mass</strong> by default. Add <strong>Rail Mass Enhancer</strong> blocks connected to the rail on the host structure to raise the limit — each enhancer adds 50 mass capacity at a small power cost per tick.</p>
+<h2 id="undocking">Undocking</h2>
+<p>To undock, pilot the docked ship and fire the docking beam at open space (not aimed at a rail), or release it remotely via the <strong>Structure Panel</strong> (<code>Delete</code>) on the host ship.</p>
+<h2 id="turrets">Turrets</h2>
+<p>A turret is a docked ship that rotates automatically to track and fire at enemies. Use a <strong>Rail Turret Axis</strong> on the host structure instead of a Rail Basic. A single axis allows rotation on one plane; <strong>chain two Rail Turret Axes</strong> (one on the host, one on an intermediate bracket docked to the first) for full pitch + yaw freedom.</p>
+<h3 id="turret-design-rules">Turret Design Rules</h3>
+<ul>
+<li>The <strong>ship core must be at the bottom</strong> of the turret structure. Nothing may be built below the core.</li>
+<li>Orient the Rail Docker's arrow to face the Rail Turret Axis arrow.</li>
+<li>The turret rotates around the docking point, so core position determines the pivot.</li>
+</ul>
+<h3 id="enabling-ai-on-a-turret">Enabling AI on a Turret</h3>
+<ol>
+<li>Place an <strong>AI Module</strong> on the turret.</li>
+<li>Press <code>R</code> on the AI module and set the mode to <strong>Turret</strong>.</li>
+<li>Place a <strong>Faction Module</strong> on the turret and register it to your faction (press <code>R</code>, enter your faction signature). The AI uses this to identify enemies.</li>
+<li>Enable the AI by ticking <strong>Activate</strong> in the AI module panel, <strong>or</strong> do it remotely from the Structure Panel (<code>Delete</code>) of the host ship.</li>
+</ol>
+<h3 id="ai-targeting-modes">AI Targeting Modes</h3>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aim at Any</td>
+<td>Attacks any enemy entity in range</td>
+</tr>
+<tr>
+<td>Aim at Selected Target</td>
+<td>Attacks the entity targeted by the host ship's pilot (<code>F</code> to select)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Entering the turret's core <strong>disables the AI</strong>. Exit before re-enabling it.</p>
+</blockquote>
+<h2 id="automatic-docking-pickup-system">Automatic Docking (Pickup System)</h2>
+<p>For carrier hangars, use the <strong>Pickup Rail + Pickup Point</strong> pair on the host:</p>
+<ul>
+<li><strong>Pickup Point</strong> projects a detection sphere; any ship with a Rail Docker that enters this area docks automatically.</li>
+<li><strong>Pickup Rail</strong> is the block the ship actually docks to.</li>
+</ul>
+<p>The docked ship remembers this pickup rail and can be recalled to it automatically. This is the recommended approach for fighter bays and carrier designs — no manual beam aiming required.</p>
+<h2 id="moving-rails">Moving Rails</h2>
+<p>Rail blocks can also carry ships along a track rather than simply holding them:</p>
+<ul>
+<li><strong>Rail Rotator (CW/CCW)</strong> — rotates a docked entity in a circle.</li>
+<li><strong>Rail Speed Controller</strong> — connected to rail blocks via <code>C</code>/<code>V</code>; the ratio of active to inactive blocks sets the movement speed (e.g. 5 active + 5 inactive = 50% speed).</li>
+</ul>
+<p>This enables elevators, rotating weapon platforms, and automated launch/recovery systems.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../01-advanced-building/" class="btn btn-neutral float-left" title="Advanced Building"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../combat/00-overview/" class="btn btn-neutral float-right" title="Combat Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../01-advanced-building/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../combat/00-overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

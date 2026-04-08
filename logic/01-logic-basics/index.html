@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Logic: Basics - StarMade Guides</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Logic: Basics";
+        var mkdocs_page_input_path = "logic/01-logic-basics.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> StarMade Guides
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ai And Fleets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/00-overview/">AI and Fleets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/01-ai-systems/">AI Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/02-fleets/">Fleets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Building</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/00-overview/">Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/01-advanced-building/">Advanced Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/02-docking-and-turrets/">Docking & Turrets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Combat</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/00-overview/">Combat Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/01-shields/">Shields</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/02-armor-and-damage/">Armor & Damage</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/00-overview/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/01-introduction/">Introduction to StarMade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/02-hud-and-interface/">HUD & Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/03-basic-controls/">Basic Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/04-character-movement/">Character Movement</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logic</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../00-overview/">Logic</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Logic: Basics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#core-concept-signals">Core Concept: Signals</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-activation-block">The Activation Block</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#connecting-blocks">Connecting Blocks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-remote-light-switch">Example: Remote Light Switch</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chain-connections">Chain Connections</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#connecting-to-weapon-computers">Connecting to Weapon Computers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gravity-modules">Gravity Modules</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#command-modules">Command Modules</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#supported-targets">Supported Targets</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#bobby-ai-module">Bobby AI Module</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#reactor">Reactor</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#shipyard-computer">Shipyard Computer</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#warp-gate-computer">Warp Gate Computer</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rail-docked-entities-turrets-etc">Rail-Docked Entities (Turrets, etc.)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#use-cases">Use Cases</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../02-logic-gates/">Logic: Gates</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Manufacturing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/00-overview/">Manufacturing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/01-crafting-basics/">Crafting Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/02-factories/">Factories & Production</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Multiplayer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/00-overview/">Multiplayer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/01-factions/">Factions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/02-catalog-and-blueprints/">Catalog & Blueprints</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ships</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/00-overview/">Ships</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/01-ship-basics/">Ship Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/02-building-a-ship/">Building a Ship</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/03-ship-systems/">Ship Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/04-reactors/">Reactors and Stabilizers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/05-chambers/">Reactor Chambers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/06-weapons/">Weapons</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">World</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/00-overview/">World</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/01-navigation/">Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/02-resources-and-mining/">Resources & Mining</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">StarMade Guides</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Logic</li>
+      <li class="breadcrumb-item active">Logic: Basics</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="logic-basics">Logic: Basics</h1>
+<p>StarMade has a fully integrated, <strong>Turing-complete logic system</strong>. You can build anything from a simple light switch to a fully functional CPU using logic blocks connected to each other.</p>
+<h2 id="core-concept-signals">Core Concept: Signals</h2>
+<p>Every logic block outputs one of two states: <strong>ON</strong> or <strong>OFF</strong>. These states propagate through connections to other blocks.</p>
+<h2 id="the-activation-block">The Activation Block</h2>
+<p>The most important block in the logic system is the <strong>Activation Block</strong>. It acts as both a switch and a signal carrier.</p>
+<ul>
+<li>Press <code>R</code> on it to manually toggle it <strong>ON</strong> or <strong>OFF</strong>.</li>
+<li>When ON, it sends an ON signal to every block connected to it.</li>
+<li>When OFF, it sends an OFF signal (or no signal) to connected blocks.</li>
+</ul>
+<p>Activation blocks can be linked to:
+- Other activation blocks
+- Doors
+- Lights
+- Weapon computers (fire/stop)
+- Gravity modules
+- And any other activatable block</p>
+<h2 id="connecting-blocks">Connecting Blocks</h2>
+<p>All logic connections use the same two-step process:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>C</code></td>
+<td><strong>Select</strong> the block that will <em>send</em> the signal</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>V</code></td>
+<td><strong>Connect</strong> the selected block to the block that will <em>receive</em> the signal</td>
+</tr>
+</tbody>
+</table>
+<p>A visual indicator (coloured box) appears on connected blocks to show the connection.</p>
+<p>To remove a connection, select the source block with <code>C</code> again and then press <code>V</code> on the connection target while it is already connected.</p>
+<h2 id="example-remote-light-switch">Example: Remote Light Switch</h2>
+<h2 id="chain-connections">Chain Connections</h2>
+<p>You can create chains — activation block A → activation block B → light. When A is toggled, B receives the signal and passes it to the light.</p>
+<p>This lets you build <strong>remote switching panels</strong>, <strong>interlocked doors</strong>, and <strong>complex trigger sequences</strong> from a single input.</p>
+<h2 id="connecting-to-weapon-computers">Connecting to Weapon Computers</h2>
+<p>Linking an activation block to a <strong>weapon computer</strong> fires that weapon while the activation block is ON, and stops it when OFF. This enables:</p>
+<ul>
+<li>Automated firing sequences</li>
+<li>Logic-triggered turrets</li>
+<li>Shoot-when-condition-met circuits</li>
+</ul>
+<h2 id="gravity-modules">Gravity Modules</h2>
+<p>Activation blocks can be linked directly to <strong>Gravity Modules</strong> to toggle gravity on or off. Note: the activation block must currently be directly connected to the gravity module (not through intermediate blocks).</p>
+<h2 id="command-modules">Command Modules</h2>
+<p>The <strong>Command Module</strong> block lets you send pre-configured commands to other systems on your ship or station. Unlike activation blocks (which only send ON/OFF signals), command modules execute specific actions like switching reactor configurations, toggling AI modes, or controlling shipyard operations.</p>
+<h3 id="setup">Setup</h3>
+<ol>
+<li>Place a <strong>Command Module</strong> block.</li>
+<li>Connect it to a supported target block using <code>C</code> (on the command module) then <code>V</code> (on the target).</li>
+<li>Press <code>R</code> on the command module to open its interface and configure the command.</li>
+<li>Select a command type and set any required parameters.</li>
+<li>Click <strong>Execute</strong> to run it manually, or trigger it via a <strong>logic beam</strong> from an activation block or logic circuit.</li>
+</ol>
+<p>When triggered by logic, there is a <strong>500 ms cooldown</strong> between executions to prevent spam.</p>
+<h3 id="supported-targets">Supported Targets</h3>
+<h4 id="bobby-ai-module">Bobby AI Module</h4>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle AI</td>
+<td>Flip AI on/off</td>
+</tr>
+<tr>
+<td>Activate AI</td>
+<td>Explicitly set AI on or off</td>
+</tr>
+<tr>
+<td>Target Type</td>
+<td>Set what the AI targets: Any, Selected Target, Stations, Ships, Missiles, Astronauts, Asteroids</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Set AI behavior: Ship, Fleet, Turret</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reactor">Reactor</h4>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set Active Reactor</td>
+<td>Switch to a specific reactor tree by ID</td>
+</tr>
+<tr>
+<td>Next Reactor</td>
+<td>Cycle to the next reactor</td>
+</tr>
+<tr>
+<td>Previous Reactor</td>
+<td>Cycle to the previous reactor</td>
+</tr>
+<tr>
+<td>Reboot Reactor</td>
+<td>Reboot the active reactor</td>
+</tr>
+</tbody>
+</table>
+<h4 id="shipyard-computer">Shipyard Computer</h4>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create New Design</td>
+<td>Start a new shipyard design</td>
+</tr>
+<tr>
+<td>Load Design</td>
+<td>Load an existing design</td>
+</tr>
+<tr>
+<td>Unload Design</td>
+<td>Unload the current design</td>
+</tr>
+<tr>
+<td>Spawn Design</td>
+<td>Build the loaded design as a new ship</td>
+</tr>
+<tr>
+<td>Deconstruct</td>
+<td>Deconstruct a docked ship into a design</td>
+</tr>
+<tr>
+<td>Deconstruct &amp; Recycle</td>
+<td>Deconstruct and recycle materials</td>
+</tr>
+<tr>
+<td>Catalog to Design</td>
+<td>Convert a catalog blueprint to a design</td>
+</tr>
+<tr>
+<td>Blueprint to Design</td>
+<td>Convert a blueprint to a design</td>
+</tr>
+<tr>
+<td>Design to Blueprint</td>
+<td>Save a design as a blueprint</td>
+</tr>
+<tr>
+<td>Repair from Design</td>
+<td>Repair a structure using its design as a template</td>
+</tr>
+</tbody>
+</table>
+<h4 id="warp-gate-computer">Warp Gate Computer</h4>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set Target Sector</td>
+<td>Set the warp destination coordinates</td>
+</tr>
+<tr>
+<td>Activate</td>
+<td>Turn the gate on or off</td>
+</tr>
+<tr>
+<td>Toggle</td>
+<td>Flip the gate state</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rail-docked-entities-turrets-etc">Rail-Docked Entities (Turrets, etc.)</h4>
+<p>Any block that can dock to a rail can be controlled:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activate AI</td>
+<td>Set docked entity AI on or off</td>
+</tr>
+<tr>
+<td>Toggle AI</td>
+<td>Flip docked entity AI state</td>
+</tr>
+<tr>
+<td>Set Powered</td>
+<td>Control power transfer to the docked entity</td>
+</tr>
+<tr>
+<td>Toggle Powered</td>
+<td>Flip power transfer state</td>
+</tr>
+<tr>
+<td>Reset Rail</td>
+<td>Reset turret to its default position and rotation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="use-cases">Use Cases</h3>
+<ul>
+<li><strong>Automated turret control</strong> — logic circuit detects an enemy, command module activates turret AI and sets targeting mode.</li>
+<li><strong>Reactor switching</strong> — a button on the bridge cycles between combat and travel reactor configurations.</li>
+<li><strong>Shipyard automation</strong> — logic triggers spawn a design when resources are ready.</li>
+<li><strong>Warp gate networks</strong> — command modules set destination coordinates before activating the gate.</li>
+</ul>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Connections are not affected by distance — a block on one end of your ship can control something on the other end.</li>
+<li>You can connect one source block to <strong>many</strong> targets — useful for turning on all lights at once.</li>
+<li>Multiple sources can connect to the same target block.</li>
+<li>Connections survive reloads and blueprint saves (if both blocks are included in the blueprint).</li>
+</ul>
+<p>For more complex logic (NOT, AND, OR, DELAY gates), see <a href="../02-logic-gates/">Logic: Gates</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../00-overview/" class="btn btn-neutral float-left" title="Logic"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../02-logic-gates/" class="btn btn-neutral float-right" title="Logic: Gates">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../00-overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../02-logic-gates/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
