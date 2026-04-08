@@ -2,10 +2,14 @@
 
 Welcome to the StarMade Guides documentation.
 
-## Overview
+#
+
+# Overview
 
 This site contains guides and documentation for StarMade.
 
-## Getting Started
+#
+
+# Getting Started
 
 Browse the navigation on the left to find guides on various topics.

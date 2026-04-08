@@ -5,6 +5,45 @@ theme:
   name: readthedocs
 nav:
 - Home: index.md
+- Getting Started:
+  - Overview: getting-started/00-overview.md
+  - Introduction: getting-started/01-introduction.md
+  - HUD & Interface: getting-started/02-hud-and-interface.md
+  - Basic Controls: getting-started/03-basic-controls.md
+  - Character Movement: getting-started/04-character-movement.md
+- Ships:
+  - Overview: ships/00-overview.md
+  - Ship Basics: ships/01-ship-basics.md
+  - Building a Ship: ships/02-building-a-ship.md
+  - Ship Systems: ships/03-ship-systems.md
+  - Reactors: ships/04-reactors.md
+  - Chambers: ships/05-chambers.md
+  - Weapons: ships/06-weapons.md
+- Building:
+  - Overview: building/00-overview.md
+  - Advanced Building: building/01-advanced-building.md
+  - Docking & Turrets: building/02-docking-and-turrets.md
 - Combat:
+  - Overview: combat/00-overview.md
   - Shields: combat/01-shields.md
   - Armor & Damage: combat/02-armor-and-damage.md
+- World:
+  - Overview: world/00-overview.md
+  - Navigation: world/01-navigation.md
+  - Resources & Mining: world/02-resources-and-mining.md
+- Manufacturing:
+  - Overview: manufacturing/00-overview.md
+  - Crafting Basics: manufacturing/01-crafting-basics.md
+  - Factories: manufacturing/02-factories.md
+- Logic:
+  - Overview: logic/00-overview.md
+  - Logic Basics: logic/01-logic-basics.md
+  - Logic Gates: logic/02-logic-gates.md
+- AI & Fleets:
+  - Overview: ai-and-fleets/00-overview.md
+  - AI Systems: ai-and-fleets/01-ai-systems.md
+  - Fleets: ai-and-fleets/02-fleets.md
+- Multiplayer:
+  - Overview: multiplayer/00-overview.md
+  - Factions: multiplayer/01-factions.md
+  - Catalog & Blueprints: multiplayer/02-catalog-and-blueprints.md
