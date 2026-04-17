@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Character Movement - StarMade Guides</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Character Movement";
+        var mkdocs_page_input_path = "getting-started/04-character-movement.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> StarMade Guides
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ai And Fleets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/00-overview/">AI and Fleets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/01-ai-systems/">AI Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/02-fleets/">Fleets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Building</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/00-overview/">Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/01-advanced-building/">Advanced Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/02-power-basics/">Power Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/03-docking-and-turrets/">Docking & Turrets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Combat</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/00-overview/">Combat Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/01-shields/">Shields</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/02-armor-and-damage/">Armor & Damage</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../00-overview/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../01-introduction/">Introduction to StarMade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../02-hud-and-interface/">HUD & Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../03-basic-controls/">Basic Controls</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Character Movement</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#gravity-mode">Gravity Mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#zero-gravity-mode">Zero-Gravity Mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#aligning-to-a-structure">Aligning to a Structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logic</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/00-overview/">Logic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/01-logic-basics/">Logic: Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/02-logic-gates/">Logic: Gates</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Manufacturing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/00-overview/">Manufacturing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/01-crafting-basics/">Crafting Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/02-factories/">Factories & Production</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Multiplayer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/00-overview/">Multiplayer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/01-factions/">Factions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/02-catalog-and-blueprints/">Catalog & Blueprints</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ships</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/00-overview/">Ships</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/01-ship-basics/">Ship Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/02-building-a-ship/">Building a Ship</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/03-ship-systems/">Ship Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/04-reactors/">Reactors and Stabilizers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/05-chambers/">Reactor Chambers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/06-weapons/">Weapons</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">World</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/00-overview/">World</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/01-navigation/">Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/02-resources-and-mining/">Resources & Mining</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/03-asteroids/">Asteroids</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">StarMade Guides</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Getting Started</li>
+      <li class="breadcrumb-item active">Character Movement</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="character-movement">Character Movement</h1>
+<p>Your character can move in two very different environments: areas with <strong>gravity</strong> and open <strong>zero-gravity</strong> space.</p>
+<h2 id="gravity-mode">Gravity Mode</h2>
+<p>Gravity modules on ships and stations generate a local gravity field. When you are inside that field, movement works like a standard first-person game.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Walk forward / backward</td>
+<td><code>W</code> / <code>S</code></td>
+</tr>
+<tr>
+<td>Strafe left / right</td>
+<td><code>A</code> / <code>D</code></td>
+</tr>
+<tr>
+<td>Jump</td>
+<td><code>Space</code></td>
+</tr>
+<tr>
+<td>Walk (slow)</td>
+<td><code>Left Shift</code></td>
+</tr>
+<tr>
+<td>Look</td>
+<td>Mouse</td>
+</tr>
+<tr>
+<td>Activate a block</td>
+<td><code>R</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Turning gravity off:</strong> If you find a <strong>Gravity Module</strong> block, press <code>R</code> on it to toggle gravity for the area. The space beneath a red indicator light often has a gravity block nearby.</p>
+</blockquote>
+<h2 id="zero-gravity-mode">Zero-Gravity Mode</h2>
+<p>Outside of a gravity field you float freely in all six directions.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move forward / backward</td>
+<td><code>W</code> / <code>S</code></td>
+</tr>
+<tr>
+<td>Strafe left / right</td>
+<td><code>A</code> / <code>D</code></td>
+</tr>
+<tr>
+<td>Move up</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>Move down</td>
+<td><code>Q</code></td>
+</tr>
+<tr>
+<td>Look</td>
+<td>Mouse</td>
+</tr>
+<tr>
+<td>Align to nearby structure</td>
+<td><code>Space</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="aligning-to-a-structure">Aligning to a Structure</h2>
+<p>When you are floating near a ship or station you can <strong>align</strong> yourself to it by pressing <code>Space</code> (Grapple / Align). This does two things:</p>
+<ol>
+<li>Snaps your orientation to match the structure's local up/down.</li>
+<li>Makes you <strong>move with the structure</strong> if it is in motion.</li>
+</ol>
+<p>This is very useful for:
+- Boarding a moving ship through a hatch
+- Working on the outside of a ship without drifting away
+- Avoiding being left behind when a crewed ship accelerates</p>
+<p>To break the alignment, simply fly away from the structure or enter a different gravity field.</p>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Holding <code>Left Shift</code> switches to a slower walk pace in gravity mode.</li>
+<li>Deselecting your weapon (scroll past the last hotbar slot) lets you <strong>mine</strong> asteroid resources by holding the right mouse button.</li>
+<li>In build mode inside a ship, movement is the same as zero-G but you pass through blocks — hold <code>Left Shift</code> for much faster movement around large ships.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../03-basic-controls/" class="btn btn-neutral float-left" title="Basic Controls"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../logic/00-overview/" class="btn btn-neutral float-right" title="Logic">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../03-basic-controls/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../logic/00-overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

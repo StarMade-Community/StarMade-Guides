@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Factories & Production - StarMade Guides</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Factories \u0026 Production";
+        var mkdocs_page_input_path = "manufacturing/02-factories.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> StarMade Guides
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ai And Fleets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/00-overview/">AI and Fleets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/01-ai-systems/">AI Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/02-fleets/">Fleets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Building</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/00-overview/">Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/01-advanced-building/">Advanced Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/02-power-basics/">Power Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../building/03-docking-and-turrets/">Docking & Turrets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Combat</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/00-overview/">Combat Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/01-shields/">Shields</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/02-armor-and-damage/">Armor & Damage</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/00-overview/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/01-introduction/">Introduction to StarMade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/02-hud-and-interface/">HUD & Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/03-basic-controls/">Basic Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/04-character-movement/">Character Movement</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logic</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/00-overview/">Logic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/01-logic-basics/">Logic: Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/02-logic-gates/">Logic: Gates</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Manufacturing</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../00-overview/">Manufacturing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../01-crafting-basics/">Crafting Basics</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Factories & Production</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#placing-a-factory">Placing a Factory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setting-up-production">Setting Up Production</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-graph-view">The Graph View</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-power-reactor-module">Example: Power Reactor Module</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#factory-linking-chaining">Factory Linking (Chaining)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#factory-manager">Factory Manager</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#how-it-works">How It Works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#order-processing">Order Processing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#production-capacity">Production Capacity</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#shopping-list-clipboard">Shopping List &amp; Clipboard</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#graph-view-colors">Graph View Colors</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tips">Tips</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Multiplayer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/00-overview/">Multiplayer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/01-factions/">Factions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/02-catalog-and-blueprints/">Catalog & Blueprints</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ships</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/00-overview/">Ships</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/01-ship-basics/">Ship Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/02-building-a-ship/">Building a Ship</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/03-ship-systems/">Ship Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/04-reactors/">Reactors and Stabilizers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/05-chambers/">Reactor Chambers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/06-weapons/">Weapons</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">World</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/00-overview/">World</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/01-navigation/">Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/02-resources-and-mining/">Resources & Mining</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/03-asteroids/">Asteroids</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">StarMade Guides</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Manufacturing</li>
+      <li class="breadcrumb-item active">Factories & Production</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="factories-production">Factories &amp; Production</h1>
+<p>The <strong>Macro Factory</strong> is the main production block in StarMade. It can craft any block in the game, but only performs the final assembly step of the crafting tree. A full production line requires multiple linked factories.</p>
+<h2 id="placing-a-factory">Placing a Factory</h2>
+<p>Macro factories can only be placed on a <strong>station</strong> or a <strong>planet</strong> — they cannot be placed on ships.</p>
+<p>Factories require <strong>power</strong> to operate. You can supply power by:
+- Shooting the factory with a personal power beam
+- Placing <strong>Power Recharge Blocks</strong> near the factory
+- Building on or near a powered station</p>
+<h2 id="setting-up-production">Setting Up Production</h2>
+<ol>
+<li>Press <code>R</code> on the factory to open its interface.</li>
+<li>Click <strong>Change Production</strong>.</li>
+<li>Use the search filter to find the item you want to produce (e.g. type "power" to find Power Reactor Module).</li>
+<li>Select the item from the dropdown.</li>
+<li>Click <strong>View Graph</strong> to see the full crafting tree for that item.</li>
+</ol>
+<h2 id="the-graph-view">The Graph View</h2>
+<p>The <strong>View Graph</strong> button shows the entire crafting tree as a flowchart. The factory only processes the <strong>topmost step</strong> — everything below it must be handled by separate factories.</p>
+<h3 id="example-power-reactor-module">Example: Power Reactor Module</h3>
+<pre><code>[Power Reactor Module]   ← THIS factory produces this
+  ├─ [Metal Mesh]        ← another factory must provide this
+  │    └─ [Ore Capsules] ← another factory provides this
+  └─ [Active Varat Proc] ← another factory must provide this
+       ├─ [Metal Mesh]
+       └─ [Shard Caps]
+</code></pre>
+<p>Your top factory takes <strong>Metal Mesh</strong> and <strong>Active Varat Processor</strong> as inputs and outputs <strong>Power Reactor Modules</strong>. You need additional factories set up to produce each of those.</p>
+<h2 id="factory-linking-chaining">Factory Linking (Chaining)</h2>
+<p>Factories can pull ingredients from each other automatically using connections:</p>
+<ol>
+<li>Press <code>C</code> on the factory you want to act as the <strong>ingredient source</strong> (it holds raw materials or intermediate products).</li>
+<li>Press <code>V</code> on the factory that <strong>needs</strong> those ingredients.</li>
+<li>The second factory will now draw needed materials from the first automatically.</li>
+</ol>
+<p>With a properly linked chain, you place raw materials into the bottom factory and the top factory outputs the final product — everything in between is handled automatically.</p>
+<h2 id="factory-manager">Factory Manager</h2>
+<p>The <strong>Factory Manager</strong> block automates an entire production chain. Instead of manually setting recipes and linking factories one by one, a Factory Manager analyzes what needs to be built, figures out what raw materials are missing, and assigns recipes to connected factories automatically.</p>
+<h3 id="how-it-works">How It Works</h3>
+<ol>
+<li><strong>Place a Factory Manager</strong> on your station.</li>
+<li><strong>Connect it to your factories</strong> — link the Factory Manager to every factory you want it to control using <code>C</code> (on the manager) and <code>V</code> (on each factory). It supports all factory types (Basic, Standard, Advanced, Micro Assembler, Capsule Assembler).</li>
+<li><strong>Connect it to storage</strong> — link the Factory Manager to inventories (storage blocks) so it can see what raw materials are available.</li>
+<li><strong>Place an order</strong> — tell the manager what you want produced. Orders can come from:</li>
+<li>A <strong>factory</strong> — the manager reads what recipe is set and ensures all intermediate ingredients are produced.</li>
+<li>A <strong>shipyard</strong> — the manager produces all blocks needed for a ship under construction.</li>
+<li>A <strong>storage filter</strong> — the manager keeps a storage filled to the quantities defined in its filter.</li>
+</ol>
+<h3 id="order-processing">Order Processing</h3>
+<p>When an order is placed, the Factory Manager:</p>
+<ol>
+<li><strong>Walks the crafting tree</strong> — starting from the requested item, it recursively determines every intermediate product and raw material needed.</li>
+<li><strong>Checks inventories</strong> — it scans connected storage to see what materials are already available and reserves them.</li>
+<li><strong>Identifies shortages</strong> — any raw material that no connected factory can produce is added to a <strong>shopping list</strong> (materials the player must supply).</li>
+<li><strong>Prioritizes production</strong> — items are sorted by urgency. Bottleneck ingredients (ones blocking other production steps) are prioritized over items already in surplus.</li>
+<li><strong>Assigns recipes to factories</strong> — the manager sets each connected factory's recipe and production limit automatically, activating idle factories and shutting down ones with nothing to produce.</li>
+</ol>
+<h3 id="production-capacity">Production Capacity</h3>
+<p>The Factory Manager accounts for the <strong>capability</strong> of each factory (based on how many factory blocks are grouped together). When deciding how much to produce per cycle, it estimates combined capacity as roughly the sum of all factory capabilities of a given type, ensuring larger factories are assigned work first.</p>
+<h3 id="shopping-list-clipboard">Shopping List &amp; Clipboard</h3>
+<p>The Factory Manager tracks two resource lists:</p>
+<ul>
+<li><strong>Needed (remaining)</strong> — raw materials still required to complete the current order.</li>
+<li><strong>Total</strong> — all raw materials the full order requires from the start.</li>
+</ul>
+<p>Both lists can be <strong>copied to the clipboard</strong> directly from the Factory Manager interface, making it easy to see exactly what you need to gather.</p>
+<h3 id="graph-view-colors">Graph View Colors</h3>
+<p>When viewing the crafting graph through a Factory Manager, nodes are color-coded:</p>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Green</td>
+<td>Resource is fully stocked</td>
+</tr>
+<tr>
+<td>Blue</td>
+<td>Resource is partially available</td>
+</tr>
+<tr>
+<td>Red</td>
+<td>Resource is missing or insufficient</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tips">Tips</h2>
+<ul>
+<li><strong>Start small.</strong> Craft a basic factory (from 10 Metal Meshes or 10 Crystal Circuits in the personal micro-factory) to begin. The macro factory comes later.</li>
+<li><strong>Power matters.</strong> A factory without power stalls. Place power recharge blocks near factory clusters.</li>
+<li><strong>Use View Graph every time</strong> you set up a new production line — it clearly shows exactly what inputs the factory expects at each step.</li>
+<li>Multiple factories can be linked to one source factory — the source will supply whatever any of its connected factories need.</li>
+<li><strong>Use a Factory Manager</strong> for complex production chains — it eliminates the tedious manual setup of recipe assignment and linking, especially when producing blocks that require many intermediate steps.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../01-crafting-basics/" class="btn btn-neutral float-left" title="Crafting Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../multiplayer/00-overview/" class="btn btn-neutral float-right" title="Multiplayer">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../01-crafting-basics/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../multiplayer/00-overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
