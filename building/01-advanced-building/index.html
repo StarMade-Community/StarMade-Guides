@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Advanced Building - StarMade Guides</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Advanced Building";
+        var mkdocs_page_input_path = "building/01-advanced-building.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> StarMade Guides
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ai And Fleets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/00-overview/">AI and Fleets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/01-ai-systems/">AI Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ai-and-fleets/02-fleets/">Fleets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Building</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../00-overview/">Building</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Advanced Building</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#build-tools-radial-menu">Build Tools Radial Menu</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#single">Single</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#line">Line</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#box">Box</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#circle">Circle</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#curve">Curve</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cylinder">Cylinder</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ellipsoid">Ellipsoid</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#polygon">Polygon</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#accessing-advanced-build-tools">Accessing Advanced Build Tools</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tool-reference">Tool Reference</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#remove-mode">Remove Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lighten-mode">Lighten Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#area-sliders">Area Sliders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#orientation">Orientation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#undo-redo">Undo / Redo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#copy-paste">Copy / Paste</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#symmetry-planes">Symmetry Planes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mirror-mode">Mirror Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#remove-filter">Remove Filter</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../02-power-basics/">Power Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../03-docking-and-turrets/">Docking & Turrets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Combat</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/00-overview/">Combat Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/01-shields/">Shields</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../combat/02-armor-and-damage/">Armor & Damage</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/00-overview/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/01-introduction/">Introduction to StarMade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/02-hud-and-interface/">HUD & Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/03-basic-controls/">Basic Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/04-character-movement/">Character Movement</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Logic</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/00-overview/">Logic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/01-logic-basics/">Logic: Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../logic/02-logic-gates/">Logic: Gates</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Manufacturing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/00-overview/">Manufacturing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/01-crafting-basics/">Crafting Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../manufacturing/02-factories/">Factories & Production</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Multiplayer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/00-overview/">Multiplayer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/01-factions/">Factions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../multiplayer/02-catalog-and-blueprints/">Catalog & Blueprints</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Ships</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/00-overview/">Ships</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/01-ship-basics/">Ship Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/02-building-a-ship/">Building a Ship</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/03-ship-systems/">Ship Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/04-reactors/">Reactors and Stabilizers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/05-chambers/">Reactor Chambers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ships/06-weapons/">Weapons</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">World</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/00-overview/">World</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/01-navigation/">Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/02-resources-and-mining/">Resources & Mining</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../world/03-asteroids/">Asteroids</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">StarMade Guides</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Building</li>
+      <li class="breadcrumb-item active">Advanced Building</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="advanced-building">Advanced Building</h1>
+<p>Build mode has a full set of power tools accessible by holding <code>Left Alt</code>, as well as a radial menu of shape tools for placing blocks in geometric patterns. These tools dramatically speed up construction of large ships and stations.</p>
+<h2 id="build-tools-radial-menu">Build Tools Radial Menu</h2>
+<p>Press the <strong>backtick key</strong> (<code>`</code>) while in Build Mode to open the radial menu. This gives you access to eight shape-based placement tools. Select a tool from the ring, then click in the world to use it.</p>
+<p>The <strong>center button</strong> of the radial menu toggles <strong>Hollow Mode</strong> — when enabled, shapes are placed as empty shells instead of solid fills. Hollow mode applies to all tools except Single.</p>
+<h3 id="single">Single</h3>
+<p>The default mode. Place or remove one block (or one build-dimension group) per click.</p>
+<h3 id="line">Line</h3>
+<p>Draw a straight line of blocks between two points.</p>
+<ol>
+<li>Click to set the <strong>start point</strong>.</li>
+<li>
+<p>Click again to set the <strong>end point</strong> — the line fills in.</p>
+</li>
+<li>
+<p><strong>Scroll wheel</strong> cycles axis restriction: Auto, XY plane, XZ plane, YZ plane.</p>
+</li>
+<li><strong>Hold Left Shift</strong> to snap to 45-degree angles (cardinals and diagonals).</li>
+</ol>
+<h3 id="box">Box</h3>
+<p>Fill a 3D rectangular volume with blocks.</p>
+<ol>
+<li>Click to set the <strong>first corner</strong>.</li>
+<li>
+<p>Click to set the <strong>opposite corner</strong> — the box fills in.</p>
+</li>
+<li>
+<p><strong>Hold Left Ctrl</strong> for camera-based virtual positioning (build over empty space).</p>
+</li>
+<li>Supports hollow mode.</li>
+</ol>
+<h3 id="circle">Circle</h3>
+<p>Place a flat circle of blocks.</p>
+<ol>
+<li>Click to set the <strong>center</strong>.</li>
+<li>
+<p>Click to set a point on the <strong>radius</strong>.</p>
+</li>
+<li>
+<p><strong>Scroll wheel</strong> cycles plane lock: Auto, XY, XZ, YZ.</p>
+</li>
+<li><strong>Hold Left Shift</strong> to snap angles.</li>
+<li>Supports hollow mode (ring).</li>
+</ol>
+<h3 id="curve">Curve</h3>
+<p>Draw a smooth curved line using three control points.</p>
+<ol>
+<li>Click to set the <strong>start point</strong>.</li>
+<li>Click to set the <strong>end point</strong>.</li>
+<li>
+<p>Click to set the <strong>control point</strong> — the curve fills in between the start and end, bending toward the control point.</p>
+</li>
+<li>
+<p><strong>Scroll wheel</strong> cycles axis restriction.</p>
+</li>
+<li><strong>Hold Left Shift</strong> to snap angles.</li>
+</ol>
+<h3 id="cylinder">Cylinder</h3>
+<p>Build a 3D cylinder.</p>
+<ol>
+<li>Click to set the <strong>base center</strong>.</li>
+<li>Click to set the <strong>radius</strong>.</li>
+<li>
+<p>Click to set the <strong>height</strong> — the cylinder fills in.</p>
+</li>
+<li>
+<p><strong>Scroll wheel</strong> cycles plane lock.</p>
+</li>
+<li>Supports hollow mode (tube).</li>
+</ol>
+<h3 id="ellipsoid">Ellipsoid</h3>
+<p>Build a 3D ellipsoid (sphere or egg shape).</p>
+<ol>
+<li>Click to set the <strong>first corner</strong> of the bounding box.</li>
+<li>
+<p>Click to set the <strong>opposite corner</strong> — the ellipsoid fills in.</p>
+</li>
+<li>
+<p>Supports hollow mode (shell).</p>
+</li>
+</ol>
+<h3 id="polygon">Polygon</h3>
+<p>Build a custom flat polygon with up to 8 vertices.</p>
+<ol>
+<li>Click to place each <strong>vertex</strong> (minimum 3, maximum 8).</li>
+<li><strong>Scroll wheel</strong> adjusts target point count.</li>
+<li>
+<p><strong>Right-click</strong> to finalize with the current points.</p>
+</li>
+<li>
+<p>The plane locks after the third point is placed.</p>
+</li>
+<li>Supports hollow mode.</li>
+</ol>
+<blockquote>
+<p>All shape tools support <strong>remove mode</strong> (right-click removes instead of places), real-time <strong>preview rendering</strong>, and <strong>undo/redo</strong>.</p>
+</blockquote>
+<h2 id="accessing-advanced-build-tools">Accessing Advanced Build Tools</h2>
+<p>You must be in <strong>Build Mode</strong> (inside a ship core or build block). Hold <code>Left Alt</code> to reveal the advanced tool panel on the right side of the screen.</p>
+<p>While holding <code>Left Alt</code>:
+- Click with the mouse to place/remove blocks with the current tool active
+- Scroll the mouse wheel to cycle through block orientations (for rotatable blocks)</p>
+<blockquote>
+<p><strong>Speed tip:</strong> Hold <code>Left Shift</code> in build mode to move much faster — essential for working on large structures.</p>
+</blockquote>
+<h2 id="tool-reference">Tool Reference</h2>
+<h3 id="remove-mode">Remove Mode</h3>
+<p>Toggles the build box from <strong>yellow</strong> (place) to <strong>red</strong> (remove). Useful for clearing large areas quickly. Works with the area sliders to remove multiple blocks at once.</p>
+<h3 id="lighten-mode">Lighten Mode</h3>
+<p>Removes all shadows and ambient occlusion rendering. Dark interiors become fully lit, making it easier to see what you are building. <strong>Toggle it off periodically</strong> to check how your ship actually looks with normal lighting.</p>
+<h3 id="area-sliders">Area Sliders</h3>
+<p>Three sliders — one for each axis — expand the placement/removal box so you can place or remove multiple blocks in a rectangular volume with a single click.</p>
+<blockquote>
+<p>Server admins can set maximum slider values in <code>server.cfg</code>. In singleplayer the limit is configurable in the same file.</p>
+</blockquote>
+<h3 id="orientation">Orientation</h3>
+<p>When a rotatable block is selected (wedges, sloped hull, directional blocks), the orientation picker lets you choose which way the block faces. You can also scroll the mouse wheel to cycle orientations while holding <code>Left Alt</code>.</p>
+<h3 id="undo-redo">Undo / Redo</h3>
+<ul>
+<li><strong>Undo</strong> (<code>Ctrl+Z</code> or the button): Reverts your most recent build action.</li>
+<li><strong>Redo</strong>: Re-applies an undone action.</li>
+</ul>
+<p>Multiple undo steps are supported.</p>
+<h3 id="copy-paste">Copy / Paste</h3>
+<ol>
+<li>Click <strong>Copy</strong>, then drag to select a rectangular volume.</li>
+<li>Click <strong>Paste</strong> to place the copied region. You need the required blocks in your inventory.</li>
+</ol>
+<p><strong>Connections are preserved</strong> if both the controlling block and the controlled block are within the copied region.</p>
+<h3 id="symmetry-planes">Symmetry Planes</h3>
+<p>Symmetry planes are the most powerful build tool. You place invisible walls that divide your structure; placing a block on one side automatically mirrors it to the other.</p>
+<ul>
+<li>Place symmetry planes on X, Y, and Z simultaneously to build in all three axes at once — this quadruples (or eighths for all three axes) your build speed.</li>
+<li><strong>Odd symmetry</strong> mode offsets the plane to sit at the centre of a block rather than between blocks, useful for ships with an odd-numbered width.</li>
+</ul>
+<h3 id="mirror-mode">Mirror Mode</h3>
+<p>When symmetry planes are active, <strong>Mirror Mode</strong> also mirrors the <strong>orientation</strong> of directional blocks. Without it, a weapon turret on the left side would face the same direction as the one on the right; with mirror mode it faces the opposite direction (correctly outward).</p>
+<h3 id="remove-filter">Remove Filter</h3>
+<p>Select a specific block type from the dropdown and only that block type will be removed when you right-click — all other blocks are ignored. Works with area sliders and symmetry planes.</p>
+<p>This is invaluable for <strong>refitting ships</strong>: you can quickly strip all power blocks without accidentally removing hull or weapons.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../00-overview/" class="btn btn-neutral float-left" title="Building"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../02-power-basics/" class="btn btn-neutral float-right" title="Power Basics">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../00-overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../02-power-basics/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
