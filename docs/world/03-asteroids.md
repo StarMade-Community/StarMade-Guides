@@ -1,6 +1,8 @@
 # Asteroids
 
-![asteroids_fig1.jpg](https://web.archive.org/web/20241010090719im_/https://starmadepedia.net/images/6/61/Asteroids.jpg){ align=right } Asteroids are highly concentrated deposits of Raw Materials found in space orbiting stars. They are harvested with ship-based Salvage Systems.
+![asteroids_fig1.jpg](https://web.archive.org/web/20241010090719im_/https://starmadepedia.net/images/6/61/Asteroids.jpg)
+
+Asteroids are highly concentrated deposits of Raw Materials found in space orbiting stars. They are harvested with ship-based Salvage Systems.
 
 ## Types
 
@@ -22,14 +24,12 @@ It should be noted that as of StarMade v0.198.219, Yellow "Lukrah" asteroids are
 ### Spawning
 
 ![asteroids_fig3.png](https://web.archive.org/web/20241010090719im_/https://starmadepedia.net/images/9/92/AsteroidMap.png)
-/// caption
+
 Asteroids spawn throughout star-systems in a very predictable, and structured manner, making it easy to find resources. The diagram below shows the different zones in which certain asteroid types can spawn, and the zones' inner & outer spawn radii.
-///
 
 ![asteroids_fig2.jpg](https://web.archive.org/web/20241010090719im_/https://starmadepedia.net/images/c/cd/Asteroid_belt_orbits.jpg)
-/// caption
+
 Locations of asteroid belts in a star system, as shown in the Map.
-///
 
 ## Player Interaction
 
