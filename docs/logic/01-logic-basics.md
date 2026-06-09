@@ -65,7 +65,7 @@ The **Command Module** block lets you send pre-configured commands to other syst
 2. Connect it to a supported target block using `C` (on the command module) then `V` (on the target).
 3. Press `R` on the command module to open its interface and configure the command.
 4. Select a command type and set any required parameters.
-5. Click **Execute** to run it manually, or trigger it via a **logic beam** from an activation block or logic circuit.
+5. Click **Execute** to run it manually, or trigger it via a logic signal.
 
 When triggered by logic, there is a **500 ms cooldown** between executions to prevent spam.
 
