@@ -6,44 +6,38 @@ theme:
 nav:
 - Home: index.md
 - Getting Started:
-  - Overview: getting-started/00-overview.md
-  - Introduction: getting-started/01-introduction.md
-  - HUD & Interface: getting-started/02-hud-and-interface.md
-  - Basic Controls: getting-started/03-basic-controls.md
-  - Character Movement: getting-started/04-character-movement.md
-- Ships:
-  - Overview: ships/00-overview.md
-  - Ship Basics: ships/01-ship-basics.md
-  - Building a Ship: ships/02-building-a-ship.md
-  - Ship Systems: ships/03-ship-systems.md
-  - Reactors: ships/04-reactors.md
-  - Chambers: ships/05-chambers.md
-  - Weapons: ships/06-weapons.md
+  - Introduction: 00-getting-started/00-introduction.md
+  - HUD & Interface: 00-getting-started/01-hud-and-interface.md
+  - Basic Controls: 00-getting-started/02-basic-controls.md
+  - Character Movement: 00-getting-started/03-character-movement.md
 - Building:
-  - Overview: building/00-overview.md
-  - Advanced Building: building/01-advanced-building.md
-  - Docking & Turrets: building/02-docking-and-turrets.md
-- Combat:
-  - Overview: combat/00-overview.md
-  - Shields: combat/01-shields.md
-  - Armor & Damage: combat/02-armor-and-damage.md
+  - Advanced Building: 01-building/00-advanced-building.md
+  - Power Basics: 01-building/01-power-basics.md
+  - Docking & Turrets: 01-building/02-docking-and-turrets.md
+- Ships:
+  - Ship Basics: 02-ships/00-ship-basics.md
+  - Building a Ship: 02-ships/01-building-a-ship.md
+  - Ship Systems: 02-ships/02-ship-systems.md
+  - Reactors: 02-ships/03-reactors.md
+  - Chambers: 02-ships/04-chambers.md
+  - Thrusters: 02-ships/05-thrusters.md
+  - Shields: 02-ships/06-shields.md
+  - Weapons & Effects: 02-ships/07-weapons-and-effects.md
+  - Salvagers: 02-ships/08-salvagers.md
+  - Armor & Damage: 02-ships/09-armor-and-damage.md
 - World:
-  - Overview: world/00-overview.md
-  - Navigation: world/01-navigation.md
-  - Resources & Mining: world/02-resources-and-mining.md
+  - Navigation: 03-world/00-navigation.md
+  - Resources & Mining: 03-world/01-resources-and-mining.md
+  - Asteroids: 03-world/02-asteroids.md
 - Manufacturing:
-  - Overview: manufacturing/00-overview.md
-  - Crafting Basics: manufacturing/01-crafting-basics.md
-  - Factories: manufacturing/02-factories.md
-- Logic:
-  - Overview: logic/00-overview.md
-  - Logic Basics: logic/01-logic-basics.md
-  - Logic Gates: logic/02-logic-gates.md
+  - Crafting Basics: 04-manufacturing/00-crafting-basics.md
+  - Factories: 04-manufacturing/01-factories.md
 - AI & Fleets:
-  - Overview: ai-and-fleets/00-overview.md
-  - AI Systems: ai-and-fleets/01-ai-systems.md
-  - Fleets: ai-and-fleets/02-fleets.md
+  - AI Systems: 05-ai-and-fleets/00-ai-systems.md
+  - Fleets: 05-ai-and-fleets/01-fleets.md
+- Logic:
+  - Logic Basics: 06-logic/00-logic-basics.md
+  - Logic Gates: 06-logic/01-logic-gates.md
 - Multiplayer:
-  - Overview: multiplayer/00-overview.md
-  - Factions: multiplayer/01-factions.md
-  - Catalog & Blueprints: multiplayer/02-catalog-and-blueprints.md
+  - Factions: 07-multiplayer/00-factions.md
+  - Catalog & Blueprints: 07-multiplayer/01-catalog-and-blueprints.md

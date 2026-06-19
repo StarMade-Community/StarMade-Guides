@@ -75,7 +75,7 @@ Each weapon type has a different default **damage distribution**, making them be
 | Damage Beams | 16.6% | 33.3% | 50% |
 | Missiles | 16.6% | 50% | 33.3% |
 
-See the [Armor & Damage guide](../combat/02-armor-and-damage.md) for how damage types interact with shields and armor.
+See the [Armor & Damage guide](09-armor-and-damage.md) for how damage types interact with shields and armor.
 
 ## Linking via the Weapon Panel
 

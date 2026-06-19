@@ -30,7 +30,7 @@ The selected block type is shown in your hotbar. Open your inventory (`I`) to mo
 
 A bare ship core cannot move or fire weapons. At minimum you need:
 
-1. **Power Reactor Module** — place one or more anywhere on the ship. More reactor blocks = more power generation. The layout of reactor groups affects efficiency (see [Ship Systems](03-ship-systems.md)).
+1. **Power Reactor Module** — place one or more anywhere on the ship. More reactor blocks = more power generation. The layout of reactor groups affects efficiency (see [Ship Systems](02-ship-systems.md)).
 2. **Thruster Module** — place one or more anywhere on the ship. More thruster blocks = more top speed and acceleration. The direction the thrusters face doesn't matter mechanically — they push the ship forward in whatever direction the core is pointed.
 
 With both placed, switch to flight mode (`Z`) — you can now fly.
@@ -47,7 +47,7 @@ To arm your ship:
 
 The weapon computer turns **orange and pulses** when it is the last selected/placed computer — this indicates it is "active" for connections.
 
-See [Weapons](06-weapons.md) for details on weapon types and combinations.
+See [Weapons](07-weapons-and-effects.md) for details on weapon types and combinations.
 
 ## Blueprint Tips
 
@@ -56,11 +56,11 @@ At any time, you can save your current ship as a **blueprint**:
 - Click **Create New Entry**
 - The blueprint is saved and can later be spawned at any shop, provided you supply the required blocks
 
-See [Catalog & Blueprints](../multiplayer/02-catalog-and-blueprints.md) for the full catalog guide.
+See [Catalog & Blueprints](../07-multiplayer/01-catalog-and-blueprints.md) for the full catalog guide.
 
 ## Good Building Practices
 
-- Build **symmetrically** — a balanced ship handles more predictably. Use symmetry planes (see [Advanced Building](../advanced/01-advanced-building.md)) to mirror blocks automatically.
+- Build **symmetrically** — a balanced ship handles more predictably. Use symmetry planes (see [Advanced Building](../01-building/00-advanced-building.md)) to mirror blocks automatically.
 - **Protect your core** — the ship core is its most critical block. Surround it with hull and armour.
 - **Protect computers and reactors** — a destroyed weapon computer disables that weapon system; a destroyed reactor drops available power.
 - Use **build mode fast movement** (`Left Shift`) to move quickly around large ships.

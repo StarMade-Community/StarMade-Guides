@@ -1,6 +1,6 @@
 # Logic: Gates
 
-Building on the basics of [activation blocks and connections](02-logic-basics.md), StarMade provides four additional logic blocks that let you build complex circuits.
+Building on the basics of [activation blocks and connections](00-logic-basics.md), StarMade provides four additional logic blocks that let you build complex circuits.
 
 ## Logic Gate Blocks
 

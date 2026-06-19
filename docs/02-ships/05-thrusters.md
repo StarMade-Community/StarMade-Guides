@@ -18,4 +18,4 @@ Repulsors use thrust to allow a ship to automatically hover off the ground insid
 
 Chambers can increase your ship's max speed or unlock a "Thrust Blast" system for sudden bursts of acceleration. 
 
-See the [Chambers guide](05-chambers.md) for more details.
+See the [Chambers guide](04-chambers.md) for more details.

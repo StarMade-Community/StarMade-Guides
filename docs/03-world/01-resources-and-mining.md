@@ -39,7 +39,7 @@ Build a **Salvage Computer** and **Salvage Beam Modules** on your ship (same set
 
 Raw ores and shards cannot be used directly — they must be processed into **capsules** first, then into crafting ingredients.
 
-See [Crafting Basics](../crafting/01-crafting-basics.md) for the full processing chain.
+See [Crafting Basics](../04-manufacturing/00-crafting-basics.md) for the full processing chain.
 
 ## Quick Resource Reference
 

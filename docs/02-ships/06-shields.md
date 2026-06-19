@@ -79,7 +79,7 @@ Shield-related chamber trees can boost:
 - **Shield upkeep** (less shield upkeep cost)
 - **Recovery time** (shorter lockout after shield break)
 
-See the [Chambers guide](05-chambers.md) for details.
+See the [Chambers guide](04-chambers.md) for details.
 
 ## Tips and Tricks
 

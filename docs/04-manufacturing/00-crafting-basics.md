@@ -51,7 +51,7 @@ In your inventory, click **Micro** to open the personal micro-factory.
 
 When you have **10 Metal Meshes** or **10 Crystal Circuits**, click **Craft Macro** in your inventory to craft your first **Macro Factory** block.
 
-This factory can produce any craftable block in the game — see [Factories & Production](02-factories.md) for how to use it.
+This factory can produce any craftable block in the game — see [Factories & Production](01-factories.md) for how to use it.
 
 ## Material Summary
 

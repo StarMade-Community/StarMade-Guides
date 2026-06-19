@@ -8,7 +8,7 @@ Every ship needs a power reactor to run its systems. This guide covers how to bu
 |-------|------|
 | **Reactor Block** | Generates power. More blocks = more power capacity and higher reactor level. |
 | **Reactor Stabilizer** | Increases stabilization, unlocking the reactor's full output. |
-| **Reactor Conduit** | Connects chambers to the reactor (see [Chambers](05-chambers.md)). |
+| **Reactor Conduit** | Connects chambers to the reactor (see [Chambers](04-chambers.md)). |
 
 ## Power and Stabilization
 
@@ -21,7 +21,7 @@ Your reactor's effective power output is determined by two things: the number of
 
 Reactor level scales logarithmically with the number of reactor blocks. A small ship with a handful of reactor blocks will be level 0 or 1; a large capital ship can reach much higher levels.
 
-Level matters primarily because it determines how many chamber modules are required to activate chambers. (see [Chambers](05-chambers.md)).
+Level matters primarily because it determines how many chamber modules are required to activate chambers. (see [Chambers](04-chambers.md)).
 
 ## How Much to Build
 
