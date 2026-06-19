@@ -138,4 +138,4 @@ Any block that can dock to a rail can be controlled:
 - Multiple sources can connect to the same target block.
 - Connections survive reloads and blueprint saves (if both blocks are included in the blueprint).
 
-For more complex logic (NOT, AND, OR, DELAY gates), see [Logic: Gates](02-logic-gates.md).
+For more complex logic (NOT, AND, OR, DELAY gates), see [Logic: Gates](01-logic-gates.md).

@@ -28,9 +28,9 @@ When you first spawn, you will be in **astronaut mode** — a floating humanoid 
 
 Your immediate goals:
 
-- Get comfortable with [character movement](04-character-movement.md)
-- Familiarise yourself with the [HUD](02-hud-and-interface.md)
-- Learn [basic controls](03-basic-controls.md)
+- Get comfortable with [character movement](03-character-movement.md)
+- Familiarise yourself with the [HUD](01-hud-and-interface.md)
+- Learn [basic controls](02-basic-controls.md)
 - Find some asteroids and mine your first resources
 
 > **Tip:** Check the navigation panel (`N` by default) to locate nearby trading stations, asteroids, and planets from your starting position.

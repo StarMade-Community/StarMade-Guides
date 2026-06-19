@@ -108,7 +108,7 @@ When **combined targeting** is enabled, all fleet members share the flagship's c
 
 ## Carrier Recall
 
-If your fleet ships were launched from a carrier using the [Pickup Rail system](../advanced/04-docking-and-turrets.md), each ship remembers its last docking point. Issue the **Carrier Recall** command to send them all back to their pickup rails automatically.
+If your fleet ships were launched from a carrier using the [Pickup Rail system](../01-building/02-docking-and-turrets.md), each ship remembers its last docking point. Issue the **Carrier Recall** command to send them all back to their pickup rails automatically.
 
 Ships navigate back individually and re-dock when they arrive. The process completes once all ships are docked.
 
