@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Shields - StarMade Guides</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Shields";
+        var mkdocs_page_input_path = "02-ships/06-shields.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> StarMade Guides
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">00 Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/00-introduction/">Introduction to StarMade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/01-hud-and-interface/">HUD & Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/02-basic-controls/">Basic Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/03-character-movement/">Character Movement</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/04-starmade-galaxy/">StarMade Galaxy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">01 Building</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/00-advanced-building/">Advanced Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/01-power-basics/">Power Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/02-docking-and-turrets/">Docking & Turrets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/03-shipyards/">Shipyards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">02 Ships</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../00-ship-basics/">Ship Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../01-building-a-ship/">Building a Ship</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../02-ship-systems/">Ship Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../03-reactors/">Reactors and Stabilizers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../04-chambers/">Reactor Chambers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../05-thrusters/">Thrusters</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Shields</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#shield-capacitor-blocks">Shield Capacitor Blocks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#shield-recharger-blocks-and-shield-radius">Shield Recharger Blocks and Shield Radius</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#shield-upkeep">Shield Upkeep</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#recharge-behaviour">Recharge Behaviour</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#turretsdocks-shield-interaction">Turrets/Docks Shield Interaction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#improving-shields-with-chambers">Improving Shields with Chambers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tips-and-tricks">Tips and Tricks</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../07-weapons-and-effects/">Weapons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../08-salvagers/">Salvagers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../09-armor-and-damage/">Armor & Damage</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">03 World</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03-world/00-navigation/">Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03-world/01-resources-and-mining/">Resources & Mining</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03-world/02-asteroids/">Asteroids</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">04 Manufacturing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04-manufacturing/00-crafting-basics/">Crafting Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04-manufacturing/01-factories/">Factories & Production</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">05 Ai And Fleets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05-ai-and-fleets/00-ai-systems/">AI Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05-ai-and-fleets/01-fleets/">Fleets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">06 Logic</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06-logic/00-logic-basics/">Logic: Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06-logic/01-logic-gates/">Logic: Gates</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">07 Multiplayer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07-multiplayer/00-factions/">Factions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07-multiplayer/01-catalog-and-blueprints/">Catalog & Blueprints</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">StarMade Guides</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">02 Ships</li>
+      <li class="breadcrumb-item active">Shields</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="shields">Shields</h1>
+<p>Shields are your ship's first layer of defence. All incoming damage hits shields before reaching your hull and blocks. When shields are depleted they enter a <strong>Shield Outage</strong> before recharging.</p>
+<pre><code class="language-svg">&lt;svg width=&quot;640&quot; height=&quot;262&quot; viewBox=&quot;0 0 640 262&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; font-family=&quot;sans-serif&quot;&gt;
+  &lt;rect x=&quot;1&quot; y=&quot;1&quot; width=&quot;638&quot; height=&quot;260&quot; rx=&quot;12&quot; fill=&quot;#121821&quot; stroke=&quot;#2c3b50&quot; stroke-width=&quot;2&quot;/&gt;
+  &lt;text x=&quot;320&quot; y=&quot;36&quot; text-anchor=&quot;middle&quot; fill=&quot;#e8eef7&quot; font-size=&quot;22&quot; font-weight=&quot;bold&quot;&gt;Damage Hits Shields First&lt;/text&gt;
+
+  &lt;line x1=&quot;36&quot; y1=&quot;140&quot; x2=&quot;214&quot; y2=&quot;140&quot; stroke=&quot;#e09a3e&quot; stroke-width=&quot;6&quot;/&gt;
+  &lt;polygon points=&quot;214,128 240,140 214,152&quot; fill=&quot;#e09a3e&quot;/&gt;
+  &lt;text x=&quot;42&quot; y=&quot;124&quot; fill=&quot;#e09a3e&quot; font-size=&quot;13&quot; font-weight=&quot;bold&quot;&gt;Incoming damage&lt;/text&gt;
+
+  &lt;rect x=&quot;250&quot; y=&quot;64&quot; width=&quot;350&quot; height=&quot;152&quot; rx=&quot;14&quot; fill=&quot;#10303b&quot; stroke=&quot;#4fc3e8&quot; stroke-width=&quot;2&quot;/&gt;
+  &lt;rect x=&quot;296&quot; y=&quot;92&quot; width=&quot;258&quot; height=&quot;96&quot; rx=&quot;10&quot; fill=&quot;#2a313b&quot; stroke=&quot;#c3ccd8&quot; stroke-width=&quot;2&quot;/&gt;
+  &lt;rect x=&quot;348&quot; y=&quot;116&quot; width=&quot;154&quot; height=&quot;48&quot; rx=&quot;8&quot; fill=&quot;#1b232f&quot; stroke=&quot;#8e9bac&quot; stroke-width=&quot;2&quot;/&gt;
+  &lt;rect x=&quot;408&quot; y=&quot;128&quot; width=&quot;34&quot; height=&quot;24&quot; rx=&quot;4&quot; fill=&quot;#4a3a1a&quot; stroke=&quot;#e0b057&quot;/&gt;
+
+  &lt;text x=&quot;270&quot; y=&quot;84&quot; fill=&quot;#7fdcf2&quot; font-size=&quot;14&quot; font-weight=&quot;bold&quot;&gt;SHIELDS&lt;/text&gt;
+  &lt;text x=&quot;312&quot; y=&quot;110&quot; fill=&quot;#dde3ec&quot; font-size=&quot;13&quot; font-weight=&quot;bold&quot;&gt;ARMOR&lt;/text&gt;
+  &lt;text x=&quot;425&quot; y=&quot;186&quot; text-anchor=&quot;middle&quot; fill=&quot;#aab7c6&quot; font-size=&quot;12&quot; font-weight=&quot;bold&quot;&gt;SYSTEMS&lt;/text&gt;
+
+  &lt;text x=&quot;320&quot; y=&quot;246&quot; text-anchor=&quot;middle&quot; fill=&quot;#8e9bac&quot; font-size=&quot;13&quot;&gt;When shields are depleted they enter an outage; hits then pass to armor, then internal systems.&lt;/text&gt;
+&lt;/svg&gt;
+</code></pre>
+<h2 id="shield-capacitor-blocks">Shield Capacitor Blocks</h2>
+<p>Place <strong>Shield Capacitor</strong> blocks on your ship to add shield capacity. Each block contributes:</p>
+<table>
+<thead>
+<tr>
+<th>Stat</th>
+<th>Value per block</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capacity</td>
+<td>250</td>
+</tr>
+</tbody>
+</table>
+<p>Every contiguous group of <strong>Shield Capacitors</strong> forms a <strong>Capacity Bank.</strong> A ship can only have up to 20 <strong>Capacity Banks</strong>, so make sure your <strong>Shield Capacitors</strong> are grouped together to avoid going over the limit.</p>
+<h2 id="shield-recharger-blocks-and-shield-radius">Shield Recharger Blocks and Shield Radius</h2>
+<p><strong>Shield Rechargers</strong> convert <strong>Reactor Power</strong> into Shields, which are stored by <strong>Shield Capacitors</strong> inside their <strong>Shield Radius</strong>. Each block contributes:</p>
+<table>
+<thead>
+<tr>
+<th>Stat</th>
+<th>Value per block</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recharge</td>
+<td>5/second</td>
+</tr>
+</tbody>
+</table>
+<p>And costs:</p>
+<table>
+<thead>
+<tr>
+<th>Stat</th>
+<th>Value per block</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reactor Power</td>
+<td>10/second</td>
+</tr>
+</tbody>
+</table>
+<p>This <strong>Reactor Power</strong> cost does not change whether the <strong>Shield Rechargers</strong> are resting or actively charging.</p>
+<p><strong>Shield Radius</strong> (the zone around your ship that the shield covers) projects from the center of each contiguous group of <strong>Shield Rechargers</strong>, and scales up with block count on an exponential curve — small ships get good coverage quickly; large ships need proportionally more blocks for full hull coverage. It is not a "shield bubble"; The shield is skin-tight to the hull of the ship, and the <strong>Shield Radius</strong> just shows what part of the hull is covered.</p>
+<p>Each contiguous group of <strong>Shield Rechargers</strong> produces its own <strong>Shield Radius</strong>. If the center of one <strong>Shield Radius</strong> is inside another <strong>Shield Radius</strong>, the smaller of the two will be disabled.</p>
+<p><strong>Shield Radius</strong> determines which which <strong>Capacity Banks</strong> are charged by which <strong>Shield Recharger</strong> group. To be charged, a <strong>Capacity Bank</strong> must be inside the <strong>Shield Recharger</strong> group's <strong>Shield Radius</strong>. Each <strong>Capacity Bank</strong> can only belong to one <strong>Shield Recharger</strong> group, so in the event of <strong>Shield Radius</strong> overlap, the <strong>Capacity Bank</strong> will go to the largest <strong>Shield Recharger</strong> group. <strong>Capacity Bank</strong> ownership is indicated by pink arrows from the center of the <strong>Capacity Bank</strong> to the center of the <strong>Shield Recharger</strong> group.</p>
+<h2 id="shield-upkeep">Shield Upkeep</h2>
+<p>Each point of <strong>Shield Capacity</strong> also requires 0.004 points of <strong>Shield Upkeep</strong> per second. This equates to 1 point per block of <strong>Shield Capacitors</strong>. If <strong>Shield Recharge</strong> is less than the <strong>Shield Upkeep</strong> cost, the <strong>Capacity Bank</strong> will drain until it reaches zero.</p>
+<h2 id="recharge-behaviour">Recharge Behaviour</h2>
+<p>A <strong>Shield Recharger</strong> group that has not taken any damage for the last 30 seconds will recharge at its full rate regardless of how much <strong>Shield Capacity</strong> the group currently has.</p>
+<p><strong>Shield Under Fire</strong> is a debuff that lasts for 30 seconds after a <strong>Shield Recharger</strong> group has taken Shield damage. During this time, <strong>Shield Recharge</strong> is reduced, from a 0% reduction at 100% <strong>Shield Capacity</strong> to a 50% reduction at 20% <strong>Shield Capacity</strong>. The amount of reduction is based on the lowest percentage the <strong>Shield Recharger</strong> group reached while afflicted with the debuff, rather than the current <strong>Shield Capacity</strong>.</p>
+<p><strong>Shield Outage</strong> is a debuff that lasts for 10 seconds after a <strong>Shield Recharger</strong> group has reached 0% <strong>Shield Capacity</strong>. During this time, <strong>Shield Recharge</strong> for this group is completely disabled.</p>
+<h2 id="turretsdocks-shield-interaction">Turrets/Docks Shield Interaction</h2>
+<p>Turrets and docked ships have their shields disabled while they are docked. When they are hit by weapons, they will be protected by the shields of the ship or station they are docked to instead.</p>
+<h2 id="improving-shields-with-chambers">Improving Shields with Chambers</h2>
+<p>Shield-related chamber trees can boost:
+- <strong>Total capacity</strong> (more buffer before breaking)
+- <strong>Shield upkeep</strong> (less shield upkeep cost)
+- <strong>Recovery time</strong> (shorter lockout after shield break)</p>
+<p>See the <a href="../04-chambers/">Chambers guide</a> for details.</p>
+<h2 id="tips-and-tricks">Tips and Tricks</h2>
+<blockquote>
+<p>While it is possible to have multiple groups of <strong>Shield Rechargers</strong> on one ship, it is almost always better to just have a single group that covers the entire ship.</p>
+<p>It's important to make sure you have enough <strong>Shield Regen</strong> to still regenerate while afflicted with the <strong>Shield Under Fire</strong> debuff. If your <strong>Shield Upkeep</strong> exceeds your <strong>Shield Regen</strong> you will rapidly lose your shields and start taking hull damage.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../05-thrusters/" class="btn btn-neutral float-left" title="Thrusters"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../07-weapons-and-effects/" class="btn btn-neutral float-right" title="Weapons">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../05-thrusters/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../07-weapons-and-effects/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

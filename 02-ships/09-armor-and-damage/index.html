@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Armor & Damage - StarMade Guides</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Armor \u0026 Damage";
+        var mkdocs_page_input_path = "02-ships/09-armor-and-damage.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> StarMade Guides
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">00 Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/00-introduction/">Introduction to StarMade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/01-hud-and-interface/">HUD & Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/02-basic-controls/">Basic Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/03-character-movement/">Character Movement</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/04-starmade-galaxy/">StarMade Galaxy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">01 Building</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/00-advanced-building/">Advanced Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/01-power-basics/">Power Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/02-docking-and-turrets/">Docking & Turrets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/03-shipyards/">Shipyards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">02 Ships</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../00-ship-basics/">Ship Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../01-building-a-ship/">Building a Ship</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../02-ship-systems/">Ship Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../03-reactors/">Reactors and Stabilizers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../04-chambers/">Reactor Chambers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../05-thrusters/">Thrusters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../06-shields/">Shields</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../07-weapons-and-effects/">Weapons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../08-salvagers/">Salvagers</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Armor & Damage</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#damage-types">Damage Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#armor-blocks">Armor Blocks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-armor-works">How Armor Works</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#key-takeaways-and-practical-implications">Key Takeaways and Practical Implications</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#effect-blocks-and-damage-type-shifting">Effect Blocks and Damage Type Shifting</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">03 World</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03-world/00-navigation/">Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03-world/01-resources-and-mining/">Resources & Mining</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03-world/02-asteroids/">Asteroids</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">04 Manufacturing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04-manufacturing/00-crafting-basics/">Crafting Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04-manufacturing/01-factories/">Factories & Production</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">05 Ai And Fleets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05-ai-and-fleets/00-ai-systems/">AI Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05-ai-and-fleets/01-fleets/">Fleets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">06 Logic</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06-logic/00-logic-basics/">Logic: Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06-logic/01-logic-gates/">Logic: Gates</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">07 Multiplayer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07-multiplayer/00-factions/">Factions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07-multiplayer/01-catalog-and-blueprints/">Catalog & Blueprints</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">StarMade Guides</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">02 Ships</li>
+      <li class="breadcrumb-item active">Armor & Damage</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="armor-damage">Armor &amp; Damage</h1>
+<p>Understanding armor and damage types is essential for both building durable ships and designing effective weapons.</p>
+<h2 id="damage-types">Damage Types</h2>
+<p>All damage in StarMade is split across three types:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kinetic</strong></td>
+<td>Physical impact; most effective against unarmored system blocks</td>
+</tr>
+<tr>
+<td><strong>Heat</strong></td>
+<td>Thermal damage; most effective against armored hull blocks</td>
+</tr>
+<tr>
+<td><strong>EM</strong></td>
+<td>Electromagnetic; most effective against shields</td>
+</tr>
+</tbody>
+</table>
+<p>Different weapons deal different mixes of these types. The <strong>Damage Beam</strong>, for example, is heavily EM (≈50% EM, ≈33% Heat, ≈17% Kinetic), making it more effective against shield-heavy targets. Effect blocks connected to a weapon computer can shift its damage type distribution.</p>
+<p>Systems, armor, and shields each have one heavy resistance, one slight resistance, and one damage type with no resistance.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Kinetic Resistance</th>
+<th>Heat Resistance</th>
+<th>EM Resistance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Systems</td>
+<td>0%</td>
+<td>15%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>Armor</td>
+<td>10%</td>
+<td>0 %</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>Shields</td>
+<td>15%</td>
+<td>10%</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-svg">&lt;svg width=&quot;640&quot; height=&quot;396&quot; viewBox=&quot;0 0 640 396&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; font-family=&quot;sans-serif&quot;&gt;
+  &lt;rect x=&quot;1&quot; y=&quot;1&quot; width=&quot;638&quot; height=&quot;394&quot; rx=&quot;12&quot; fill=&quot;#121821&quot; stroke=&quot;#2c3b50&quot; stroke-width=&quot;2&quot;/&gt;
+  &lt;text x=&quot;320&quot; y=&quot;38&quot; text-anchor=&quot;middle&quot; fill=&quot;#e8eef7&quot; font-size=&quot;22&quot; font-weight=&quot;bold&quot;&gt;Damage Type vs. Defense Resistance&lt;/text&gt;
+
+  &lt;g font-size=&quot;15&quot; font-weight=&quot;bold&quot; text-anchor=&quot;middle&quot;&gt;
+    &lt;rect x=&quot;200&quot; y=&quot;62&quot; width=&quot;136&quot; height=&quot;36&quot; rx=&quot;6&quot; fill=&quot;#3a2c14&quot; stroke=&quot;#e09a3e&quot;/&gt;
+    &lt;text x=&quot;268&quot; y=&quot;86&quot; fill=&quot;#e09a3e&quot;&gt;KINETIC&lt;/text&gt;
+    &lt;rect x=&quot;340&quot; y=&quot;62&quot; width=&quot;136&quot; height=&quot;36&quot; rx=&quot;6&quot; fill=&quot;#3a1f1a&quot; stroke=&quot;#d75d49&quot;/&gt;
+    &lt;text x=&quot;408&quot; y=&quot;86&quot; fill=&quot;#d75d49&quot;&gt;HEAT&lt;/text&gt;
+    &lt;rect x=&quot;480&quot; y=&quot;62&quot; width=&quot;136&quot; height=&quot;36&quot; rx=&quot;6&quot; fill=&quot;#152f44&quot; stroke=&quot;#57b0ec&quot;/&gt;
+    &lt;text x=&quot;548&quot; y=&quot;86&quot; fill=&quot;#57b0ec&quot;&gt;EM&lt;/text&gt;
+  &lt;/g&gt;
+
+  &lt;g font-size=&quot;15&quot; font-weight=&quot;bold&quot; text-anchor=&quot;middle&quot;&gt;
+    &lt;rect x=&quot;40&quot; y=&quot;106&quot; width=&quot;156&quot; height=&quot;80&quot; rx=&quot;6&quot; fill=&quot;#1b232f&quot; stroke=&quot;#8e9bac&quot;/&gt;
+    &lt;text x=&quot;118&quot; y=&quot;152&quot; fill=&quot;#c4cdda&quot;&gt;SYSTEMS&lt;/text&gt;
+    &lt;rect x=&quot;40&quot; y=&quot;190&quot; width=&quot;156&quot; height=&quot;80&quot; rx=&quot;6&quot; fill=&quot;#1b232f&quot; stroke=&quot;#c3ccd8&quot;/&gt;
+    &lt;text x=&quot;118&quot; y=&quot;236&quot; fill=&quot;#dde3ec&quot;&gt;ARMOR&lt;/text&gt;
+    &lt;rect x=&quot;40&quot; y=&quot;274&quot; width=&quot;156&quot; height=&quot;80&quot; rx=&quot;6&quot; fill=&quot;#1b232f&quot; stroke=&quot;#4fc3e8&quot;/&gt;
+    &lt;text x=&quot;118&quot; y=&quot;320&quot; fill=&quot;#9fe0f4&quot;&gt;SHIELDS&lt;/text&gt;
+  &lt;/g&gt;
+
+  &lt;g text-anchor=&quot;middle&quot;&gt;
+    &lt;rect x=&quot;200&quot; y=&quot;106&quot; width=&quot;136&quot; height=&quot;80&quot; rx=&quot;6&quot; fill=&quot;#1d4b33&quot; stroke=&quot;#46c483&quot; stroke-width=&quot;2&quot;/&gt;
+    &lt;text x=&quot;268&quot; y=&quot;148&quot; fill=&quot;#d4fbe5&quot; font-size=&quot;26&quot; font-weight=&quot;bold&quot;&gt;0%&lt;/text&gt;
+    &lt;text x=&quot;268&quot; y=&quot;170&quot; fill=&quot;#9fe6c2&quot; font-size=&quot;12&quot; font-weight=&quot;bold&quot;&gt;WEAK POINT&lt;/text&gt;
+    &lt;rect x=&quot;340&quot; y=&quot;106&quot; width=&quot;136&quot; height=&quot;80&quot; rx=&quot;6&quot; fill=&quot;#4a221c&quot; stroke=&quot;#e07a6b&quot;/&gt;
+    &lt;text x=&quot;408&quot; y=&quot;148&quot; fill=&quot;#f8d4cc&quot; font-size=&quot;26&quot; font-weight=&quot;bold&quot;&gt;15%&lt;/text&gt;
+    &lt;text x=&quot;408&quot; y=&quot;170&quot; fill=&quot;#e0a99f&quot; font-size=&quot;12&quot;&gt;strong resist&lt;/text&gt;
+    &lt;rect x=&quot;480&quot; y=&quot;106&quot; width=&quot;136&quot; height=&quot;80&quot; rx=&quot;6&quot; fill=&quot;#4a3a1a&quot; stroke=&quot;#e0b057&quot;/&gt;
+    &lt;text x=&quot;548&quot; y=&quot;148&quot; fill=&quot;#f6e4bd&quot; font-size=&quot;26&quot; font-weight=&quot;bold&quot;&gt;10%&lt;/text&gt;
+    &lt;text x=&quot;548&quot; y=&quot;170&quot; fill=&quot;#d8bf8a&quot; font-size=&quot;12&quot;&gt;slight resist&lt;/text&gt;
+    &lt;rect x=&quot;200&quot; y=&quot;190&quot; width=&quot;136&quot; height=&quot;80&quot; rx=&quot;6&quot; fill=&quot;#4a3a1a&quot; stroke=&quot;#e0b057&quot;/&gt;
+    &lt;text x=&quot;268&quot; y=&quot;232&quot; fill=&quot;#f6e4bd&quot; font-size=&quot;26&quot; font-weight=&quot;bold&quot;&gt;10%&lt;/text&gt;
+    &lt;text x=&quot;268&quot; y=&quot;254&quot; fill=&quot;#d8bf8a&quot; font-size=&quot;12&quot;&gt;slight resist&lt;/text&gt;
+    &lt;rect x=&quot;340&quot; y=&quot;190&quot; width=&quot;136&quot; height=&quot;80&quot; rx=&quot;6&quot; fill=&quot;#1d4b33&quot; stroke=&quot;#46c483&quot; stroke-width=&quot;2&quot;/&gt;
+    &lt;text x=&quot;408&quot; y=&quot;232&quot; fill=&quot;#d4fbe5&quot; font-size=&quot;26&quot; font-weight=&quot;bold&quot;&gt;0%&lt;/text&gt;
+    &lt;text x=&quot;408&quot; y=&quot;254&quot; fill=&quot;#9fe6c2&quot; font-size=&quot;12&quot; font-weight=&quot;bold&quot;&gt;WEAK POINT&lt;/text&gt;
+    &lt;rect x=&quot;480&quot; y=&quot;190&quot; width=&quot;136&quot; height=&quot;80&quot; rx=&quot;6&quot; fill=&quot;#4a221c&quot; stroke=&quot;#e07a6b&quot;/&gt;
+    &lt;text x=&quot;548&quot; y=&quot;232&quot; fill=&quot;#f8d4cc&quot; font-size=&quot;26&quot; font-weight=&quot;bold&quot;&gt;15%&lt;/text&gt;
+    &lt;text x=&quot;548&quot; y=&quot;254&quot; fill=&quot;#e0a99f&quot; font-size=&quot;12&quot;&gt;strong resist&lt;/text&gt;
+    &lt;rect x=&quot;200&quot; y=&quot;274&quot; width=&quot;136&quot; height=&quot;80&quot; rx=&quot;6&quot; fill=&quot;#4a221c&quot; stroke=&quot;#e07a6b&quot;/&gt;
+    &lt;text x=&quot;268&quot; y=&quot;316&quot; fill=&quot;#f8d4cc&quot; font-size=&quot;26&quot; font-weight=&quot;bold&quot;&gt;15%&lt;/text&gt;
+    &lt;text x=&quot;268&quot; y=&quot;338&quot; fill=&quot;#e0a99f&quot; font-size=&quot;12&quot;&gt;strong resist&lt;/text&gt;
+    &lt;rect x=&quot;340&quot; y=&quot;274&quot; width=&quot;136&quot; height=&quot;80&quot; rx=&quot;6&quot; fill=&quot;#4a3a1a&quot; stroke=&quot;#e0b057&quot;/&gt;
+    &lt;text x=&quot;408&quot; y=&quot;316&quot; fill=&quot;#f6e4bd&quot; font-size=&quot;26&quot; font-weight=&quot;bold&quot;&gt;10%&lt;/text&gt;
+    &lt;text x=&quot;408&quot; y=&quot;338&quot; fill=&quot;#d8bf8a&quot; font-size=&quot;12&quot;&gt;slight resist&lt;/text&gt;
+    &lt;rect x=&quot;480&quot; y=&quot;274&quot; width=&quot;136&quot; height=&quot;80&quot; rx=&quot;6&quot; fill=&quot;#1d4b33&quot; stroke=&quot;#46c483&quot; stroke-width=&quot;2&quot;/&gt;
+    &lt;text x=&quot;548&quot; y=&quot;316&quot; fill=&quot;#d4fbe5&quot; font-size=&quot;26&quot; font-weight=&quot;bold&quot;&gt;0%&lt;/text&gt;
+    &lt;text x=&quot;548&quot; y=&quot;338&quot; fill=&quot;#9fe6c2&quot; font-size=&quot;12&quot; font-weight=&quot;bold&quot;&gt;WEAK POINT&lt;/text&gt;
+  &lt;/g&gt;
+
+  &lt;text x=&quot;320&quot; y=&quot;382&quot; text-anchor=&quot;middle&quot; fill=&quot;#8e9bac&quot; font-size=&quot;13&quot;&gt;Lower resistance = more damage taken. Hit each layer with its weak-point damage type.&lt;/text&gt;
+&lt;/svg&gt;
+</code></pre>
+<h2 id="armor-blocks">Armor Blocks</h2>
+<p><strong>Basic Armor</strong> blocks provide structural protection. They come in multiple colours (Grey, White, Dark Grey, Black, and many more) and shapes (full block, wedge, corner, hepta, tetra, 1/4, 1/2, 3/4 slab) for hull construction.</p>
+<p>All armour colors and shapes have the same combat stats per block; the shape variants are purely for aesthetics and hull smoothing.</p>
+<p><strong>Standard Armor</strong> and <strong>Advanced Armor</strong> offer greater armor value per block but are heavier and more expensive to craft. <strong>Advanced Armor</strong> has lower total HP, but much higher armor value, making it stronger overall. </p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>HP</th>
+<th>Armor Value</th>
+<th>Mass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic</strong></td>
+<td>200</td>
+<td>0.1</td>
+<td>0.05</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>300</td>
+<td>4.4</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td><strong>Advanced</strong></td>
+<td>150</td>
+<td>15.63</td>
+<td>0.2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-armor-works">How Armor Works</h2>
+<p>Armor uses an <strong>exponential formula</strong> to determine how much damage passes through:</p>
+<pre><code>Damage dealt = D² / (A³ + D)
+</code></pre>
+<p>Where <code>D</code> = incoming damage per shot and <code>A</code> = total armor value in the path of the shot.</p>
+<p>Armor thickness is only calculated up to 32 blocks, but thicker armor is still more durable as it can maintain a 32 block thickness even as outer layers of the hull are destroyed.</p>
+<p><strong>Overpenetration</strong> occurs when a cannon hit does more than 20 times an armor block's HP before accounting for reduction by armor value. When <strong>overpenetrating</strong>, the cannon shell will pass straight through the block instead of stopping and spreading damage to all surrounding blocks. <strong>Overpenetration</strong> does not apply to damage beams and missiles.</p>
+<h3 id="key-takeaways-and-practical-implications">Key Takeaways and Practical Implications</h3>
+<ul>
+<li><strong>Small hits are almost completely absorbed.</strong> A wall of armor is nearly impenetrable against many weak shots.</li>
+<li><strong>Massive single cannon hits penetrate.</strong> A cannon shot doing more than 20× the armor block's HP bypasses it entirely via <strong>overpenetration</strong>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Best approach</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Defending against many small rapid-fire hits</td>
+<td>Thick armor wall; Machine gun and sustained beams struggle</td>
+</tr>
+<tr>
+<td>Defending against high-damage burst weapons</td>
+<td>Harder to block; armor is penetrated by high damage</td>
+</tr>
+<tr>
+<td>Attacking armored ships</td>
+<td>Use high-damage burst combos (Charge Cannon, Sniper Cannon) to reach overpenetration threshold</td>
+</tr>
+<tr>
+<td>Attacking unarmored ships</td>
+<td>Any weapon combo works; shields are the main barrier; focus on EM damage</td>
+</tr>
+</tbody>
+</table>
+<h2 id="effect-blocks-and-damage-type-shifting">Effect Blocks and Damage Type Shifting</h2>
+<p>Linking <strong>effect blocks</strong> to a weapon computer shifts the weapon's Kinetic/Heat/EM distribution. Different armor tiers and special block types may have varying resistances to each damage type — this is exposed in the block properties panel in build mode.</p>
+<blockquote>
+<p>Effect block combinations and exact resistances are configurable on servers and may vary.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../08-salvagers/" class="btn btn-neutral float-left" title="Salvagers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../03-world/00-navigation/" class="btn btn-neutral float-right" title="Navigation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../08-salvagers/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../03-world/00-navigation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

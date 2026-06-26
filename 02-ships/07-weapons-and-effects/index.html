@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Weapons - StarMade Guides</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Weapons";
+        var mkdocs_page_input_path = "02-ships/07-weapons-and-effects.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> StarMade Guides
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">00 Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/00-introduction/">Introduction to StarMade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/01-hud-and-interface/">HUD & Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/02-basic-controls/">Basic Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/03-character-movement/">Character Movement</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/04-starmade-galaxy/">StarMade Galaxy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">01 Building</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/00-advanced-building/">Advanced Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/01-power-basics/">Power Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/02-docking-and-turrets/">Docking & Turrets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/03-shipyards/">Shipyards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">02 Ships</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../00-ship-basics/">Ship Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../01-building-a-ship/">Building a Ship</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../02-ship-systems/">Ship Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../03-reactors/">Reactors and Stabilizers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../04-chambers/">Reactor Chambers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../05-thrusters/">Thrusters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../06-shields/">Shields</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Weapons</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#weapon-types">Weapon Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setting-up-a-weapon">Setting Up a Weapon</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#steps">Steps</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#combination-system">Combination System</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#effect-system">Effect System</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#linking-via-the-weapon-panel">Linking via the Weapon Panel</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#weapon-capacity">Weapon Capacity</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#projectile-colour">Projectile Colour</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../08-salvagers/">Salvagers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../09-armor-and-damage/">Armor & Damage</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">03 World</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03-world/00-navigation/">Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03-world/01-resources-and-mining/">Resources & Mining</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03-world/02-asteroids/">Asteroids</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">04 Manufacturing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04-manufacturing/00-crafting-basics/">Crafting Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04-manufacturing/01-factories/">Factories & Production</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">05 Ai And Fleets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05-ai-and-fleets/00-ai-systems/">AI Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05-ai-and-fleets/01-fleets/">Fleets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">06 Logic</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06-logic/00-logic-basics/">Logic: Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06-logic/01-logic-gates/">Logic: Gates</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">07 Multiplayer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07-multiplayer/00-factions/">Factions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07-multiplayer/01-catalog-and-blueprints/">Catalog & Blueprints</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">StarMade Guides</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">02 Ships</li>
+      <li class="breadcrumb-item active">Weapons</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="weapons">Weapons</h1>
+<p>StarMade has three primary weapon types, three utility weapons, and explosive warhead blocks. Primary weapons can be <strong>linked</strong> to a <strong>secondary weapon</strong> to alter the functions and stats of the primary weapon, and can be linked to an <strong>effect system</strong> to alter its damage type distribution. Some weapons require <strong>weapon capacity</strong> to fire.</p>
+<h2 id="weapon-types">Weapon Types</h2>
+<p><strong>Primary Weapons</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Weapon</th>
+<th>Primary Role</th>
+<th>Secondary Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cannon</strong></td>
+<td>Simple direct-fire projectile</td>
+<td>Shorter range, higher rate of fire</td>
+</tr>
+<tr>
+<td><strong>Missile</strong></td>
+<td>Complex explosive projectile</td>
+<td>Higher damage, charge up time</td>
+</tr>
+<tr>
+<td><strong>Damage Beam</strong></td>
+<td>Hitscan damage beam</td>
+<td>Longer range, slower rate of fire</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Utility Weapons</strong> (no direct damage):</p>
+<table>
+<thead>
+<tr>
+<th>Weapon</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Push Pulse</strong></td>
+<td>Knocks back nearby ships; deals no direct damage</td>
+</tr>
+<tr>
+<td><strong>Tractor Beam</strong></td>
+<td>Pulls, pushes, or tows ships and loose objects</td>
+</tr>
+<tr>
+<td><strong>Astrotech Beam</strong></td>
+<td>Repairs damaged or destroyed blocks on ships</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Block Weapons</strong> (deal damage on block contact):</p>
+<table>
+<thead>
+<tr>
+<th>Weapon</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Warhead</td>
+<td>Explodes on contact with another ship; ignores shields</td>
+</tr>
+</tbody>
+</table>
+<h2 id="setting-up-a-weapon">Setting Up a Weapon</h2>
+<p>Every weapon system consists of two block types:</p>
+<ol>
+<li><strong>Weapon Computer</strong> — the controller. Assign it to a hotbar slot. One per weapon system.</li>
+<li><strong>Weapon Modules</strong> — the actual firepower. More modules = more damage.</li>
+</ol>
+<h3 id="steps">Steps</h3>
+<ol>
+<li>Place a <strong>Weapon Computer</strong> on your ship in build mode.</li>
+<li>Place <strong>Weapon Modules</strong> anywhere on the ship (they don't need to touch the computer).</li>
+<li>Open the <strong>Weapon Panel</strong> (<code>G</code>).</li>
+<li>Drag the computer into a hotbar slot.</li>
+<li>Close the panel, switch to flight mode, and select the weapon slot.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Weapon</th>
+<th>Computer</th>
+<th>Module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cannon</td>
+<td>Cannon Computer</td>
+<td>Cannon Barrel</td>
+</tr>
+<tr>
+<td>Missile</td>
+<td>Missile Computer</td>
+<td>Missile Tube</td>
+</tr>
+<tr>
+<td>Beam</td>
+<td>Damage Beam Computer</td>
+<td>Damage Beam Module</td>
+</tr>
+<tr>
+<td>Push Pulse</td>
+<td>Push Pulse Computer</td>
+<td>Push Pulse Module</td>
+</tr>
+<tr>
+<td>Tractor Beam</td>
+<td>Tractor Beam Computer</td>
+<td>Tractor Beam Module</td>
+</tr>
+</tbody>
+</table>
+<h2 id="combination-system">Combination System</h2>
+<p>By linking a <strong>Secondary Weapon</strong> computer and modules to a <strong>Primary Weapon</strong>, you can alter the function of the primary weapon, like its range, reload speed, and damage. Including the 3 basic primary weapons, there are 12 total <strong>Weapon Combinations</strong>, each with unique stats and function. The ratio of <strong>weapon modules</strong> linked to the <strong>Secondary Weapon</strong> compared to the <strong>Primary Weapon</strong> determines how much of the modification effect is applied, with 100% of the effect being applied at a 1:1 ratio. Experiment with partial secondary effects to find the perfect weapon for your niche!</p>
+<blockquote>
+<p>A weapon computer can only be used in <strong>one combination at a time</strong>.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Primary Weapon</th>
+<th>Cannon Secondary</th>
+<th>Damage Beam Secondary</th>
+<th>Missile Secondary</th>
+<th>No Secondary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cannon</td>
+<td>Machine Gun</td>
+<td>Sniper Cannon</td>
+<td>Charge Cannon</td>
+<td>Basic Cannon</td>
+</tr>
+<tr>
+<td>Damage Beam</td>
+<td>Constant Beam</td>
+<td>Sniper Beam</td>
+<td>Charge Beam</td>
+<td>Burst Beam</td>
+</tr>
+<tr>
+<td>Missile</td>
+<td>Heat-Seeking Swarms</td>
+<td>Long Range Lock On</td>
+<td>Inertia Bomb</td>
+<td>Dumbfire Missile</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Missile/Missile creates a special shield-ignoring bomb that has no velocity of its own and must be launched from a fast moving ship. </p>
+</blockquote>
+<h2 id="effect-system">Effect System</h2>
+<p>Connecting certain <strong>effect systems</strong> to a weapon computer changes the damage type distribution (Kinetic, Heat, EM). This will make a weapon stronger against one type of defenses and weaker against the others. At a 1:1 <strong>Primary Weapon</strong> to <strong>Effect System</strong> ratio, the damage will be increased by 33.3% for the specified damage type and reduced by 16.6% for the other two types. A <strong>primary weapon</strong> can be linked to both a <strong>secondary weapon</strong> and an <strong>effect system</strong> at the same time. </p>
+<p>Each weapon type has a different default <strong>damage distribution</strong>, making them better suited for dealing with different types of targets.</p>
+<table>
+<thead>
+<tr>
+<th>Weapon Type</th>
+<th>Kinetic</th>
+<th>Heat</th>
+<th>EM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cannons</td>
+<td>50%</td>
+<td>16.6%</td>
+<td>33.3%</td>
+</tr>
+<tr>
+<td>Damage Beams</td>
+<td>16.6%</td>
+<td>33.3%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Missiles</td>
+<td>16.6%</td>
+<td>50%</td>
+<td>33.3%</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../09-armor-and-damage/">Armor &amp; Damage guide</a> for how damage types interact with shields and armor.</p>
+<h2 id="linking-via-the-weapon-panel">Linking via the Weapon Panel</h2>
+<ol>
+<li>Open the Weapon Panel (<code>G</code>).</li>
+<li>Find your primary weapon computer in the list.</li>
+<li>Drag the secondary weapon computer into the <strong>secondary slot</strong> of the primary.</li>
+<li>The coloured borders on the computers in the world indicate the connection.</li>
+</ol>
+<p>To unlink, drag the secondary out of its slot and drop it in the <strong>unlink box</strong>.</p>
+<p>You can also link and unlink in-world: press <code>C</code> on the primary computer, then <code>V</code> on the secondary computer.</p>
+<h2 id="weapon-capacity">Weapon Capacity</h2>
+<p><strong>Missiles</strong> require <strong>Missile Capacity</strong> to fire. <strong>Missile Capacity Modules</strong> give a ship <strong>Missile Capacity</strong>, which is consumed when firing a <strong>missile</strong>. 
+If a ship's <strong>Missile Capacity</strong> is not full, it will start reloading, with the length of time depending on how much <strong>Missile Capacity</strong> the ship has. </p>
+<p>Each <strong>Missile Capacity Module</strong> added gives diminishing returns, with the first few blocks giving a lot of <strong>Missile Capacity</strong>, but further capacity requiring exponentially more modules for each additional unit. This creates a soft cap on the number of missiles that a single ship can actually fire in a single volley.</p>
+<h2 id="projectile-colour">Projectile Colour</h2>
+<p>Link a <strong>Light Source</strong> block to a weapon computer (using <code>C</code> to select, then <code>V</code> to connect) to change the colour of that weapon's projectiles to match the light colour.</p>
+<h1 id="utility-weapons">Utility Weapons</h1>
+<p>Utility weapons do no damage on their own, instead having some sort of support function to either reduce the effectiveness of an enemy or boost the effectiveness of your own ships.</p>
+<h2 id="push-pulse">Push Pulse</h2>
+<p>Push Pulse projects an area of effect pulse that pushes ships away from its origin point. The more modules, the larger and more powerful the pushing effect is.</p>
+<h2 id="tractor-beam">Tractor Beam</h2>
+<p>Tractor Beams can push, pull, and stop a ship or asteroid by applying force at the point of the beam's impact. More modules increases the tractor strength. A small, slowly drifting asteroid is much easier to stop than a large ship that is actively fighting the tractor beam with its own thrusters.</p>
+<h2 id="astrotech-beam">Astrotech Beam</h2>
+<p>Astrotech beams can repair damaged blocks and restore destroyed blocks on a ship. The ship must not have been edited with build mode after the blocks were destroyed for it to be repaired by an astrotech beam, as astrotech restores the ship to its last saved state. More modules increases the amount of blocks restored with each burst of the beam.</p>
+<blockquote>
+<p>There is a cooldown period after taking block damage before any blocks can be repaired by an astrotech beam.</p>
+</blockquote>
+<h1 id="warheads">Warheads</h1>
+<p>Warheads are explosive blocks that detonate when hit by a weapon or when they collide with another object. All warheads in a contiguous group are automatically linked together and will detonate together, with the strength of the explosion determined by how many blocks are in the group. The explosion from warheads ignores shields. </p>
+<p>Warheads can be combined with shootout rails and a Bobby AI module to create powerful, single use "torpedo" ships that attempt to ram enemy ships with their warheads.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../06-shields/" class="btn btn-neutral float-left" title="Shields"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../08-salvagers/" class="btn btn-neutral float-right" title="Salvagers">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../06-shields/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../08-salvagers/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
