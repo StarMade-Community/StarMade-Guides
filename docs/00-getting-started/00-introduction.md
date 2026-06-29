@@ -4,7 +4,7 @@ StarMade is a voxel-based space sandbox game. You explore a procedurally generat
 
 ## The Universe at a Glance
 
-The universe is divided into **sectors** and **systems**.
+The universe is divided into [Sectors](../03-world/00-navigation.md#sectors) and [Systems](../03-world/00-navigation.md#systems). Pirates and other [NPC Factions](../07-multiplayer/00-factions.md) appear ad hoc across the galaxy map. Planets and [asteroids](../03-world/02-asteroids.md) gather around star systems, asteroid belts vary in resouces based on their distance from stars.
 
 ## Core Gameplay Loop
 
@@ -31,6 +31,6 @@ Your immediate goals:
 - Get comfortable with [character movement](03-character-movement.md)
 - Familiarise yourself with the [HUD](01-hud-and-interface.md)
 - Learn [basic controls](02-basic-controls.md)
-- Find some asteroids and mine your first resources
+- Find some asteroids and [mine your first resources](../03-world/01-resources-and-mining.md)
 
 > **Tip:** Check the navigation panel (`N` by default) to locate nearby trading stations, asteroids, and planets from your starting position.
