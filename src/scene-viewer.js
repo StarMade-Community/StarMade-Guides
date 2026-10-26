@@ -1,6 +1,7 @@
-// Web versions of the in-game guide fences: ```svg is drawn inline, ```scene as a 3D block viewer.
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/+esm';
-import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js/+esm';
+// Web version of the in-game ```scene fence: a 3D block viewer. src/plugins/guide-fences.js leaves the placeholders.
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import siteConfig from '@generated/docusaurus.config';
 
 const AUTO_STEP_MS = 3000;
 // Colour by block key; anything unlisted gets a stable colour from its name.
@@ -17,8 +18,10 @@ function colour(key) {
 }
 
 // Block face textures exported from the game by StarMade-Master's scripts/export_guide_textures.py
-const BLOCKS_DIR = new URL('../assets/blocks/', import.meta.url);
-const { blocks: blockTextures = {}, names: blockNames = {}, texOrder: TEX_ORDER, orient: ORIENT_BASES } = await fetch(new URL('blocks.json', BLOCKS_DIR)).then(r => r.json()).catch(() => ({}));
+const BLOCKS_DIR = new URL(`${siteConfig.baseUrl}blocks/`, location.origin);
+let blockTextures = {}, blockNames = {}, TEX_ORDER, ORIENT_BASES;
+const blocksLoaded = fetch(new URL('blocks.json', BLOCKS_DIR)).then(r => r.json()).catch(() => ({}))
+	.then(d => ({ blocks: blockTextures = {}, names: blockNames = {}, texOrder: TEX_ORDER, orient: ORIENT_BASES } = d));
 // The outer 20/256 of each tile is a wrap margin the game never shows
 const TILE_INSET = 20 / 256;
 const sheets = new Map();
@@ -177,7 +180,8 @@ function place(entries, into) {
 	}
 }
 
-async function scene(pre, json) {
+async function scene(box, json) {
+	await blocksLoaded;
 	const steps = json.steps || [];
 	// Each step adds to the ones before, replacing blocks at the same position
 	const states = [];
@@ -185,16 +189,12 @@ async function scene(pre, json) {
 	place(json.blocks, acc);
 	if (!steps.length) states.push(new Map(acc));
 	for (const s of steps) { place(s.blocks, acc); states.push(new Map(acc)); }
-	const shapes = new Set(states.flatMap(s => [...s.values()].map(b => blockEntry(b.key)?.l).filter(Boolean)));
-	await Promise.all([...shapes].map(lodModel));
+	const shapes = new Set(states.flatMap(s => Array.from(s.values()).map(b => blockEntry(b.key)?.l).filter(Boolean)));
+	await Promise.all(Array.from(shapes).map(lodModel));
 
-	const box = document.createElement('div');
-	box.className = 'guide-scene';
-	box.style.position = 'relative';
 	const canvas = document.createElement('canvas');
 	canvas.style.cssText = `width:100%;height:${json.height || 220}px;display:block;background:#0d121c;border-radius:6px`;
 	box.append(canvas);
-	pre.replaceWith(box);
 
 	const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 	renderer.setClearColor(0x0d121c);
@@ -262,7 +262,7 @@ async function scene(pre, json) {
 		ray.setFromCamera(mouse, camera);
 		return ray.intersectObjects(group.children, false)[0]?.object.userData;
 	}
-	const controlsAny = pos => [...states[step].values()].some(b => b.controller === pos);
+	const controlsAny = pos => Array.from(states[step].values()).some(b => b.controller === pos);
 
 	const tip = document.createElement('div');
 	tip.style.cssText = 'position:absolute;pointer-events:none;display:none;white-space:pre;padding:3px 7px;border-radius:4px;background:rgba(10,14,22,0.92);color:#e6edf5;font-size:13px;border:1px solid #2c3b50';
@@ -315,6 +315,13 @@ Click to see Connections` : hit.name;
 	}
 
 	renderer.setAnimationLoop(() => {
+		// Pages swap without a reload, so stop once ours has gone
+		if (!canvas.isConnected) {
+			auto = false;
+			renderer.setAnimationLoop(null);
+			renderer.dispose();
+			return;
+		}
 		const w = canvas.clientWidth, h = canvas.clientHeight;
 		if (canvas.width !== w * devicePixelRatio || canvas.height !== h * devicePixelRatio) {
 			renderer.setPixelRatio(devicePixelRatio);
@@ -330,35 +337,9 @@ Click to see Connections` : hit.name;
 	});
 }
 
-// ![block:Name] or ![block:ID] is an in-game block icon; the web shows the block's name instead
-const walker = document.createTreeWalker(document.querySelector('[role=main]') || document.body, NodeFilter.SHOW_TEXT,
-	{ acceptNode: n => n.parentElement.closest('pre, code') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
-const iconTexts = [];
-while (walker.nextNode()) if (/!\[block:[^\]]+\]/i.test(walker.currentNode.nodeValue)) iconTexts.push(walker.currentNode);
-for (const node of iconTexts) {
-	const span = document.createElement('span');
-	for (const part of node.nodeValue.split(/(!\[block:[^\]]+\])/i)) {
-		const ref = /^!\[block:([^\]]+)\]$/i.exec(part)?.[1].trim();
-		if (!ref) { span.append(part); continue; }
-		const chip = Object.assign(document.createElement('span'), { textContent: /^\d+$/.test(ref) ? `Block #${ref}` : ref });
-		chip.style.cssText = 'display:inline-block;padding:0 6px;border-radius:4px;background:#1b232f;color:#cfe0f5;font-size:90%;white-space:nowrap';
-		span.append(chip);
-	}
-	node.replaceWith(span);
-}
-
-for (const code of document.querySelectorAll('pre > code.language-svg')) {
-	const div = document.createElement('div');
-	div.innerHTML = code.textContent;
-	div.querySelector('svg')?.style.setProperty('max-width', '100%');
-	div.querySelector('svg')?.style.setProperty('height', 'auto');
-	code.parentElement.replaceWith(div);
-}
-for (const code of document.querySelectorAll('pre > code.language-scene')) {
-	// On failure the source is left showing
-	try {
-		scene(code.parentElement, JSON.parse(code.textContent)).catch(e => console.error('guide scene failed', e));
-	} catch (e) {
-		console.error('guide scene failed', e);
+export function mountScenes() {
+	for (const box of document.querySelectorAll('.guide-scene:not([data-mounted])')) {
+		box.dataset.mounted = '';
+		scene(box, JSON.parse(box.dataset.scene)).catch(e => console.error('guide scene failed', e));
 	}
 }
