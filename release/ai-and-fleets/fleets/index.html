@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-ai-and-fleets/fleets" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Fleets | StarMade Guides</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://starmade-community.github.io/StarMade-Guides/release/ai-and-fleets/fleets/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Fleets | StarMade Guides"><meta data-rh="true" name="description" content="A fleet is a group of AI-controlled ships that act together under a single set of orders. No special block is required — fleets are created and managed entirely through the Fleet Panel (K)."><meta data-rh="true" property="og:description" content="A fleet is a group of AI-controlled ships that act together under a single set of orders. No special block is required — fleets are created and managed entirely through the Fleet Panel (K)."><link data-rh="true" rel="canonical" href="https://starmade-community.github.io/StarMade-Guides/release/ai-and-fleets/fleets/"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/release/ai-and-fleets/fleets/" hreflang="en"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/release/ai-and-fleets/fleets/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Fleets","item":"https://starmade-community.github.io/StarMade-Guides/release/ai-and-fleets/fleets"}]}</script><link rel="stylesheet" href="/StarMade-Guides/release/assets/css/styles.1828d92d.css">
+<script src="/StarMade-Guides/release/assets/js/runtime~main.b6a2c2b2.js" defer="defer"></script>
+<script src="/StarMade-Guides/release/assets/js/main.ece5e21d.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/StarMade-Guides/release/"><b class="navbar__title text--truncate">StarMade Guides</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link">Release</a><ul class="dropdown__menu"><li><a href="https://starmade-community.github.io/StarMade-Guides/release/" target="_self" rel="noopener noreferrer" class="dropdown__link">Release<svg width="12" height="12" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li><a href="https://starmade-community.github.io/StarMade-Guides/pre/" target="_self" rel="noopener noreferrer" class="dropdown__link">Pre-release<svg width="12" height="12" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><a href="https://github.com/StarMade-Community/StarMade-Guides" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/getting-started/introduction/"><span class="categoryLinkLabel_W154">Getting Started</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/building/advanced-building/"><span class="categoryLinkLabel_W154">Building</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/ships/ship-basics/"><span class="categoryLinkLabel_W154">Ships</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/world/navigation/"><span class="categoryLinkLabel_W154">World</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/manufacturing/crafting-basics/"><span class="categoryLinkLabel_W154">Manufacturing</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/StarMade-Guides/release/ai-and-fleets/ai-systems/"><span class="categoryLinkLabel_W154">AI &amp; Fleets</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/StarMade-Guides/release/ai-and-fleets/ai-systems/"><span class="linkLabel_WmDU">AI Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/StarMade-Guides/release/ai-and-fleets/fleets/"><span class="linkLabel_WmDU">Fleets</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/logic/logic-basics/"><span class="categoryLinkLabel_W154">Logic</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/multiplayer/factions/"><span class="categoryLinkLabel_W154">Multiplayer</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/StarMade-Guides/release/"><span class="linkLabel_WmDU">StarMade Guides</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/StarMade-Guides/release/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">AI &amp; Fleets</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Fleets</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Fleets</h1></header>
+<p>A fleet is a group of AI-controlled ships that act together under a single set of orders. No special block is required — fleets are created and managed entirely through the <strong>Fleet Panel</strong> (<code>K</code>).</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="creating-a-fleet">Creating a Fleet<a href="#creating-a-fleet" class="hash-link" aria-label="Direct link to Creating a Fleet" title="Direct link to Creating a Fleet" translate="no">​</a></h2>
+<ol>
+<li class="">Open the Fleet Panel (<code>K</code>).</li>
+<li class="">Create a new fleet and give it a name.</li>
+<li class="">Add ships to the fleet by selecting them from your faction&#x27;s ship list.</li>
+<li class="">The <strong>first ship added becomes the flagship</strong>.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-flagship">The Flagship<a href="#the-flagship" class="hash-link" aria-label="Direct link to The Flagship" title="Direct link to The Flagship" translate="no">​</a></h2>
+<p>The flagship is the anchor of the fleet. It determines:</p>
+<ul>
+<li class="">The reference position for all formation modes.</li>
+<li class="">The shared target in combined targeting mode.</li>
+<li class="">The recall destination for carrier operations.</li>
+</ul>
+<p>If the flagship is removed from the fleet, the next ship in the list automatically takes over as the new flagship.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fleet-types">Fleet Types<a href="#fleet-types" class="hash-link" aria-label="Direct link to Fleet Types" title="Direct link to Fleet Types" translate="no">​</a></h2>
+<p>When creating a fleet you assign it a <strong>type</strong>, which describes its intended role. This is a classification label and does not restrict which commands you can issue.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Type</th><th>Intended Role</th></tr></thead><tbody><tr><td><strong>Assault</strong></td><td>Front-line combat</td></tr><tr><td><strong>Defense</strong></td><td>Sector or station guarding</td></tr><tr><td><strong>Scouting</strong></td><td>Exploration and reconnaissance</td></tr><tr><td><strong>Supporting</strong></td><td>Logistics, repair, escort</td></tr><tr><td><strong>Cargo</strong></td><td>Hauling goods between locations</td></tr><tr><td><strong>Commerce</strong></td><td>Trade operations</td></tr><tr><td><strong>Mining</strong></td><td>Asteroid mining operations</td></tr><tr><td><strong>Salvage</strong></td><td>Wreck salvage operations</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fleet-commands">Fleet Commands<a href="#fleet-commands" class="hash-link" aria-label="Direct link to Fleet Commands" title="Direct link to Fleet Commands" translate="no">​</a></h2>
+<p>Issue commands from the Fleet Panel. Commands are grouped below by function.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="movement">Movement<a href="#movement" class="hash-link" aria-label="Direct link to Movement" title="Direct link to Movement" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Command</th><th>Behaviour</th></tr></thead><tbody><tr><td><strong>Idle</strong></td><td>Fleet holds position and ignores enemies</td></tr><tr><td><strong>Move</strong></td><td>Fleet moves to the specified sector</td></tr><tr><td><strong>Patrol</strong></td><td>Fleet patrols a route between two or more waypoint sectors</td></tr><tr><td><strong>Escort</strong></td><td>Fleet follows the flagship; attacks enemies within 1 sector radius of it</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="combat">Combat<a href="#combat" class="hash-link" aria-label="Direct link to Combat" title="Direct link to Combat" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Command</th><th>Behaviour</th></tr></thead><tbody><tr><td><strong>Attack</strong></td><td>Fleet moves to target sector and engages enemy ships</td></tr><tr><td><strong>Defend</strong></td><td>Fleet moves to sector and attacks nearby enemies; will not chase more than 2 sectors</td></tr><tr><td><strong>Sentry</strong></td><td>Fleet stays in place and attacks enemies that come into range</td></tr><tr><td><strong>Standoff</strong></td><td>Fleet engages at distance and retreats if enemies close in</td></tr><tr><td><strong>Repair</strong></td><td>Fleet disengages combat and prioritises repairs</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="utility">Utility<a href="#utility" class="hash-link" aria-label="Direct link to Utility" title="Direct link to Utility" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Command</th><th>Behaviour</th></tr></thead><tbody><tr><td><strong>Mine</strong></td><td>All non-flagship ships mine asteroids in the current sector</td></tr><tr><td><strong>Carrier Recall</strong></td><td>All ships return to the pickup rails of the last carrier they docked with</td></tr><tr><td><strong>Activate Remote</strong></td><td>Triggers a named inner-ship logic remote on every fleet member</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="stealth--ew">Stealth &amp; EW<a href="#stealth--ew" class="hash-link" aria-label="Direct link to Stealth &amp; EW" title="Direct link to Stealth &amp; EW" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Command</th><th>Behaviour</th></tr></thead><tbody><tr><td><strong>Cloak / Uncloak</strong></td><td>All capable ships engage or disengage cloaking</td></tr><tr><td><strong>Jam / Unjam</strong></td><td>All capable ships enable or disable radar jamming</td></tr><tr><td><strong>Interdict / Stop Interdict</strong></td><td>All capable ships enable or disable FTL interdiction</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="trade">Trade<a href="#trade" class="hash-link" aria-label="Direct link to Trade" title="Direct link to Trade" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Command</th><th>Behaviour</th></tr></thead><tbody><tr><td><strong>Trade (NPC)</strong></td><td>Fleet moves to fulfill a trade order between two locations</td></tr><tr><td><strong>Trade (Active)</strong></td><td>Fleet actively seeks trade runs</td></tr><tr><td><strong>Trade (Waiting)</strong></td><td>Fleet waits at faction homebase to fulfill incoming trade orders</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="formation-modes">Formation Modes<a href="#formation-modes" class="hash-link" aria-label="Direct link to Formation Modes" title="Direct link to Formation Modes" translate="no">​</a></h2>
+<p>Two formation commands keep ships in organised positions relative to the flagship:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Formation</th><th>Behaviour</th></tr></thead><tbody><tr><td><strong>Sentry Formation</strong></td><td>Holds formation while attacking nearby enemies</td></tr><tr><td><strong>Idle Formation</strong></td><td>Holds formation without engaging enemies</td></tr></tbody></table>
+<blockquote>
+<p><strong>Warning:</strong> Formation modes are experimental and can cause movement glitches, especially with large ships or crowded sectors. Use with caution.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="combat-settings">Combat Settings<a href="#combat-settings" class="hash-link" aria-label="Direct link to Combat Settings" title="Direct link to Combat Settings" translate="no">​</a></h2>
+<p>Each fleet has a combat engagement setting that controls unprompted aggression:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Setting</th><th>Behaviour</th></tr></thead><tbody><tr><td><strong>Sometimes Engage</strong> <em>(default)</em></td><td>Fleet engages enemies opportunistically</td></tr><tr><td><strong>Always Engage</strong></td><td>Fleet attacks all enemies on sight</td></tr><tr><td><strong>Never Engage</strong></td><td>Fleet ignores all enemies unless commanded</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="combined-targeting">Combined Targeting<a href="#combined-targeting" class="hash-link" aria-label="Direct link to Combined Targeting" title="Direct link to Combined Targeting" translate="no">​</a></h3>
+<p>When <strong>combined targeting</strong> is enabled, all fleet members share the flagship&#x27;s current target. Every ship in the fleet focuses fire on the same enemy, updated every second. This is effective for quickly destroying individual targets but leaves other nearby threats unaddressed.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="carrier-recall">Carrier Recall<a href="#carrier-recall" class="hash-link" aria-label="Direct link to Carrier Recall" title="Direct link to Carrier Recall" translate="no">​</a></h2>
+<p>If your fleet ships were launched from a carrier using the <a class="" href="/StarMade-Guides/release/building/docking-and-turrets/">Pickup Rail system</a>, each ship remembers its last docking point. Issue the <strong>Carrier Recall</strong> command to send them all back to their pickup rails automatically.</p>
+<p>Ships navigate back individually and re-dock when they arrive. The process completes once all ships are docked.</p>
+<blockquote>
+<p>Recall only works if the ship has docked to a pickup rail at least once. Ships spawned fresh without a prior docking have no recall point.</p>
+</blockquote></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/StarMade-Community/StarMade-Guides/edit/main/docs/05-ai-and-fleets/01-fleets.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/StarMade-Guides/release/ai-and-fleets/ai-systems/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">AI Systems</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/StarMade-Guides/release/logic/logic-basics/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Logic: Basics</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#creating-a-fleet" class="table-of-contents__link toc-highlight">Creating a Fleet</a></li><li><a href="#the-flagship" class="table-of-contents__link toc-highlight">The Flagship</a></li><li><a href="#fleet-types" class="table-of-contents__link toc-highlight">Fleet Types</a></li><li><a href="#fleet-commands" class="table-of-contents__link toc-highlight">Fleet Commands</a><ul><li><a href="#movement" class="table-of-contents__link toc-highlight">Movement</a></li><li><a href="#combat" class="table-of-contents__link toc-highlight">Combat</a></li><li><a href="#utility" class="table-of-contents__link toc-highlight">Utility</a></li><li><a href="#stealth--ew" class="table-of-contents__link toc-highlight">Stealth &amp; EW</a></li><li><a href="#trade" class="table-of-contents__link toc-highlight">Trade</a></li></ul></li><li><a href="#formation-modes" class="table-of-contents__link toc-highlight">Formation Modes</a></li><li><a href="#combat-settings" class="table-of-contents__link toc-highlight">Combat Settings</a><ul><li><a href="#combined-targeting" class="table-of-contents__link toc-highlight">Combined Targeting</a></li></ul></li><li><a href="#carrier-recall" class="table-of-contents__link toc-highlight">Carrier Recall</a></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-building/docking-and-turrets" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Docking &amp; Turrets | StarMade Guides</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://starmade-community.github.io/StarMade-Guides/release/building/docking-and-turrets/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Docking &amp; Turrets | StarMade Guides"><meta data-rh="true" name="description" content="StarMade uses a rail-based docking system. Ships dock to rail blocks on stations or other ships using a Rail Docker block. This system handles rigid docking, rotating turrets, moving platforms, automated cargo transfer, and carrier hangar docking."><meta data-rh="true" property="og:description" content="StarMade uses a rail-based docking system. Ships dock to rail blocks on stations or other ships using a Rail Docker block. This system handles rigid docking, rotating turrets, moving platforms, automated cargo transfer, and carrier hangar docking."><link data-rh="true" rel="canonical" href="https://starmade-community.github.io/StarMade-Guides/release/building/docking-and-turrets/"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/release/building/docking-and-turrets/" hreflang="en"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/release/building/docking-and-turrets/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Docking & Turrets","item":"https://starmade-community.github.io/StarMade-Guides/release/building/docking-and-turrets"}]}</script><link rel="stylesheet" href="/StarMade-Guides/release/assets/css/styles.1828d92d.css">
+<script src="/StarMade-Guides/release/assets/js/runtime~main.b6a2c2b2.js" defer="defer"></script>
+<script src="/StarMade-Guides/release/assets/js/main.ece5e21d.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/StarMade-Guides/release/"><b class="navbar__title text--truncate">StarMade Guides</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link">Release</a><ul class="dropdown__menu"><li><a href="https://starmade-community.github.io/StarMade-Guides/release/" target="_self" rel="noopener noreferrer" class="dropdown__link">Release<svg width="12" height="12" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li><a href="https://starmade-community.github.io/StarMade-Guides/pre/" target="_self" rel="noopener noreferrer" class="dropdown__link">Pre-release<svg width="12" height="12" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><a href="https://github.com/StarMade-Community/StarMade-Guides" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/getting-started/introduction/"><span class="categoryLinkLabel_W154">Getting Started</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/StarMade-Guides/release/building/advanced-building/"><span class="categoryLinkLabel_W154">Building</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/StarMade-Guides/release/building/advanced-building/"><span class="linkLabel_WmDU">Advanced Building</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/StarMade-Guides/release/building/power-basics/"><span class="linkLabel_WmDU">Power Basics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/StarMade-Guides/release/building/docking-and-turrets/"><span class="linkLabel_WmDU">Docking &amp; Turrets</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/StarMade-Guides/release/building/shipyards/"><span class="linkLabel_WmDU">Shipyards</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/ships/ship-basics/"><span class="categoryLinkLabel_W154">Ships</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/world/navigation/"><span class="categoryLinkLabel_W154">World</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/manufacturing/crafting-basics/"><span class="categoryLinkLabel_W154">Manufacturing</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/ai-and-fleets/ai-systems/"><span class="categoryLinkLabel_W154">AI &amp; Fleets</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/logic/logic-basics/"><span class="categoryLinkLabel_W154">Logic</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/release/multiplayer/factions/"><span class="categoryLinkLabel_W154">Multiplayer</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/StarMade-Guides/release/"><span class="linkLabel_WmDU">StarMade Guides</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/StarMade-Guides/release/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Building</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Docking &amp; Turrets</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Docking &amp; Turrets</h1></header>
+<p>StarMade uses a <strong>rail-based docking system</strong>. Ships dock to rail blocks on stations or other ships using a <strong>Rail Docker</strong> block. This system handles rigid docking, rotating turrets, moving platforms, automated cargo transfer, and carrier hangar docking.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="rail-blocks">Rail Blocks<a href="#rail-blocks" class="hash-link" aria-label="Direct link to Rail Blocks" title="Direct link to Rail Blocks" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Block</th><th>Role</th></tr></thead><tbody><tr><td><strong>Rail Docker</strong></td><td>Placed on the ship being docked; the connector end</td></tr><tr><td><strong>Rail Basic</strong></td><td>Standard docking/track rail placed on the host structure</td></tr><tr><td><strong>Rail Turret Axis</strong></td><td>Lets a docked ship rotate along one axis; chain two for full 360°</td></tr><tr><td><strong>Rail Rotator (CW / CCW)</strong></td><td>Moves a docked ship in a circular path</td></tr><tr><td><strong>Rail Mass Enhancer</strong></td><td>Increases the mass a rail can support</td></tr><tr><td><strong>Rail Speed Controller</strong></td><td>Controls movement speed along a rail</td></tr><tr><td><strong>Rail Load / Rail Unload</strong></td><td>Transfers cargo between a docked ship and connected storage</td></tr><tr><td><strong>Pickup Rail + Pickup Point</strong></td><td>Automatically docks ships that fly into the detection area</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="docking-a-ship">Docking a Ship<a href="#docking-a-ship" class="hash-link" aria-label="Direct link to Docking a Ship" title="Direct link to Docking a Ship" translate="no">​</a></h2>
+<ol>
+<li class="">Place a <strong>Rail Docker</strong> on your ship. The <strong>arrow</strong> on its top face points toward the docking direction — it must align with the arrow on the target rail block.</li>
+<li class="">Equip the <strong>Rail Docking Beam</strong> in a weapon slot via the weapons panel.</li>
+<li class="">Fly your ship close to a <strong>Rail Basic</strong> (or other dockable rail) on the host structure.</li>
+<li class="">Aim at the rail block and <strong>fire</strong> to connect.</li>
+</ol>
+<blockquote>
+<p><strong>Tip:</strong> The Rail Docker&#x27;s arrow must face toward the target block. Use the orientation tool (<code>Left Alt</code> → Orientation) to adjust it.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="mass-limits">Mass Limits<a href="#mass-limits" class="hash-link" aria-label="Direct link to Mass Limits" title="Direct link to Mass Limits" translate="no">​</a></h2>
+<p>Each rail block supports <strong>50 mass</strong> by default. Add <strong>Rail Mass Enhancer</strong> blocks connected to the rail on the host structure to raise the limit — each enhancer adds 50 mass capacity at a small power cost per tick.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="undocking">Undocking<a href="#undocking" class="hash-link" aria-label="Direct link to Undocking" title="Direct link to Undocking" translate="no">​</a></h2>
+<p>To undock, pilot the docked ship and fire the docking beam at open space (not aimed at a rail), or release it remotely via the <strong>Structure Panel</strong> (<code>Delete</code>) on the host ship.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="turrets">Turrets<a href="#turrets" class="hash-link" aria-label="Direct link to Turrets" title="Direct link to Turrets" translate="no">​</a></h2>
+<p>A turret is a docked ship that rotates automatically to track and fire at enemies. Use a <strong>Rail Turret Axis</strong> on the host structure instead of a Rail Basic. A single axis allows rotation on one plane; <strong>chain two Rail Turret Axes</strong> (one on the host, one on an intermediate bracket docked to the first) for full pitch + yaw freedom.</p>
+<div class="guide-svg"><svg width="640" height="330" viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect x="1" y="1" width="638" height="328" rx="12" fill="#121821" stroke="#2c3b50" stroke-width="2"></rect>
+  <text x="320" y="36" text-anchor="middle" fill="#e8eef7" font-size="22" font-weight="bold">Two-Axis Turret</text>
+
+  <rect x="40" y="270" width="560" height="34" rx="6" fill="#1b232f" stroke="#33445a"></rect>
+  <text x="320" y="292" text-anchor="middle" fill="#7e8da0" font-size="12" font-style="italic">host ship / station surface</text>
+
+  <rect x="244" y="236" width="60" height="34" rx="5" fill="#3f6f9c" stroke="#274a6b" stroke-width="2"></rect>
+  <text x="316" y="258" fill="#8fb6e0" font-size="12" font-weight="bold">Rail Turret Axis 1 (yaw)</text>
+  <path d="M210 236 A60 22 0 0 1 338 236" fill="none" stroke="#5cb87a" stroke-width="2" stroke-dasharray="4 3"></path>
+  <polygon points="338,236 326,228 330,242" fill="#5cb87a"></polygon>
+
+  <rect x="232" y="176" width="84" height="60" rx="6" fill="#2a313b" stroke="#c3ccd8" stroke-width="2"></rect>
+  <text x="274" y="210" text-anchor="middle" fill="#aab7c6" font-size="12">base</text>
+
+  <rect x="316" y="186" width="34" height="40" rx="5" fill="#3f6f9c" stroke="#274a6b" stroke-width="2"></rect>
+  <text x="358" y="210" fill="#8fb6e0" font-size="12" font-weight="bold">Axis 2 (pitch)</text>
+
+  <rect x="333" y="176" width="150" height="20" rx="5" fill="#4f8fd0" stroke="#274a6b" stroke-width="2" transform="rotate(-24 333 186)"></rect>
+  <text x="452" y="118" fill="#8fb6e0" font-size="12" font-weight="bold">barrel</text>
+  <path d="M388 168 A48 48 0 0 1 420 132" fill="none" stroke="#5cb87a" stroke-width="2" stroke-dasharray="4 3"></path>
+  <polygon points="420,132 408,135 416,144" fill="#5cb87a"></polygon>
+
+  <rect x="262" y="244" width="24" height="24" rx="3" fill="#e09a3e" stroke="#7a531c" stroke-width="2"></rect>
+  <line x1="274" y1="256" x2="150" y2="256" stroke="#e09a3e" stroke-width="1.5" stroke-dasharray="3 3"></line>
+  <text x="46" y="252" fill="#e0b57a" font-size="12" font-weight="bold">Ship core</text>
+  <text x="46" y="268" fill="#8e9bac" font-size="11">at the bottom</text>
+
+  <text x="320" y="322" text-anchor="middle" fill="#8e9bac" font-size="13">Chain two Rail Turret Axes for full yaw + pitch tracking. Nothing below the core.</text>
+</svg></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="turret-design-rules">Turret Design Rules<a href="#turret-design-rules" class="hash-link" aria-label="Direct link to Turret Design Rules" title="Direct link to Turret Design Rules" translate="no">​</a></h3>
+<ul>
+<li class="">The <strong>ship core must be at the bottom</strong> of the turret structure. Nothing may be built below the core.</li>
+<li class="">Orient the Rail Docker&#x27;s arrow to face the Rail Turret Axis arrow.</li>
+<li class="">The turret rotates around the docking point, so core position determines the pivot.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="enabling-ai-on-a-turret">Enabling AI on a Turret<a href="#enabling-ai-on-a-turret" class="hash-link" aria-label="Direct link to Enabling AI on a Turret" title="Direct link to Enabling AI on a Turret" translate="no">​</a></h3>
+<ol>
+<li class="">Place an <strong>AI Module</strong> on the turret.</li>
+<li class="">Press <code>R</code> on the AI module and set the mode to <strong>Turret</strong>.</li>
+<li class="">Place a <strong>Faction Module</strong> on the turret and register it to your faction (press <code>R</code>, enter your faction signature). The AI uses this to identify enemies.</li>
+<li class="">Enable the AI by ticking <strong>Activate</strong> in the AI module panel, <strong>or</strong> do it remotely from the Structure Panel (<code>Delete</code>) of the host ship.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-targeting-modes">AI Targeting Modes<a href="#ai-targeting-modes" class="hash-link" aria-label="Direct link to AI Targeting Modes" title="Direct link to AI Targeting Modes" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Mode</th><th>Behaviour</th></tr></thead><tbody><tr><td>Aim at Any</td><td>Attacks any enemy entity in range</td></tr><tr><td>Aim at Selected Target</td><td>Attacks the entity targeted by the host ship&#x27;s pilot (<code>F</code> to select)</td></tr></tbody></table>
+<blockquote>
+<p>Entering the turret&#x27;s core <strong>disables the AI</strong>. Exit before re-enabling it.</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="automatic-docking-pickup-system">Automatic Docking (Pickup System)<a href="#automatic-docking-pickup-system" class="hash-link" aria-label="Direct link to Automatic Docking (Pickup System)" title="Direct link to Automatic Docking (Pickup System)" translate="no">​</a></h2>
+<p>For carrier hangars, use the <strong>Pickup Rail + Pickup Point</strong> pair on the host:</p>
+<ul>
+<li class=""><strong>Pickup Point</strong> projects a detection sphere; any ship with a Rail Docker that enters this area docks automatically.</li>
+<li class=""><strong>Pickup Rail</strong> is the block the ship actually docks to.</li>
+</ul>
+<p>The docked ship remembers this pickup rail and can be recalled to it automatically. This is the recommended approach for fighter bays and carrier designs — no manual beam aiming required.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="moving-rails">Moving Rails<a href="#moving-rails" class="hash-link" aria-label="Direct link to Moving Rails" title="Direct link to Moving Rails" translate="no">​</a></h2>
+<p>Rail blocks can also carry ships along a track rather than simply holding them:</p>
+<ul>
+<li class=""><strong>Rail Rotator (CW/CCW)</strong> — rotates a docked entity in a circle.</li>
+<li class=""><strong>Rail Speed Controller</strong> — connected to rail blocks via <code>C</code>/<code>V</code>; the ratio of active to inactive blocks sets the movement speed (e.g. 5 active + 5 inactive = 50% speed).</li>
+</ul>
+<p>This enables elevators, rotating weapon platforms, and automated launch/recovery systems.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/StarMade-Community/StarMade-Guides/edit/main/docs/01-building/02-docking-and-turrets.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/StarMade-Guides/release/building/power-basics/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Power Basics</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/StarMade-Guides/release/building/shipyards/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Shipyards</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#rail-blocks" class="table-of-contents__link toc-highlight">Rail Blocks</a></li><li><a href="#docking-a-ship" class="table-of-contents__link toc-highlight">Docking a Ship</a></li><li><a href="#mass-limits" class="table-of-contents__link toc-highlight">Mass Limits</a></li><li><a href="#undocking" class="table-of-contents__link toc-highlight">Undocking</a></li><li><a href="#turrets" class="table-of-contents__link toc-highlight">Turrets</a><ul><li><a href="#turret-design-rules" class="table-of-contents__link toc-highlight">Turret Design Rules</a></li><li><a href="#enabling-ai-on-a-turret" class="table-of-contents__link toc-highlight">Enabling AI on a Turret</a></li><li><a href="#ai-targeting-modes" class="table-of-contents__link toc-highlight">AI Targeting Modes</a></li></ul></li><li><a href="#automatic-docking-pickup-system" class="table-of-contents__link toc-highlight">Automatic Docking (Pickup System)</a></li><li><a href="#moving-rails" class="table-of-contents__link toc-highlight">Moving Rails</a></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>
