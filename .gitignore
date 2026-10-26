@@ -1,4 +1,6 @@
 .idea
 .vscode
-.claude
 *.DS_Store
+build
+.docusaurus
+/node_modules/

@@ -23,7 +23,7 @@ It should be noted that as of StarMade v0.198.219, Yellow "Lukrah" asteroids are
 
 ### Spawning
 
-![asteroidmap.png](assets/asteroidmap.png)
+![asteroidmap.png](../assets/asteroidmap.png)
 
 Asteroids spawn throughout star-systems in a very predictable, and structured manner, making it easy to find resources. The diagram below shows the different zones in which certain asteroid types can spawn, and the zones' inner & outer spawn radii.
 
