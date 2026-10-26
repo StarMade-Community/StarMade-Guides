@@ -4,10 +4,16 @@ on:
   push:
     branches:
       - main
+      - pre
   workflow_dispatch:
 
 permissions:
   contents: write
+
+# main and pre both commit to gh-pages; don't let them race
+concurrency:
+  group: gh-pages
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -23,4 +29,16 @@ jobs:
 
       - run: python generate_nav.py
 
-      - run: mkdocs gh-deploy --force
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git fetch origin gh-pages --depth=1
+
+      # Each branch gets its own folder on the site; the version dropdown switches between them
+      - run: |
+          if [ "$GITHUB_REF_NAME" = "main" ]; then
+            mike deploy --push --update-aliases --title "Release" release
+            mike set-default --push release
+          else
+            mike deploy --push --title "Pre-release" pre
+          fi
