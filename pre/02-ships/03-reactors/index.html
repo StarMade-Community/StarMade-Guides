@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Reactors and Stabilizers - StarMade Guides</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Reactors and Stabilizers";
+        var mkdocs_page_input_path = "02-ships/03-reactors.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> StarMade Guides
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">00 Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/00-introduction/">Introduction to StarMade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/01-hud-and-interface/">HUD & Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/02-basic-controls/">Basic Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../00-getting-started/03-character-movement/">Character Movement</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">01 Building</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/00-advanced-building/">Advanced Building</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/01-power-basics/">Power Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/02-docking-and-turrets/">Docking & Turrets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../01-building/03-shipyards/">Shipyards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">02 Ships</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../00-ship-basics/">Ship Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../01-building-a-ship/">Building a Ship</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../02-ship-systems/">Ship Systems</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Reactors and Stabilizers</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#core-blocks">Core Blocks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#building-a-reactor">Building a Reactor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stability">Stability</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reactor-level">Reactor Level</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#running-out-of-power">Running Out of Power</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../04-chambers/">Reactor Chambers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../05-thrusters/">Thrusters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../06-shields/">Shields</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../07-weapons-and-effects/">Weapons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../08-salvagers/">Salvagers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../09-armor-and-damage/">Armor & Damage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../10-ship-ai/">Ship & Turret AI</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">03 World</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03-world/00-navigation/">Navigation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03-world/01-resources-and-mining/">Resources & Mining</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03-world/02-asteroids/">Asteroids</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">04 Manufacturing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04-manufacturing/00-crafting-basics/">Crafting Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04-manufacturing/01-factories/">Factories & Production</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">05 Ai And Fleets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05-ai-and-fleets/00-ai-systems/">AI Systems</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05-ai-and-fleets/01-fleets/">Fleets</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">06 Logic</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06-logic/00-logic-basics/">Logic: Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06-logic/01-logic-gates/">Logic: Gates</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">07 Multiplayer</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07-multiplayer/00-factions/">Factions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07-multiplayer/01-catalog-and-blueprints/">Catalog & Blueprints</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">StarMade Guides</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">02 Ships</li>
+      <li class="breadcrumb-item active">Reactors and Stabilizers</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="reactors-and-stabilizers">Reactors and Stabilizers</h1>
+<p>Every ship needs a power reactor to run its systems. This guide covers how to build and balance your reactor.</p>
+<h2 id="core-blocks">Core Blocks</h2>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reactor Power</strong></td>
+<td>Generates power. More blocks = more power regen and a higher reactor level.</td>
+</tr>
+<tr>
+<td><strong>Reactor Stabilizer</strong></td>
+<td>Keeps the reactor stable. Below 100% stability the ship takes extra damage.</td>
+</tr>
+<tr>
+<td><strong>Reactor Conduit</strong></td>
+<td>Connects chambers to the reactor (see <a href="../04-chambers/">Chambers</a>).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="building-a-reactor">Building a Reactor</h2>
+<p>Reactor Power blocks that touch each other form one reactor. Its power regen increases with every block in it.</p>
+<pre><code class="language-scene">{ &quot;height&quot;: 260,
+  &quot;blocks&quot;: [ { &quot;from&quot;: [0,0,0], &quot;to&quot;: [2,2,2], &quot;block&quot;: &quot;REACTOR_POWER&quot; } ],
+  &quot;steps&quot;: [
+    { &quot;text&quot;: &quot;27 Reactor Power blocks touching each other form one reactor.&quot;, &quot;blocks&quot;: [] },
+    { &quot;text&quot;: &quot;The first 10 reactor blocks are free; every block after that needs one stabilizer. 27 - 10 = 17 stabilizers for 100% stability.&quot;,
+      &quot;blocks&quot;: [ { &quot;from&quot;: [6,0,0], &quot;to&quot;: [6,2,2], &quot;block&quot;: &quot;REACTOR_STABILIZER&quot; },
+                  { &quot;from&quot;: [-4,0,0], &quot;to&quot;: [-4,2,2], &quot;block&quot;: &quot;REACTOR_STABILIZER&quot; } ] },
+    { &quot;text&quot;: &quot;Conduits lead from the reactor to its chambers, which unlock extra ship abilities.&quot;,
+      &quot;blocks&quot;: [ { &quot;from&quot;: [1,3,1], &quot;to&quot;: [1,4,1], &quot;block&quot;: &quot;REACTOR_CONDUIT&quot;, &quot;orient&quot;: 2 },
+                  { &quot;from&quot;: [0,5,0], &quot;to&quot;: [2,5,2], &quot;block&quot;: &quot;MOBILITY_CHAMBER&quot; } ] } ] }
+</code></pre>
+<p>A ship can hold more than one reactor, but only one is <strong>active</strong> at a time. You can switch the active reactor from the reactor panel; switching has a 10 second cooldown.</p>
+<h2 id="stability">Stability</h2>
+<p>Stability compares your stabilizers to the size of your active reactor:</p>
+<blockquote>
+<p><strong>stability = (10 + stabilizers) ÷ reactor blocks</strong>, capped at 100%</p>
+</blockquote>
+<ul>
+<li>The first <strong>10 reactor blocks</strong> are stabilized for free. After that, you need <strong>one stabilizer per reactor block</strong>.</li>
+<li>Stabilizers can go <strong>anywhere on the ship</strong> — distance and direction from the reactor don't matter.</li>
+<li>Only your <strong>20 largest stabilizer groups</strong> count, so don't scatter them as single blocks all over the hull.</li>
+</ul>
+<p>Stability does not reduce your power output, but below 100% your ship takes <strong>extra damage</strong> from beams and explosions (missiles and explosive effects). Cannon hits are not affected.</p>
+<table>
+<thead>
+<tr>
+<th>Stability</th>
+<th>Damage taken</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100%</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>90%</td>
+<td>About 3×</td>
+</tr>
+<tr>
+<td>50%</td>
+<td>About 11×</td>
+</tr>
+<tr>
+<td>0%</td>
+<td>21×</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Tip:</strong> Always aim for 100% stability. You can check it in the ship's reactor panel. Losing stabilizers in combat lowers it, so a few spare stabilizers buy you margin.</p>
+</blockquote>
+<h2 id="reactor-level">Reactor Level</h2>
+<p>Reactor level goes up by one for every <strong>150 reactor blocks</strong> (0–149 blocks is level 0, 150 is level 1, 300 is level 2, and so on).</p>
+<p>Level matters because it sets how many chamber blocks you need to activate chambers (see <a href="../04-chambers/">Chambers</a>).</p>
+<h2 id="running-out-of-power">Running Out of Power</h2>
+<p>Your systems draw power continuously, and more while they charge. If the reactor can't keep up, weapons and other charged systems recharge more slowly, and once they get less than 90% of the power they need at rest they start to <strong>lose</strong> charge.</p>
+<p>When the active reactor loses blocks, it starts <strong>rebooting</strong>: for at least 15 seconds (longer the more damaged the reactor and the heavier the ship) you can't place reactor or chamber blocks or change your chambers.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../02-ship-systems/" class="btn btn-neutral float-left" title="Ship Systems"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../04-chambers/" class="btn btn-neutral float-right" title="Reactor Chambers">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../02-ship-systems/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../04-chambers/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../javascripts/guides.js" type="module"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

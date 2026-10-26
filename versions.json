@@ -3,5 +3,10 @@
     "version": "release",
     "title": "Release",
     "aliases": []
+  },
+  {
+    "version": "pre",
+    "title": "Pre-release",
+    "aliases": []
   }
 ]
