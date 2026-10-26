@@ -20,6 +20,8 @@ module.exports = {
 	presets: [['classic', {
 		docs: {
 			routeBasePath: '/',
+			// docs/assets/ is images and the scene viewer's data, not pages
+			exclude: ['assets/**', '**/_*.{js,jsx,ts,tsx,md,mdx}', '**/_*/**'],
 			// Section labels from folder names ("05-ai-and-fleets" -> "AI & Fleets"), so docs/ needs no _category_ files
 			sidebarItemsGenerator: async ({ defaultSidebarItemsGenerator, ...args }) => {
 				const words = { ai: 'AI', and: '&' };
