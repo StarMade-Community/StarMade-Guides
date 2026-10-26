@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-logic/logic-basics" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Logic: Basics | StarMade Guides</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://starmade-community.github.io/StarMade-Guides/pre/logic/logic-basics/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Logic: Basics | StarMade Guides"><meta data-rh="true" name="description" content="StarMade has a fully integrated, Turing-complete logic system. You can build anything from a simple light switch to a fully functional CPU using logic blocks connected to each other."><meta data-rh="true" property="og:description" content="StarMade has a fully integrated, Turing-complete logic system. You can build anything from a simple light switch to a fully functional CPU using logic blocks connected to each other."><link data-rh="true" rel="canonical" href="https://starmade-community.github.io/StarMade-Guides/pre/logic/logic-basics/"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/pre/logic/logic-basics/" hreflang="en"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/pre/logic/logic-basics/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Logic: Basics","item":"https://starmade-community.github.io/StarMade-Guides/pre/logic/logic-basics"}]}</script><link rel="stylesheet" href="/StarMade-Guides/pre/assets/css/styles.1828d92d.css">
+<script src="/StarMade-Guides/pre/assets/js/runtime~main.5e544a29.js" defer="defer"></script>
+<script src="/StarMade-Guides/pre/assets/js/main.8e0d4583.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/StarMade-Guides/pre/"><b class="navbar__title text--truncate">StarMade Guides</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link">Pre-release</a><ul class="dropdown__menu"><li><a href="https://starmade-community.github.io/StarMade-Guides/release/" target="_self" rel="noopener noreferrer" class="dropdown__link">Release<svg width="12" height="12" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li><a href="https://starmade-community.github.io/StarMade-Guides/pre/" target="_self" rel="noopener noreferrer" class="dropdown__link">Pre-release<svg width="12" height="12" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><a href="https://github.com/StarMade-Community/StarMade-Guides" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/getting-started/introduction/"><span class="categoryLinkLabel_W154">Getting Started</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/building/advanced-building/"><span class="categoryLinkLabel_W154">Building</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/ships/ship-basics/"><span class="categoryLinkLabel_W154">Ships</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/world/navigation/"><span class="categoryLinkLabel_W154">World</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/manufacturing/crafting-basics/"><span class="categoryLinkLabel_W154">Manufacturing</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/ai-and-fleets/ai-systems/"><span class="categoryLinkLabel_W154">AI &amp; Fleets</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/StarMade-Guides/pre/logic/logic-basics/"><span class="categoryLinkLabel_W154">Logic</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/StarMade-Guides/pre/logic/logic-basics/"><span class="linkLabel_WmDU">Logic: Basics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/StarMade-Guides/pre/logic/logic-gates/"><span class="linkLabel_WmDU">Logic: Gates</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/multiplayer/factions/"><span class="categoryLinkLabel_W154">Multiplayer</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/StarMade-Guides/pre/"><span class="linkLabel_WmDU">StarMade Guides</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/StarMade-Guides/pre/starmade-galaxy/"><span class="linkLabel_WmDU">StarMade Galaxy</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/StarMade-Guides/pre/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Logic</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Logic: Basics</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Logic: Basics</h1></header>
+<p>StarMade has a fully integrated, <strong>Turing-complete logic system</strong>. You can build anything from a simple light switch to a fully functional CPU using logic blocks connected to each other.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="core-concept-signals">Core Concept: Signals<a href="#core-concept-signals" class="hash-link" aria-label="Direct link to Core Concept: Signals" title="Direct link to Core Concept: Signals" translate="no">​</a></h2>
+<p>Every logic block outputs one of two states: <strong>ON</strong> or <strong>OFF</strong>. These states propagate through connections to other blocks.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-activation-block">The Activation Block<a href="#the-activation-block" class="hash-link" aria-label="Direct link to The Activation Block" title="Direct link to The Activation Block" translate="no">​</a></h2>
+<p>The most important block in the logic system is the <strong>Activation Block</strong>. It acts as both a switch and a signal carrier.</p>
+<ul>
+<li class="">Press <code>R</code> on it to manually toggle it <strong>ON</strong> or <strong>OFF</strong>.</li>
+<li class="">When ON, it sends an ON signal to every block connected to it.</li>
+<li class="">When OFF, it sends an OFF signal (or no signal) to connected blocks.</li>
+</ul>
+<p>Activation blocks can be linked to:</p>
+<ul>
+<li class="">Other activation blocks</li>
+<li class="">Doors</li>
+<li class="">Lights</li>
+<li class="">Weapon computers (fire/stop)</li>
+<li class="">Gravity modules</li>
+<li class="">And any other activatable block</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="connecting-blocks">Connecting Blocks<a href="#connecting-blocks" class="hash-link" aria-label="Direct link to Connecting Blocks" title="Direct link to Connecting Blocks" translate="no">​</a></h2>
+<p>All logic connections use the same two-step process:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Step</th><th>Key</th><th>Action</th></tr></thead><tbody><tr><td>1</td><td><code>C</code></td><td><strong>Select</strong> the block that will <em>send</em> the signal</td></tr><tr><td>2</td><td><code>V</code></td><td><strong>Connect</strong> the selected block to the block that will <em>receive</em> the signal</td></tr></tbody></table>
+<p>A visual indicator (coloured box) appears on connected blocks to show the connection.</p>
+<p>To remove a connection, select the source block with <code>C</code> again and then press <code>V</code> on the connection target while it is already connected.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-remote-light-switch">Example: Remote Light Switch<a href="#example-remote-light-switch" class="hash-link" aria-label="Direct link to Example: Remote Light Switch" title="Direct link to Example: Remote Light Switch" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="chain-connections">Chain Connections<a href="#chain-connections" class="hash-link" aria-label="Direct link to Chain Connections" title="Direct link to Chain Connections" translate="no">​</a></h2>
+<p>You can create chains — activation block A → activation block B → light. When A is toggled, B receives the signal and passes it to the light.</p>
+<p>This lets you build <strong>remote switching panels</strong>, <strong>interlocked doors</strong>, and <strong>complex trigger sequences</strong> from a single input.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="connecting-to-weapon-computers">Connecting to Weapon Computers<a href="#connecting-to-weapon-computers" class="hash-link" aria-label="Direct link to Connecting to Weapon Computers" title="Direct link to Connecting to Weapon Computers" translate="no">​</a></h2>
+<p>Linking an activation block to a <strong>weapon computer</strong> fires that weapon while the activation block is ON, and stops it when OFF. This enables:</p>
+<ul>
+<li class="">Automated firing sequences</li>
+<li class="">Logic-triggered turrets</li>
+<li class="">Shoot-when-condition-met circuits</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="gravity-modules">Gravity Modules<a href="#gravity-modules" class="hash-link" aria-label="Direct link to Gravity Modules" title="Direct link to Gravity Modules" translate="no">​</a></h2>
+<p>Activation blocks can be linked directly to <strong>Gravity Modules</strong> to toggle gravity on or off. Note: the activation block must currently be directly connected to the gravity module (not through intermediate blocks).</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="command-modules">Command Modules<a href="#command-modules" class="hash-link" aria-label="Direct link to Command Modules" title="Direct link to Command Modules" translate="no">​</a></h2>
+<p>The <strong>Command Module</strong> block lets you send pre-configured commands to other systems on your ship or station. Unlike activation blocks (which only send ON/OFF signals), command modules execute specific actions like switching reactor configurations, toggling AI modes, or controlling shipyard operations.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup">Setup<a href="#setup" class="hash-link" aria-label="Direct link to Setup" title="Direct link to Setup" translate="no">​</a></h3>
+<ol>
+<li class="">Place a <strong>Command Module</strong> block.</li>
+<li class="">Connect it to a supported target block using <code>C</code> (on the command module) then <code>V</code> (on the target).</li>
+<li class="">Press <code>R</code> on the command module to open its interface and configure the command.</li>
+<li class="">Select a command type and set any required parameters.</li>
+<li class="">Click <strong>Execute</strong> to run it manually, or trigger it via a logic signal.</li>
+</ol>
+<p>When triggered by logic, there is a <strong>500 ms cooldown</strong> between executions to prevent spam.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="supported-targets">Supported Targets<a href="#supported-targets" class="hash-link" aria-label="Direct link to Supported Targets" title="Direct link to Supported Targets" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="bobby-ai-module">Bobby AI Module<a href="#bobby-ai-module" class="hash-link" aria-label="Direct link to Bobby AI Module" title="Direct link to Bobby AI Module" translate="no">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Command</th><th>Effect</th></tr></thead><tbody><tr><td>Toggle AI</td><td>Flip AI on/off</td></tr><tr><td>Activate AI</td><td>Explicitly set AI on or off</td></tr><tr><td>Target Type</td><td>Set what the AI targets: Any, Selected Target, Stations, Ships, Missiles, Astronauts, Asteroids</td></tr><tr><td>Type</td><td>Set AI behavior: Ship, Fleet, Turret</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="reactor">Reactor<a href="#reactor" class="hash-link" aria-label="Direct link to Reactor" title="Direct link to Reactor" translate="no">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Command</th><th>Effect</th></tr></thead><tbody><tr><td>Set Active Reactor</td><td>Switch to a specific reactor tree by ID</td></tr><tr><td>Next Reactor</td><td>Cycle to the next reactor</td></tr><tr><td>Previous Reactor</td><td>Cycle to the previous reactor</td></tr><tr><td>Reboot Reactor</td><td>Reboot the active reactor</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="shipyard-computer">Shipyard Computer<a href="#shipyard-computer" class="hash-link" aria-label="Direct link to Shipyard Computer" title="Direct link to Shipyard Computer" translate="no">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Command</th><th>Effect</th></tr></thead><tbody><tr><td>Create New Design</td><td>Start a new shipyard design</td></tr><tr><td>Load Design</td><td>Load an existing design</td></tr><tr><td>Unload Design</td><td>Unload the current design</td></tr><tr><td>Spawn Design</td><td>Build the loaded design as a new ship</td></tr><tr><td>Deconstruct</td><td>Deconstruct a docked ship into a design</td></tr><tr><td>Deconstruct &amp; Recycle</td><td>Deconstruct and recycle materials</td></tr><tr><td>Catalog to Design</td><td>Convert a catalog blueprint to a design</td></tr><tr><td>Blueprint to Design</td><td>Convert a blueprint to a design</td></tr><tr><td>Design to Blueprint</td><td>Save a design as a blueprint</td></tr><tr><td>Repair from Design</td><td>Repair a structure using its design as a template</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="warp-gate-computer">Warp Gate Computer<a href="#warp-gate-computer" class="hash-link" aria-label="Direct link to Warp Gate Computer" title="Direct link to Warp Gate Computer" translate="no">​</a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Command</th><th>Effect</th></tr></thead><tbody><tr><td>Set Target Sector</td><td>Set the warp destination coordinates</td></tr><tr><td>Activate</td><td>Turn the gate on or off</td></tr><tr><td>Toggle</td><td>Flip the gate state</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="rail-docked-entities-turrets-etc">Rail-Docked Entities (Turrets, etc.)<a href="#rail-docked-entities-turrets-etc" class="hash-link" aria-label="Direct link to Rail-Docked Entities (Turrets, etc.)" title="Direct link to Rail-Docked Entities (Turrets, etc.)" translate="no">​</a></h4>
+<p>Any block that can dock to a rail can be controlled:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Command</th><th>Effect</th></tr></thead><tbody><tr><td>Activate AI</td><td>Set docked entity AI on or off</td></tr><tr><td>Toggle AI</td><td>Flip docked entity AI state</td></tr><tr><td>Set Powered</td><td>Control power transfer to the docked entity</td></tr><tr><td>Toggle Powered</td><td>Flip power transfer state</td></tr><tr><td>Reset Rail</td><td>Reset turret to its default position and rotation</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="use-cases">Use Cases<a href="#use-cases" class="hash-link" aria-label="Direct link to Use Cases" title="Direct link to Use Cases" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Automated turret control</strong> — logic circuit detects an enemy, command module activates turret AI and sets targeting mode.</li>
+<li class=""><strong>Reactor switching</strong> — a button on the bridge cycles between combat and travel reactor configurations.</li>
+<li class=""><strong>Shipyard automation</strong> — logic triggers spawn a design when resources are ready.</li>
+<li class=""><strong>Warp gate networks</strong> — command modules set destination coordinates before activating the gate.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="tips">Tips<a href="#tips" class="hash-link" aria-label="Direct link to Tips" title="Direct link to Tips" translate="no">​</a></h2>
+<ul>
+<li class="">Connections are not affected by distance — a block on one end of your ship can control something on the other end.</li>
+<li class="">You can connect one source block to <strong>many</strong> targets — useful for turning on all lights at once.</li>
+<li class="">Multiple sources can connect to the same target block.</li>
+<li class="">Connections survive reloads and blueprint saves (if both blocks are included in the blueprint).</li>
+</ul>
+<p>For more complex logic (NOT, AND, OR, DELAY gates), see <a class="" href="/StarMade-Guides/pre/logic/logic-gates/">Logic: Gates</a>.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/StarMade-Community/StarMade-Guides/edit/pre/docs/06-logic/00-logic-basics.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/StarMade-Guides/pre/ai-and-fleets/fleets/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Fleets</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/StarMade-Guides/pre/logic/logic-gates/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Logic: Gates</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#core-concept-signals" class="table-of-contents__link toc-highlight">Core Concept: Signals</a></li><li><a href="#the-activation-block" class="table-of-contents__link toc-highlight">The Activation Block</a></li><li><a href="#connecting-blocks" class="table-of-contents__link toc-highlight">Connecting Blocks</a></li><li><a href="#example-remote-light-switch" class="table-of-contents__link toc-highlight">Example: Remote Light Switch</a></li><li><a href="#chain-connections" class="table-of-contents__link toc-highlight">Chain Connections</a></li><li><a href="#connecting-to-weapon-computers" class="table-of-contents__link toc-highlight">Connecting to Weapon Computers</a></li><li><a href="#gravity-modules" class="table-of-contents__link toc-highlight">Gravity Modules</a></li><li><a href="#command-modules" class="table-of-contents__link toc-highlight">Command Modules</a><ul><li><a href="#setup" class="table-of-contents__link toc-highlight">Setup</a></li><li><a href="#supported-targets" class="table-of-contents__link toc-highlight">Supported Targets</a></li><li><a href="#use-cases" class="table-of-contents__link toc-highlight">Use Cases</a></li></ul></li><li><a href="#tips" class="table-of-contents__link toc-highlight">Tips</a></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>

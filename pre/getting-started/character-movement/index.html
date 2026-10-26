@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-getting-started/character-movement" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Character Movement | StarMade Guides</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://starmade-community.github.io/StarMade-Guides/pre/getting-started/character-movement/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Character Movement | StarMade Guides"><meta data-rh="true" name="description" content="Your character moves in two very different ways: walking where there is gravity, and floating freely in zero gravity."><meta data-rh="true" property="og:description" content="Your character moves in two very different ways: walking where there is gravity, and floating freely in zero gravity."><link data-rh="true" rel="canonical" href="https://starmade-community.github.io/StarMade-Guides/pre/getting-started/character-movement/"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/pre/getting-started/character-movement/" hreflang="en"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/pre/getting-started/character-movement/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Character Movement","item":"https://starmade-community.github.io/StarMade-Guides/pre/getting-started/character-movement"}]}</script><link rel="stylesheet" href="/StarMade-Guides/pre/assets/css/styles.1828d92d.css">
+<script src="/StarMade-Guides/pre/assets/js/runtime~main.5e544a29.js" defer="defer"></script>
+<script src="/StarMade-Guides/pre/assets/js/main.8e0d4583.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/StarMade-Guides/pre/"><b class="navbar__title text--truncate">StarMade Guides</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link">Pre-release</a><ul class="dropdown__menu"><li><a href="https://starmade-community.github.io/StarMade-Guides/release/" target="_self" rel="noopener noreferrer" class="dropdown__link">Release<svg width="12" height="12" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li><a href="https://starmade-community.github.io/StarMade-Guides/pre/" target="_self" rel="noopener noreferrer" class="dropdown__link">Pre-release<svg width="12" height="12" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><a href="https://github.com/StarMade-Community/StarMade-Guides" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/StarMade-Guides/pre/getting-started/introduction/"><span class="categoryLinkLabel_W154">Getting Started</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/StarMade-Guides/pre/getting-started/introduction/"><span class="linkLabel_WmDU">Introduction to StarMade</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/StarMade-Guides/pre/getting-started/hud-and-interface/"><span class="linkLabel_WmDU">HUD &amp; Interface</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/StarMade-Guides/pre/getting-started/basic-controls/"><span class="linkLabel_WmDU">Basic Controls</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/StarMade-Guides/pre/getting-started/character-movement/"><span class="linkLabel_WmDU">Character Movement</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/building/advanced-building/"><span class="categoryLinkLabel_W154">Building</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/ships/ship-basics/"><span class="categoryLinkLabel_W154">Ships</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/world/navigation/"><span class="categoryLinkLabel_W154">World</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/manufacturing/crafting-basics/"><span class="categoryLinkLabel_W154">Manufacturing</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/ai-and-fleets/ai-systems/"><span class="categoryLinkLabel_W154">AI &amp; Fleets</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/logic/logic-basics/"><span class="categoryLinkLabel_W154">Logic</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/StarMade-Guides/pre/multiplayer/factions/"><span class="categoryLinkLabel_W154">Multiplayer</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/StarMade-Guides/pre/"><span class="linkLabel_WmDU">StarMade Guides</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/StarMade-Guides/pre/starmade-galaxy/"><span class="linkLabel_WmDU">StarMade Galaxy</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/StarMade-Guides/pre/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Getting Started</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Character Movement</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Character Movement</h1></header>
+<p>Your character moves in two very different ways: walking where there is <strong>gravity</strong>, and floating freely in <strong>zero gravity</strong>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="gravity">Gravity<a href="#gravity" class="hash-link" aria-label="Direct link to Gravity" title="Direct link to Gravity" translate="no">​</a></h2>
+<p>Planets always have gravity. On ships and stations you need a <strong>Gravity Unit</strong> block: look at it and press <code>R</code> to step into its gravity field. Its gravity pulls toward the bottom of the block, so place it the way you want &quot;down&quot; to point.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Action</th><th>Key</th></tr></thead><tbody><tr><td>Walk</td><td><code>W</code> <code>A</code> <code>S</code> <code>D</code></td></tr><tr><td>Sprint</td><td>Double-tap <code>W</code> and hold</td></tr><tr><td>Jump</td><td><code>Space</code></td></tr><tr><td>Crouch</td><td><code>Left Shift</code> (hold)</td></tr><tr><td>Prone</td><td><code>Z</code> (press again or <code>Space</code> to stand)</td></tr><tr><td>Look</td><td>Mouse</td></tr><tr><td>Activate a block</td><td><code>R</code></td></tr></tbody></table>
+<ul>
+<li class=""><strong>Crouching</strong> halves your speed and lowers your view. You stay crouched while there&#x27;s a low ceiling above you.</li>
+<li class=""><strong>Prone</strong> is very slow but keeps you low to the ground. You can&#x27;t go prone while swimming, sitting or climbing.</li>
+<li class=""><strong>Sprint</strong> only works going forwards.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="doors-into-gravity">Doors into Gravity<a href="#doors-into-gravity" class="hash-link" aria-label="Direct link to Doors into Gravity" title="Direct link to Doors into Gravity" translate="no">​</a></h3>
+<div class="guide-scene" data-scene="{ &quot;height&quot;: 260,
+  &quot;blocks&quot;: [ { &quot;from&quot;: [0,0,0], &quot;to&quot;: [6,0,5], &quot;block&quot;: &quot;GREY_HULL&quot; },
+              { &quot;from&quot;: [0,1,3], &quot;to&quot;: [2,3,3], &quot;block&quot;: &quot;GREY_HULL&quot; },
+              { &quot;from&quot;: [4,1,3], &quot;to&quot;: [5,3,3], &quot;block&quot;: &quot;GREY_HULL&quot; },
+              { &quot;at&quot;: [3,3,3], &quot;block&quot;: &quot;GREY_HULL&quot; },
+              { &quot;at&quot;: [6,1,1], &quot;block&quot;: &quot;GRAVITY_UNIT&quot;, &quot;orient&quot;: 3 } ],
+  &quot;steps&quot;: [
+    { &quot;text&quot;: &quot;A room with a Gravity Unit. Without a door trigger you have to walk up to it and press R.&quot;, &quot;blocks&quot;: [] },
+    { &quot;text&quot;: &quot;Fill the doorway with Trigger (Area) blocks and link them to a Trigger (Area) Controller.&quot;,
+      &quot;blocks&quot;: [ { &quot;at&quot;: [2,1,3], &quot;block&quot;: &quot;TRIGGER_AREA_CONTROLLER&quot; },
+                  { &quot;from&quot;: [3,1,3], &quot;to&quot;: [3,2,3], &quot;block&quot;: &quot;TRIGGER_AREA&quot;, &quot;controller&quot;: [2,1,3] } ] },
+    { &quot;text&quot;: &quot;Put an Activation Module against the controller and link it to the Gravity Unit. Walking through the doorway now puts you in the room&#x27;s gravity.&quot;,
+      &quot;blocks&quot;: [ { &quot;at&quot;: [2,2,3], &quot;block&quot;: &quot;ACTIVATION_MODULE&quot; },
+                  { &quot;at&quot;: [6,1,1], &quot;block&quot;: &quot;GRAVITY_UNIT&quot;, &quot;orient&quot;: 3, &quot;controller&quot;: [2,2,3] } ] } ] }"></div>
+<p>A <strong>Trigger (Area)</strong> wired through logic to a Gravity Unit switches you into that gravity field as you walk through it, so you don&#x27;t have to press <code>R</code> at the entrance. A <strong>Gravity Exit Unit</strong> used the same way takes you out of the field again. See <a class="" href="/StarMade-Guides/pre/logic/logic-basics/">Logic Basics</a>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ladders">Ladders<a href="#ladders" class="hash-link" aria-label="Direct link to Ladders" title="Direct link to Ladders" translate="no">​</a></h3>
+<div class="guide-scene" data-scene="{ &quot;height&quot;: 240,
+  &quot;blocks&quot;: [ { &quot;from&quot;: [0,0,0], &quot;to&quot;: [4,0,4], &quot;block&quot;: &quot;GREY_HULL&quot; },
+              { &quot;from&quot;: [0,1,0], &quot;to&quot;: [4,4,0], &quot;block&quot;: &quot;GREY_HULL&quot; },
+              { &quot;from&quot;: [0,4,-3], &quot;to&quot;: [4,4,-1], &quot;block&quot;: &quot;GREY_HULL&quot; },
+              { &quot;from&quot;: [2,1,1], &quot;to&quot;: [2,4,1], &quot;block&quot;: &quot;LADDER&quot;, &quot;orient&quot;: 15 } ] }"></div>
+<p>Walk into a <strong>Ladder</strong> block to grab it. Hold <code>W</code> to climb; let go and you slide back down. Press <code>Space</code>, <code>S</code>, <code>A</code> or <code>D</code> to let go of the ladder.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="swimming">Swimming<a href="#swimming" class="hash-link" aria-label="Direct link to Swimming" title="Direct link to Swimming" translate="no">​</a></h3>
+<p>In water you swim in the direction you look. <code>Space</code> swims up, and at the surface it climbs you out. You can&#x27;t sprint or go prone in water.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="zero-gravity">Zero Gravity<a href="#zero-gravity" class="hash-link" aria-label="Direct link to Zero Gravity" title="Direct link to Zero Gravity" translate="no">​</a></h2>
+<p>Outside a gravity field you float freely in all six directions.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Action</th><th>Key</th></tr></thead><tbody><tr><td>Move forward / backward</td><td><code>W</code> / <code>S</code></td></tr><tr><td>Strafe left / right</td><td><code>A</code> / <code>D</code></td></tr><tr><td>Move up / down</td><td><code>E</code> / <code>Q</code></td></tr><tr><td>Slow drift</td><td><code>Left Shift</code> (hold)</td></tr><tr><td>Look</td><td>Mouse</td></tr><tr><td>Align to the structure in front of you</td><td><code>Space</code></td></tr></tbody></table>
+<p>A <strong>Thrust Pack</strong> worn in your back slot makes you much faster in zero gravity.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="aligning-to-a-structure">Aligning to a Structure<a href="#aligning-to-a-structure" class="hash-link" aria-label="Direct link to Aligning to a Structure" title="Direct link to Aligning to a Structure" translate="no">​</a></h2>
+<p>When you are floating near a ship or station, press <code>Space</code> to <strong>align</strong> to it. You then <strong>move with the structure</strong> wherever it goes.</p>
+<p>This is very useful for:</p>
+<ul>
+<li class="">Boarding a moving ship through a hatch</li>
+<li class="">Working on the outside of a ship without drifting away</li>
+<li class="">Not being left behind when a crewed ship accelerates</li>
+</ul>
+<p>To let go, press <code>Space</code> again while not looking at the structure. If it is moving fast, the game asks you to confirm first.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="magnetic-boots">Magnetic Boots<a href="#magnetic-boots" class="hash-link" aria-label="Direct link to Magnetic Boots" title="Direct link to Magnetic Boots" translate="no">​</a></h2>
+<p><strong>Magnetic Boots</strong>, worn in your feet slot, let you stand on any surface: ships, stations and planets, including walls, ceilings and cliff faces, with no gravity module needed.</p>
+<ul>
+<li class="">Press <code>`</code> while looking at a surface within reach to stand on it.</li>
+<li class="">Press it at another surface to move onto that one.</li>
+<li class="">Press it while looking at nothing to let go.</li>
+<li class="">In zero gravity, <code>Space</code> (Align) also locks the boots on.</li>
+</ul>
+<p>To wear gear, drag it into its slot on the <strong>Equipment</strong> tab of your inventory.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="tips">Tips<a href="#tips" class="hash-link" aria-label="Direct link to Tips" title="Direct link to Tips" translate="no">​</a></h2>
+<ul>
+<li class="">In build mode, movement is the same as zero gravity, but you pass through blocks. Hold <code>Left Shift</code> to move much faster around large ships.</li>
+<li class="">Mining is done with a ship&#x27;s salvage beam, not by hand. See <a class="" href="/StarMade-Guides/pre/world/resources-and-mining/">Resources &amp; Mining</a>.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/StarMade-Community/StarMade-Guides/edit/pre/docs/00-getting-started/03-character-movement.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/StarMade-Guides/pre/getting-started/basic-controls/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Basic Controls</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/StarMade-Guides/pre/building/advanced-building/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Advanced Building</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#gravity" class="table-of-contents__link toc-highlight">Gravity</a><ul><li><a href="#doors-into-gravity" class="table-of-contents__link toc-highlight">Doors into Gravity</a></li><li><a href="#ladders" class="table-of-contents__link toc-highlight">Ladders</a></li><li><a href="#swimming" class="table-of-contents__link toc-highlight">Swimming</a></li></ul></li><li><a href="#zero-gravity" class="table-of-contents__link toc-highlight">Zero Gravity</a></li><li><a href="#aligning-to-a-structure" class="table-of-contents__link toc-highlight">Aligning to a Structure</a></li><li><a href="#magnetic-boots" class="table-of-contents__link toc-highlight">Magnetic Boots</a></li><li><a href="#tips" class="table-of-contents__link toc-highlight">Tips</a></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>
