@@ -10,7 +10,9 @@ These docs can be viewed online at https://starmade-community.github.io/StarMade
 1. **Place your file** in the appropriate subfolder under `docs/` (e.g. `docs/combat/`). Create a new subfolder if your guide doesn't fit an existing category — it will automatically become a new section in the navigation.
 2. **Use a numeric prefix** to control the order within a section (e.g. `03-weapons.md`). Files are sorted alphabetically, so `01-` always appears before `02-`.
 3. **Start your file with a `# Title` heading.** This is used as the page title in the navigation — keep it concise.
-4. **Submit a pull request.** The navigation is auto-generated on deploy, so you don't need to edit `mkdocs.yml`.
+4. **Submit a pull request.** The navigation is built from the folders, so there is nothing else to edit.
+
+To preview the website locally, install [Node.js](https://nodejs.org/) and run `npm install` then `npm start`. Pushes to `main` publish the Release site and pushes to `pre` the Pre-release one.
 
 ### Graphics
 The in-game renderer supports most markdown features (tables, images, etc.), as well as inline SVG diagrams via fenced code blocks:
@@ -31,4 +33,4 @@ Other guide-only syntax, supported both in game and on the website:
   ///
   ```
 
-Image paths are relative to the guide's own folder, e.g. `../assets/map.png`. Keep `.md` files out of `docs/assets/` and `docs/javascripts/`: any folder with a `.md` file in it shows up as a section in the in-game guides.
+Image paths are relative to the guide's own folder, e.g. `../assets/map.png`. Keep `.md` files out of `docs/assets/`: any folder with a `.md` file in it shows up as a section in the in-game guides.

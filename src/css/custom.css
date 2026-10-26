@@ -1,0 +1,10 @@
+.guide-svg svg { max-width: 100%; height: auto; }
+.guide-scene { position: relative; margin-bottom: var(--ifm-leading); }
+.guide-block {
+	display: inline-block; padding: 0 6px; border-radius: 4px;
+	background: #1b232f; color: #cfe0f5; font-size: 90%; white-space: nowrap;
+}
+.guide-align-left { float: left; margin: 0 1rem 1rem 0; }
+.guide-align-right { float: right; margin: 0 0 1rem 1rem; }
+.guide-align-center { display: block; margin: 0 auto; }
+.guide-caption { text-align: center; font-size: 90%; opacity: 0.8; }
