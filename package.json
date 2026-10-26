@@ -1,0 +1,17 @@
+{
+  "name": "starmade-guides",
+  "private": true,
+  "scripts": {
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "serve": "docusaurus serve"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.10.2",
+    "@docusaurus/preset-classic": "^3.10.2",
+    "@easyops-cn/docusaurus-search-local": "^0.55.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.160.0"
+  }
+}
