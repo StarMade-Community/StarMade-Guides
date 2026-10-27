@@ -54,7 +54,7 @@ Stability does not reduce your power output, but below 100% your ship takes **ex
 
 Reactor level goes up by one for every **150 reactor blocks** (0–149 blocks is level 0, 150 is level 1, 300 is level 2, and so on).
 
-Level matters because it sets how many chamber blocks you need to activate chambers (see [Chambers](04-chambers.md)).
+Level matters because it sets how many chamber blocks you need to activate chambers (see [Chambers](04-chambers.md)). It is also shown in the flight HUD when you select a ship (`F`), so you can quickly size up a potential adversary by its reactor level.
 
 ## Running Out of Power
 

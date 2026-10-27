@@ -1,6 +1,6 @@
 # StarMade Galaxy
 
-StarMade Galaxy is a new version of StarMade built in Unity SRP that one of the developers of the original game is working on in their free time. This version of the game is publicly unavailable, however you can support [Schema via Patreon](https://patreon.com/StarMade) to gain access to the experimental branch of StarMade Galaxy, but there is currently [no build yet](https://discord.com/channels/100173352475303936/1476338467406610665/1516863860995391509). Note that this is completely optional, and that the official Java version is still maintained and widely used throughout the community. If you're new to StarMade the suggestion remains to stick to the **Java version** [from Steam](https://store.steampowered.com/app/244770/StarMade/) or the [official StarMade site](https://www.star-made.org/download/). There is a teaser trailer of StarMade Galaxy available on [YouTube](https://www.youtube.com/watch?v=3QalCPiWq-k).
+StarMade Galaxy is a new version of StarMade built in Unity SRP that one of the developers of the original game is working on in their free time. This version of the game is publicly unavailable as of the time of writing, however you can support [Schema via Patreon](https://patreon.com/StarMade) to gain access to the experimental branch of StarMade Galaxy, but there is currently [no build yet](https://discord.com/channels/100173352475303936/1476338467406610665/1516863860995391509). Note that this is completely optional, and that the official Java version is still maintained and widely used throughout the community. If you're new to StarMade the suggestion remains to stick to the **Java version** [from Steam](https://store.steampowered.com/app/244770/StarMade/) or the [official StarMade site](https://www.star-made.org/download/). There is a teaser trailer of StarMade Galaxy available on [YouTube](https://www.youtube.com/watch?v=3QalCPiWq-k).
 
 ## Galaxy FAQ
 
@@ -10,7 +10,7 @@ As you might expect the community has a lot of questions regarding how the two S
 > "Cube planets with smoothed terrain edges" [DukeofRealms](https://discord.com/channels/100173352475303936/1476338467406610665/1516851710994415817)
 
 ### What about all the work that's gone into round planets?
-> "The round planets that was worked on is still coming in Java StarMade. Although, they were lots of plates, Derp can explain more on that." [DukeofRealms](https://discord.com/channels/100173352475303936/1476338467406610665/1516852563956338749)
+> "The round planets that was worked on is still coming in Java StarMade. Although, they were lots of plates, VideoGoose can explain more on that." [DukeofRealms](https://discord.com/channels/100173352475303936/1476338467406610665/1516852563956338749)
 
 ### What about all the good work the community has put into StarMade? 
 > "most features will be ported" [VideoGoose](https://discord.com/channels/100173352475303936/1476338467406610665/1516853742685786152)

@@ -78,9 +78,9 @@ When you are floating near a ship or station, press `Space` to **align** to it. 
 
 This is very useful for:
 
-- Boarding a moving ship through a hatch
-- Working on the outside of a ship without drifting away
-- Not being left behind when a crewed ship accelerates
+- Moving around inside a piloted or AI-controlled ship without getting bashed into walls or left behind entirely when it moves
+- Fitting through small doors, hallways, and vertical shafts which may only accommodate a character facing the right direction
+- Placing blocks with the proper orientation as an astronaut (the build preview [`CTRL`] updates its orientation with your alignment)
 
 To let go, press `Space` again while not looking at the structure. If it is moving fast, the game asks you to confirm first.
 

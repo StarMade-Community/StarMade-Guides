@@ -87,8 +87,10 @@ Two formation commands keep ships in organised positions relative to the flagshi
 
 | Formation | Behaviour |
 |-----------|-----------|
-| **Sentry Formation** | Holds formation while attacking nearby enemies |
+| **Sentry Formation** | Holds formation while idle; if enemies are spotted, ships will break out of formation and attack. |
 | **Idle Formation** | Holds formation without engaging enemies |
+
+While ships cannot currently engage enemies and remain in formation, the **Idle in Formation** command can be useful in combat for regrouping a scattered fleet.
 
 > **Warning:** Formation modes are experimental and can cause movement glitches, especially with large ships or crowded sectors. Use with caution.
 

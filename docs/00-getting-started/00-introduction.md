@@ -4,7 +4,7 @@ StarMade is a voxel-based space sandbox game. You explore a procedurally generat
 
 ## The Universe at a Glance
 
-The universe is divided into [Sectors](../03-world/00-navigation.md#sectors) and [Systems](../03-world/00-navigation.md#systems). Pirates and other [NPC Factions](../07-multiplayer/00-factions.md) appear across the galaxy map. Planets and [asteroids](../03-world/02-asteroids.md) gather around stars, and asteroid belts vary in resources based on their distance from their star.
+The universe is divided into [Sectors](../03-world/00-navigation.md#sectors) and [Systems](../03-world/00-navigation.md#systems). Pirates and other [NPC Factions](../07-multiplayer/00-factions.md) appear across the galaxy map. Planets and [asteroids](../03-world/02-asteroids.md) gather around star systems, waiting to be discovered.
 
 ## Core Gameplay Loop
 
@@ -20,17 +20,20 @@ The universe is divided into [Sectors](../03-world/00-navigation.md#sectors) and
 You host your own universe. All admin commands are available. Blueprints are saved to the `blueprints/` folder of your StarMade install.
 
 ### Multiplayer
-You connect to a shared server. Server rules govern admin commands and what you can build. Blueprints saved to a server are stored server-side.
+You connect to a shared server. Server rules govern the gameplay style, admin command access, and may restrict builds. Blueprints saved to a server are stored server-side.
 
 ## First Steps
 
-When you first spawn, you will be in **astronaut mode** — a floating humanoid character. The spawn location is configured by the server; by default it is sector **2, 2, 2**, home to a Trading Guild **Trade Station** where you can buy basic supplies.
+When you first spawn, you will be a humanoid Astronaut, equipped with a few tools for survival & some basic blocks to build your first Ship and fly out into the universe.
+
+The spawn location is configured by the server; by default it is sector **2, 2, 2**, home to a Trading Guild **Trade Station** where you can buy basic supplies.
 
 Your immediate goals:
 
 - Get comfortable with [character movement](03-character-movement.md)
 - Familiarise yourself with the [HUD](01-hud-and-interface.md)
 - Learn [basic controls](02-basic-controls.md)
-- Find some asteroids and [mine your first resources](../03-world/01-resources-and-mining.md)
+- Build your first ship
+- Find some asteroids and [mine your first resources](../03-world/01-resources-and-mining.md) using Salvage Beams
 
 > **Tip:** Check the navigation panel (`N` by default) to locate nearby trading stations, asteroids, and planets from your starting position.

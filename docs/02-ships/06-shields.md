@@ -24,29 +24,9 @@ Shields are your ship's first layer of defence. All incoming damage hits shields
 </svg>
 ```
 
-## Shield Capacitor Blocks
-
-Place **Shield Capacitor** blocks on your ship to add shield capacity. Each block contributes:
-
-| Stat | Value per block |
-|------|----------------|
-| Capacity | 250 |
-
-Every contiguous group of **Shield Capacitors** forms a **Capacity Bank.** A ship can only have up to 20 **Capacity Banks**, so make sure your **Shield Capacitors** are grouped together to avoid going over the limit.
-
 ## Shield Recharger Blocks and Shield Radius
 
-**Shield Rechargers** convert **Reactor Power** into Shields, which are stored by **Shield Capacitors** inside their **Shield Radius**. Each block contributes:
-
-| Stat | Value per block |
-|------|----------------|
-| Recharge | 5/second |
-
-And costs:
-
-| Stat | Value per block |
-|------|----------------|
-| Reactor Power | 10/second |
+**Shield Rechargers** convert **Reactor Power** into Shields, which are stored by **Shield Capacitors** inside their **Shield Radius**. Each block contributes more hitpoints per second, but costs. The total stats of a Shield system are visible in the Build Mode UI.
 
 This **Reactor Power** cost does not change whether the **Shield Rechargers** are resting or actively charging.
 
@@ -56,15 +36,21 @@ Each contiguous group of **Shield Rechargers** produces its own **Shield Radius*
 
 **Shield Radius** determines which which **Capacity Banks** are charged by which **Shield Recharger** group. To be charged, a **Capacity Bank** must be inside the **Shield Recharger** group's **Shield Radius**. Each **Capacity Bank** can only belong to one **Shield Recharger** group, so in the event of **Shield Radius** overlap, the **Capacity Bank** will go to the largest **Shield Recharger** group. **Capacity Bank** ownership is indicated by pink arrows from the center of the **Capacity Bank** to the center of the **Shield Recharger** group.
 
+## Shield Capacitor Blocks
+
+Place **Shield Capacitor** blocks on your ship to add shield capacity to the nearby shield system. As stated above, Shield Capacitor groups _must_ be placed within a Shield Recharger system's radius in order to contribute hitpoints to the shield system.
+
+Every contiguous group of **Shield Capacitors** forms a **Capacity Bank.** A single shield system can only have up to 20 **Capacity Banks**, so make sure your **Shield Capacitors** are grouped together to avoid going over the limit.
+
 ## Shield Upkeep 
 
-Each point of **Shield Capacity** also requires 0.004 points of **Shield Upkeep** per second. This equates to 1 point per block of **Shield Capacitors**. If **Shield Recharge** is less than the **Shield Upkeep** cost, the **Capacity Bank** will drain until it reaches zero.
+Shield Capacitors slowly 'leak' away stored shield HP if not replenished constantly. Each point of **Shield Capacity** requires 0.004 points of **Shield Upkeep** per second. This equates to 1 point per block of **Shield Capacitors**. If **Shield Recharge** is less than the **Shield Upkeep** cost, the shield system will drain itself until it reaches zero HP.
 
 ## Recharge Behaviour
 
-A **Shield Recharger** group that has not taken any damage for the last 30 seconds will recharge at its full rate regardless of how much **Shield Capacity** the group currently has.
+A **Shield Recharger** group that has not taken any damage for the last 1 minute will recharge at its full rate regardless of how much **Shield Capacity** the group currently has.
 
-**Shield Under Fire** is a debuff that lasts for 30 seconds after a **Shield Recharger** group has taken Shield damage. During this time, **Shield Recharge** is reduced, from a 0% reduction at 100% **Shield Capacity** to a 50% reduction at 20% **Shield Capacity**. The amount of reduction is based on the lowest percentage the **Shield Recharger** group reached while afflicted with the debuff, rather than the current **Shield Capacity**.
+**Shield Under Fire** is a debuff that lasts for 1 minute after a **Shield Recharger** group has taken Shield damage. During this time, **Shield Recharge** is reduced, from a 0% reduction at 100% **Shield Capacity** to a 50% reduction at 20% **Shield Capacity**. The amount of reduction is based on the lowest percentage the **Shield Recharger** group reached while afflicted with the debuff, rather than the current **Shield Capacity**.
 
 **Shield Outage** is a debuff that lasts for 10 seconds after a **Shield Recharger** group has reached 0% **Shield Capacity**. During this time, **Shield Recharge** for this group is completely disabled.
 
@@ -83,6 +69,6 @@ See the [Chambers guide](04-chambers.md) for details.
 
 ## Tips and Tricks
 
-> While it is possible to have multiple groups of **Shield Rechargers** on one ship, it is almost always better to just have a single group that covers the entire ship.
+> While it is possible to have multiple groups of **Shield Rechargers** on one ship, it is almost always better to have a single group that covers all of the ship when possible.
 
 > It's important to make sure you have enough **Shield Regen** to still regenerate while afflicted with the **Shield Under Fire** debuff. If your **Shield Upkeep** exceeds your **Shield Regen** you will rapidly lose your shields and start taking hull damage.

@@ -1,63 +1,39 @@
 # Crafting Basics
 
-StarMade's crafting system is based on a **consistence tree** — a hierarchy of ingredients where higher-tier items are made from lower-tier ones, all the way down to raw ores and shards.
+StarMade's crafting system is divided into three basic stages: **refining**, **component manufacturing**, and **block assembly**.
 
-## The Consistence Tree
+## Refining
 
-Think of crafting like a tree with branches:
+Raw materials you mine or extract from the universe around you, must first be refined in order to be useful for further crafting.
+Refining transforms raw materials into blocks of Metal Mesh, Crystal Composite, and Capsules of pure material depending on the type of ore being refined. These are then used in all other manufacturing processes to create blocks used in ships, stations, and more.
+As its name suggests, the Basic Capsule Refinery block is the standard way to achieve this. See the "Factories" page for more information.
+In order to use the Basic Capsule Refinery, simply place it down, build a Reactor on the same entity to supply power, activate the refinery, and place your raw materials in its internal inventory.
+Like all factories, the refinery can be selected and linked to Cargo Storage to increase its internal capacity, and Factory Enhancers to increase the amount of items refined per cycle, at the cost of higher power consumption.
 
-- The **root** is the item you want to make.
-- Each **branch** is an ingredient required for that item.
-- Each ingredient branch has its own sub-branches (its own ingredients).
-- Trees never loop — an item is never an ingredient of itself.
+Some naturally-occurring blocks, such as water, ice, lava, dirt, plants, and planetary rocks, are 'refined' via the Block Recycler instead.
 
-A factory only performs the **last step** of a tree. To make a Power Reactor Module, the factory consumes Metal Mesh and Active Varat Processor — you need a separate factory to make each of those from their own ingredients.
+## Component Manufacturing
 
-## Recipes (Fixed)
+Once you have a supply of refined materials, the next step is to transform them into useful Components. Components are pieces such as sturdy frames and advanced circuitry, that comprise the various blocks you can build with.
 
-Some items use a **recipe** instead of a consistence tree. These are fixed:
+The **Component Assembler** factory is the primary means to produce Components from their constituent raw materials.
 
-| Recipe | Output |
-|--------|--------|
-| 10 ore capsules (any type) | 1 Metal Mesh |
-| 10 shard capsules (any type) | 1 Crystal Circuit |
+Components with an orange background are "Tier 1" components. They are made from Metal Mesh, Crystal Composite, and/or natural materials. Most basic blocks such as power, thrust, & salvage beams can be produced using only these ubiquitous components.
+Components with a blue background are "Tier 2" components. These more advanced components are manufactured using specialized material capsules.
 
-## Step-by-Step: First Materials
+Blocks can also be broken down into their constituent Components via the **Block Recycler** factory.
 
-### 1. Mine Raw Resources
+## Block Assembly
 
-Go to an asteroid field and mine ores and shards with the right mouse button (no weapon selected).
+Components can be assembled into blocks by several means. The most basic way to do this is using the Block Assembler, a factory that combines components into individual blocks. The "Change Production" button allows you to specify which block to create.
+Shipyard Schematics and Blueprints can also be filled out using Components in order to build pre-designed ships and structures directly.
 
-### 2. Personal Capsule Refinery
+## Starting from Scratch
 
-Open your inventory (`I`) and click **Craft Capsule**. This opens your personal capsule refinery.
+If you find yourself stranded on an alien planet, or you forgot to obtain factories before starting up a new base, fear not!
+Your Space Suit includes compact personal fabricators capable of breaking down most natural ores and creating the factory blocks you need in order to get started.
+These fabricators are accessible via the Inventory window in your HUD.
 
-- Put one stack of raw ore or shards in the input slot.
-- Leave the second slot empty — the product (capsules) will appear there.
-- Wait for processing to complete.
+To begin, find & harvest any Metal and Crystal ores and place them in your personal refinery.
 
-> You can only process **one type** at a time in the personal refinery because it needs a free slot for the output. Factory blocks are more efficient for bulk processing.
-
-### 3. Personal Micro-Factory
-
-In your inventory, click **Micro** to open the personal micro-factory.
-
-- Place **10 capsules** (all the same type: all ore capsules, or all shard capsules).
-- After a moment you get:
-  - **10 ore capsules → 1 Metal Mesh**
-  - **10 shard capsules → 1 Crystal Circuit**
-
-### 4. Personal Macro-Factory Craft
-
-When you have **10 Metal Meshes** or **10 Crystal Circuits**, click **Craft Macro** in your inventory to craft your first **Macro Factory** block.
-
-This factory can produce any craftable block in the game — see [Factories & Production](01-factories.md) for how to use it.
-
-## Material Summary
-
-| Raw → Capsule | Capsule × 10 → |
-|--------------|----------------|
-| Ore → Ore Capsule | Metal Mesh |
-| Shard → Shard Capsule | Crystal Circuit |
-
-Metal Mesh and Crystal Circuit are ingredients in virtually every block recipe.
+Do keep in mind that, in exchange for portability, the conversion efficiency of these factory systems is lower than their standalone block equivalents.

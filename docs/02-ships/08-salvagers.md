@@ -10,6 +10,6 @@ Every weapon system consists of at least two block types:
 2. **Salvage Beam Modules** — The actual firepower. More modules = more power.
 3. (Optional) **Storage** — Link a storage block to the salvage computer to have the mined blocks go to the storage instead of your limited personal inventory.  
 
-## Scalar Mining
+## Mining Area of Effect
 
-Larger groups of salvage modules can salvage multiple blocks at once. For each doubling of salvage modules in a group, the radius salvaged increases by 1, starting with a radius of 1 at 8 modules in a group, and scaling up to a radius of 10 at 4096 modules. 
+Larger groups of salvage modules can salvage multiple blocks at once. For each doubling of salvage modules in a group, the radius salvaged increases by 1, starting with a radius of 1 at 8 modules in a group, and scaling up to a maximal radius of 10 at 4096 modules. 

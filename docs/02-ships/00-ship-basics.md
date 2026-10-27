@@ -25,20 +25,6 @@ Every ship has three resource bars visible in the HUD:
 | **Shield** | Blue | Absorbs incoming damage before hull is hit |
 | **Power** | Green | Energy available for weapons, thrusters, and shields |
 
-## Hull and Armour
-
-Blocks making up the ship's hull each have individual hit points. The **total ship HP** is the sum of all block HP.
-
-- **Hull blocks** provide high HP per block.
-- **Armour blocks** reduce damage from each incoming hit before it is applied to HP — they act as a damage multiplier reduction.
-- Weapons, computers, and other functional blocks are more fragile than hull/armour.
-
-A good ship design protects critical systems (reactors, computers, the core) with layers of hull and armour blocks.
-
-## Rebooting
-
-If your power runs completely out while under attack, the ship enters a **reboot** state. Systems come offline temporarily. Keeping spare power capacity or using shields to buy time prevents this.
-
 ## Ship Controls (Flight Mode)
 
 | Action | Key |
@@ -54,3 +40,8 @@ If your power runs completely out while under attack, the ship enters a **reboot
 | Select target | `F` |
 | Open weapon panel | `G` |
 | Open structure panel | `Delete` |
+
+## Rebooting
+
+If your reactor becomes damaged to the point of Overheating, or something else goes wrong with your systems state, you can Reboot your ship.
+During Reboot, a ship's systems are nonfunctional, but they are reset to a fresh state after the reboot is complete.

@@ -4,7 +4,11 @@ Shipyards are Space Station based systems that allow players to design ships in 
 
 ## Construction
 
-Shipyards are constructed from a Shipyard Computer, Shipyard Modules, and a Shipyard Core Anchor. The computer, as with any other [system computer](../06-logic/00-logic-basics.md#connecting-to-weapon-computers), must have all of the Shipyard Modules [slaved](../06-logic/00-logic-basics.md#connecting-blocks) to it, as well as the Shipyard Core Anchor. A shipyard is only valid if the Shipyard Modules form a C shape, with both "ends" of the C being straight across from each other. A player can build as many or as few C-shaped sections as they want without affecting the function of a shipyard, provided that they are lined up. It should look [something like this](https://starmadedock.net/content/3210). The Shipyard Core Anchor can be placed anywhere within the perimeter of a Shipyard, but it is important that there are no solid blocks near it and that it is sufficiently spaced from the edges of the Shipyard to allow space for ships to take up. Note that wherever you place the Shipyard Core Anchor is where the actual [Ship Core](../02-ships/01-building-a-ship.md#spawning-a-ship-core) will appear. Ship designs will fail to load into the Shipyard Computer if there is not enough space inside the Shipyard Modules area for the ship.
+Shipyards are constructed from a Shipyard Computer, Shipyard Modules, and a Shipyard Core Anchor. The computer, as with any other [system computer](../06-logic/00-logic-basics.md#connecting-to-weapon-computers), must have all of the Shipyard Modules [connected](../06-logic/00-logic-basics.md#connecting-blocks) to it, as well as the Shipyard Core Anchor. A shipyard is only valid if the Shipyard Modules form a C shape, with both "ends" of the C being straight across from each other. A player can build as many or as few C-shaped sections as they want without affecting the function of a shipyard, provided that they are lined up. It should look [something like this](https://starmadedock.net/content/3210). The Shipyard Core Anchor can be placed anywhere within the perimeter of a Shipyard, but it is important that there are no solid blocks near it and that it is sufficiently spaced from the edges of the Shipyard to allow space for ships to take up. Note that wherever you place the Shipyard Core Anchor is where the actual [Ship Core](../02-ships/01-building-a-ship.md#spawning-a-ship-core) will appear. Ship designs will fail to load into the Shipyard Computer if there is not enough space inside the Shipyard Modules area for the ship.
+
+## Docking An Existing Ship
+
+Ships can [dock](02-docking-and-turrets.md#docking-a-ship) to a Shipyard Core Anchor as they would with any other [Rail](02-docking-and-turrets.md#rail-blocks). If they do not have a Rail Docker, the Activation Beam from a core or camera can be used to connect with the Anchor. Either way, the ship is docked with the Ship Core at the position of the Shipyard Core Anchor. The Ship Core is **always** docked in alignment to the Shipyard Core Anchor.
 
 ## Ship Designs
 
@@ -31,9 +35,7 @@ Shipyards can also be used to repair damaged ships or update mass-produced ships
 
 ## Deconstructing Ships
 
-Ships can [dock](02-docking-and-turrets.md#docking-a-ship) to a Shipyard Core Anchor as they would with any other [Rail](02-docking-and-turrets.md#rail-blocks), but with one notable difference; They must (counter-intuitively) have a Rail Docker somewhere on the ship. The position of the Rail Docker does not influence where the ship actually docks to the Core Anchor though. Instead, the ship is docked with the Ship Core at the position of the Shipyard Core Anchor. The Ship Core is **always** docked in alignment to the Shipyard Core Anchor.
-
-> The Shipyard Computer can be used to deconstruct a docked ship and save it to a design, or simply deconstruct it without saving any design. This can be used to rapidly disassemble unused AI fleets or drones.
+The Shipyard Computer can be used to deconstruct a docked ship and save it to a design, or simply deconstruct it without saving any design. This can be used to rapidly disassemble unused AI fleets or drones.
 
 
 

@@ -1,6 +1,6 @@
 # Weapons
 
-StarMade has three primary weapon types, three utility weapons, and explosive warhead blocks. Primary weapons can be **linked** to a **secondary weapon** to alter the functions and stats of the primary weapon, and can be linked to an **effect system** to alter its damage type distribution. Some weapons require **weapon capacity** to fire.
+StarMade has three primary weapon types, three utility weapons, and explosive warhead blocks. Primary weapons can be **linked** to a **secondary weapon** to alter the functions and stats of the primary weapon, and can be linked to an **effect system** to alter its damage type distribution.
 
 ## Weapon Types
 
@@ -31,7 +31,7 @@ StarMade has three primary weapon types, three utility weapons, and explosive wa
 Every weapon system consists of two block types:
 
 1. **Weapon Computer** — the controller. Assign it to a hotbar slot. One per weapon system.
-2. **Weapon Modules** — the actual firepower. More modules = more damage.
+2. **Weapon Modules** — the actual firepower. More modules = more damage, albeit with diminishing returns on larger and larger weapons.
 
 ### Steps
 
@@ -88,12 +88,19 @@ To unlink, drag the secondary out of its slot and drop it in the **unlink box**.
 
 You can also link and unlink in-world: press `C` on the primary computer, then `V` on the secondary computer.
 
-## Weapon Capacity
+## Heat
+
+Every weapon barrel produces some **heat** when it fires, and cannot fire if the ship has no **heat capacity** remaining.
+Consequently, a ship with too many separate weapon barrels may not be able to fire them continuously.
+
+Placing **Heat Sinks** increases your ship's Heat Capacity at the cost of consuming some power. However, adding more Heat Sinks has diminishing returns, with the first few hundred blocks giving a great deal of extra Heat Capacity and further ones adding incrementally less.
+
+## Missile Capacity
 
 **Missiles** require **Missile Capacity** to fire. **Missile Capacity Modules** give a ship **Missile Capacity**, which is consumed when firing a **missile**. 
 If a ship's **Missile Capacity** is not full, it will start reloading, with the length of time depending on how much **Missile Capacity** the ship has. 
 
-Each **Missile Capacity Module** added gives diminishing returns, with the first few blocks giving a lot of **Missile Capacity**, but further capacity requiring exponentially more modules for each additional unit. This creates a soft cap on the number of missiles that a single ship can actually fire in a single volley.
+Like Heat Sinks and weapons themselves, each **Missile Capacity Module** added gives diminishing returns, with the first few blocks giving a lot of **Missile Capacity**, but further capacity requiring exponentially more modules for each additional unit. This creates a soft cap on the number of missiles that a single ship can actually fire in a single volley.
 
 ## Projectile Colour
 
