@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.10.2">
 <title data-rh="true">Shields | StarMade Guides</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://starmade-community.github.io/StarMade-Guides/pre/ships/shields/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Shields | StarMade Guides"><meta data-rh="true" name="description" content="Shields are your ship&#x27;s first layer of defence. All incoming damage hits shields before reaching your hull and blocks. When shields are depleted they enter a Shield Outage before recharging."><meta data-rh="true" property="og:description" content="Shields are your ship&#x27;s first layer of defence. All incoming damage hits shields before reaching your hull and blocks. When shields are depleted they enter a Shield Outage before recharging."><link data-rh="true" rel="canonical" href="https://starmade-community.github.io/StarMade-Guides/pre/ships/shields/"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/pre/ships/shields/" hreflang="en"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/pre/ships/shields/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Shields","item":"https://starmade-community.github.io/StarMade-Guides/pre/ships/shields"}]}</script><link rel="stylesheet" href="/StarMade-Guides/pre/assets/css/styles.1828d92d.css">
-<script src="/StarMade-Guides/pre/assets/js/runtime~main.5e544a29.js" defer="defer"></script>
-<script src="/StarMade-Guides/pre/assets/js/main.8e0d4583.js" defer="defer"></script>
+<script src="/StarMade-Guides/pre/assets/js/runtime~main.11cacee8.js" defer="defer"></script>
+<script src="/StarMade-Guides/pre/assets/js/main.cdc88d8d.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -32,63 +32,20 @@
 
   <text x="320" y="246" text-anchor="middle" fill="#8e9bac" font-size="13">When shields are depleted they enter an outage; hits then pass to armor, then internal systems.</text>
 </svg></div>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="shield-capacitor-blocks">Shield Capacitor Blocks<a href="#shield-capacitor-blocks" class="hash-link" aria-label="Direct link to Shield Capacitor Blocks" title="Direct link to Shield Capacitor Blocks" translate="no">​</a></h2>
-<p>Place <strong>Shield Capacitor</strong> blocks on your ship to add shield capacity. Each block contributes:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Stat</th><th>Value per block</th></tr></thead><tbody><tr><td>Capacity</td><td>250</td></tr></tbody></table>
-<p>Every contiguous group of <strong>Shield Capacitors</strong> forms a <strong>Capacity Bank.</strong> A ship can only have up to 20 <strong>Capacity Banks</strong>, so make sure your <strong>Shield Capacitors</strong> are grouped together to avoid going over the limit.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="shield-recharger-blocks-and-shield-radius">Shield Recharger Blocks and Shield Radius<a href="#shield-recharger-blocks-and-shield-radius" class="hash-link" aria-label="Direct link to Shield Recharger Blocks and Shield Radius" title="Direct link to Shield Recharger Blocks and Shield Radius" translate="no">​</a></h2>
-<p><strong>Shield Rechargers</strong> convert <strong>Reactor Power</strong> into Shields, which are stored by <strong>Shield Capacitors</strong> inside their <strong>Shield Radius</strong>. Each block contributes:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Stat</th><th>Value per block</th></tr></thead><tbody><tr><td>Recharge</td><td>5/second</td></tr></tbody></table>
-<p>And costs:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Stat</th><th>Value per block</th></tr></thead><tbody><tr><td>Reactor Power</td><td>10/second</td></tr></tbody></table>
+<p><strong>Shield Rechargers</strong> convert <strong>Reactor Power</strong> into Shields, which are stored by <strong>Shield Capacitors</strong> inside their <strong>Shield Radius</strong>. Each block contributes more hitpoints per second, but costs. The total stats of a Shield system are visible in the Build Mode UI.</p>
 <p>This <strong>Reactor Power</strong> cost does not change whether the <strong>Shield Rechargers</strong> are resting or actively charging.</p>
 <p><strong>Shield Radius</strong> (the zone around your ship that the shield covers) projects from the center of each contiguous group of <strong>Shield Rechargers</strong>, and scales up with block count on an exponential curve — small ships get good coverage quickly; large ships need proportionally more blocks for full hull coverage. It is not a &quot;shield bubble&quot;; The shield is skin-tight to the hull of the ship, and the <strong>Shield Radius</strong> just shows what part of the hull is covered.</p>
 <p>Each contiguous group of <strong>Shield Rechargers</strong> produces its own <strong>Shield Radius</strong>. If the center of one <strong>Shield Radius</strong> is inside another <strong>Shield Radius</strong>, the smaller of the two will be disabled.</p>
 <p><strong>Shield Radius</strong> determines which which <strong>Capacity Banks</strong> are charged by which <strong>Shield Recharger</strong> group. To be charged, a <strong>Capacity Bank</strong> must be inside the <strong>Shield Recharger</strong> group&#x27;s <strong>Shield Radius</strong>. Each <strong>Capacity Bank</strong> can only belong to one <strong>Shield Recharger</strong> group, so in the event of <strong>Shield Radius</strong> overlap, the <strong>Capacity Bank</strong> will go to the largest <strong>Shield Recharger</strong> group. <strong>Capacity Bank</strong> ownership is indicated by pink arrows from the center of the <strong>Capacity Bank</strong> to the center of the <strong>Shield Recharger</strong> group.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="shield-capacitor-blocks">Shield Capacitor Blocks<a href="#shield-capacitor-blocks" class="hash-link" aria-label="Direct link to Shield Capacitor Blocks" title="Direct link to Shield Capacitor Blocks" translate="no">​</a></h2>
+<p>Place <strong>Shield Capacitor</strong> blocks on your ship to add shield capacity to the nearby shield system. As stated above, Shield Capacitor groups <em>must</em> be placed within a Shield Recharger system&#x27;s radius in order to contribute hitpoints to the shield system.</p>
+<p>Every contiguous group of <strong>Shield Capacitors</strong> forms a <strong>Capacity Bank.</strong> A single shield system can only have up to 20 <strong>Capacity Banks</strong>, so make sure your <strong>Shield Capacitors</strong> are grouped together to avoid going over the limit.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="shield-upkeep">Shield Upkeep<a href="#shield-upkeep" class="hash-link" aria-label="Direct link to Shield Upkeep" title="Direct link to Shield Upkeep" translate="no">​</a></h2>
-<p>Each point of <strong>Shield Capacity</strong> also requires 0.004 points of <strong>Shield Upkeep</strong> per second. This equates to 1 point per block of <strong>Shield Capacitors</strong>. If <strong>Shield Recharge</strong> is less than the <strong>Shield Upkeep</strong> cost, the <strong>Capacity Bank</strong> will drain until it reaches zero.</p>
+<p>Shield Capacitors slowly &#x27;leak&#x27; away stored shield HP if not replenished constantly. Each point of <strong>Shield Capacity</strong> requires 0.004 points of <strong>Shield Upkeep</strong> per second. This equates to 1 point per block of <strong>Shield Capacitors</strong>. If <strong>Shield Recharge</strong> is less than the <strong>Shield Upkeep</strong> cost, the shield system will drain itself until it reaches zero HP.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="recharge-behaviour">Recharge Behaviour<a href="#recharge-behaviour" class="hash-link" aria-label="Direct link to Recharge Behaviour" title="Direct link to Recharge Behaviour" translate="no">​</a></h2>
-<p>A <strong>Shield Recharger</strong> group that has not taken any damage for the last 30 seconds will recharge at its full rate regardless of how much <strong>Shield Capacity</strong> the group currently has.</p>
-<p><strong>Shield Under Fire</strong> is a debuff that lasts for 30 seconds after a <strong>Shield Recharger</strong> group has taken Shield damage. During this time, <strong>Shield Recharge</strong> is reduced, from a 0% reduction at 100% <strong>Shield Capacity</strong> to a 50% reduction at 20% <strong>Shield Capacity</strong>. The amount of reduction is based on the lowest percentage the <strong>Shield Recharger</strong> group reached while afflicted with the debuff, rather than the current <strong>Shield Capacity</strong>.</p>
+<p>A <strong>Shield Recharger</strong> group that has not taken any damage for the last 1 minute will recharge at its full rate regardless of how much <strong>Shield Capacity</strong> the group currently has.</p>
+<p><strong>Shield Under Fire</strong> is a debuff that lasts for 1 minute after a <strong>Shield Recharger</strong> group has taken Shield damage. During this time, <strong>Shield Recharge</strong> is reduced, from a 0% reduction at 100% <strong>Shield Capacity</strong> to a 50% reduction at 20% <strong>Shield Capacity</strong>. The amount of reduction is based on the lowest percentage the <strong>Shield Recharger</strong> group reached while afflicted with the debuff, rather than the current <strong>Shield Capacity</strong>.</p>
 <p><strong>Shield Outage</strong> is a debuff that lasts for 10 seconds after a <strong>Shield Recharger</strong> group has reached 0% <strong>Shield Capacity</strong>. During this time, <strong>Shield Recharge</strong> for this group is completely disabled.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="turretsdocks-shield-interaction">Turrets/Docks Shield Interaction<a href="#turretsdocks-shield-interaction" class="hash-link" aria-label="Direct link to Turrets/Docks Shield Interaction" title="Direct link to Turrets/Docks Shield Interaction" translate="no">​</a></h2>
 <p>Turrets and docked ships have their shields disabled while they are docked. When they are hit by weapons, they will be protected by the shields of the ship or station they are docked to instead.</p>
@@ -102,10 +59,10 @@
 <p>See the <a class="" href="/StarMade-Guides/pre/ships/chambers/">Chambers guide</a> for details.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="tips-and-tricks">Tips and Tricks<a href="#tips-and-tricks" class="hash-link" aria-label="Direct link to Tips and Tricks" title="Direct link to Tips and Tricks" translate="no">​</a></h2>
 <blockquote>
-<p>While it is possible to have multiple groups of <strong>Shield Rechargers</strong> on one ship, it is almost always better to just have a single group that covers the entire ship.</p>
+<p>While it is possible to have multiple groups of <strong>Shield Rechargers</strong> on one ship, it is almost always better to have a single group that covers all of the ship when possible.</p>
 </blockquote>
 <blockquote>
 <p>It&#x27;s important to make sure you have enough <strong>Shield Regen</strong> to still regenerate while afflicted with the <strong>Shield Under Fire</strong> debuff. If your <strong>Shield Upkeep</strong> exceeds your <strong>Shield Regen</strong> you will rapidly lose your shields and start taking hull damage.</p>
-</blockquote></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/StarMade-Community/StarMade-Guides/edit/pre/docs/02-ships/06-shields.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/StarMade-Guides/pre/ships/thrusters/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Thrusters</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/StarMade-Guides/pre/ships/weapons-and-effects/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Weapons</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#shield-capacitor-blocks" class="table-of-contents__link toc-highlight">Shield Capacitor Blocks</a></li><li><a href="#shield-recharger-blocks-and-shield-radius" class="table-of-contents__link toc-highlight">Shield Recharger Blocks and Shield Radius</a></li><li><a href="#shield-upkeep" class="table-of-contents__link toc-highlight">Shield Upkeep</a></li><li><a href="#recharge-behaviour" class="table-of-contents__link toc-highlight">Recharge Behaviour</a></li><li><a href="#turretsdocks-shield-interaction" class="table-of-contents__link toc-highlight">Turrets/Docks Shield Interaction</a></li><li><a href="#improving-shields-with-chambers" class="table-of-contents__link toc-highlight">Improving Shields with Chambers</a></li><li><a href="#tips-and-tricks" class="table-of-contents__link toc-highlight">Tips and Tricks</a></li></ul></div></div></div></div></main></div></div></div></div>
+</blockquote></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/StarMade-Community/StarMade-Guides/edit/pre/docs/02-ships/06-shields.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/StarMade-Guides/pre/ships/thrusters/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Thrusters</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/StarMade-Guides/pre/ships/weapons-and-effects/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Weapons</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#shield-recharger-blocks-and-shield-radius" class="table-of-contents__link toc-highlight">Shield Recharger Blocks and Shield Radius</a></li><li><a href="#shield-capacitor-blocks" class="table-of-contents__link toc-highlight">Shield Capacitor Blocks</a></li><li><a href="#shield-upkeep" class="table-of-contents__link toc-highlight">Shield Upkeep</a></li><li><a href="#recharge-behaviour" class="table-of-contents__link toc-highlight">Recharge Behaviour</a></li><li><a href="#turretsdocks-shield-interaction" class="table-of-contents__link toc-highlight">Turrets/Docks Shield Interaction</a></li><li><a href="#improving-shields-with-chambers" class="table-of-contents__link toc-highlight">Improving Shields with Chambers</a></li><li><a href="#tips-and-tricks" class="table-of-contents__link toc-highlight">Tips and Tricks</a></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>

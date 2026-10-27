@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.10.2">
 <title data-rh="true">Reactor Chambers | StarMade Guides</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://starmade-community.github.io/StarMade-Guides/pre/ships/chambers/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Reactor Chambers | StarMade Guides"><meta data-rh="true" name="description" content="Chambers are special blocks that plug into your reactor to give your ship additional capabilities — jump drives, stealth, enhanced mobility, and more. They are the primary way to unlock advanced ship systems."><meta data-rh="true" property="og:description" content="Chambers are special blocks that plug into your reactor to give your ship additional capabilities — jump drives, stealth, enhanced mobility, and more. They are the primary way to unlock advanced ship systems."><link data-rh="true" rel="canonical" href="https://starmade-community.github.io/StarMade-Guides/pre/ships/chambers/"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/pre/ships/chambers/" hreflang="en"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/pre/ships/chambers/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Reactor Chambers","item":"https://starmade-community.github.io/StarMade-Guides/pre/ships/chambers"}]}</script><link rel="stylesheet" href="/StarMade-Guides/pre/assets/css/styles.1828d92d.css">
-<script src="/StarMade-Guides/pre/assets/js/runtime~main.5e544a29.js" defer="defer"></script>
-<script src="/StarMade-Guides/pre/assets/js/main.8e0d4583.js" defer="defer"></script>
+<script src="/StarMade-Guides/pre/assets/js/runtime~main.11cacee8.js" defer="defer"></script>
+<script src="/StarMade-Guides/pre/assets/js/main.cdc88d8d.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -16,40 +16,21 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-chambers-work">How Chambers Work<a href="#how-chambers-work" class="hash-link" aria-label="Direct link to How Chambers Work" title="Direct link to How Chambers Work" translate="no">​</a></h2>
 <p>Chambers must be <strong>physically connected to the reactor</strong> using <strong>Reactor Conduit</strong> blocks. A chain of conduits running from a chamber back to a Reactor Block completes the connection.</p>
 <p>The conduit chain can be any length and can route around other blocks — it just needs to form a continuous connected path from the chamber back to a Reactor Block.</p>
-<div class="guide-svg"><svg width="640" height="276" viewBox="0 0 640 276" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
-  <rect x="1" y="1" width="638" height="274" rx="12" fill="#121821" stroke="#2c3b50" stroke-width="2"></rect>
-  <text x="320" y="36" text-anchor="middle" fill="#e8eef7" font-size="22" font-weight="bold">Connecting a Chamber</text>
-
-  <rect x="36" y="138" width="48" height="48" rx="4" fill="#4f8fd0" stroke="#274a6b" stroke-width="2"></rect>
-  <text x="60" y="206" text-anchor="middle" fill="#8fb6e0" font-size="12" font-weight="bold">Reactor</text>
-
-  <g fill="#3f8c9a" stroke="#1f5560" stroke-width="2">
-    <rect x="100" y="146" width="32" height="32" rx="4"></rect>
-    <rect x="140" y="146" width="32" height="32" rx="4"></rect>
-    <rect x="180" y="146" width="32" height="32" rx="4"></rect>
-    <rect x="220" y="146" width="32" height="32" rx="4"></rect>
-  </g>
-  <g fill="#3f8c9a" stroke="#1f5560" stroke-width="2">
-    <rect x="220" y="106" width="32" height="32" rx="4"></rect>
-  </g>
-  <text x="176" y="206" text-anchor="middle" fill="#69c6d4" font-size="12" font-weight="bold">Conduits</text>
-
-  <rect x="280" y="138" width="48" height="48" rx="4" fill="#e09a3e" stroke="#7a531c" stroke-width="2"></rect>
-  <text x="304" y="206" text-anchor="middle" fill="#e0b57a" font-size="12" font-weight="bold">Chamber</text>
-
-  <rect x="216" y="58" width="40" height="40" rx="4" fill="#e09a3e" stroke="#7a531c" stroke-width="2"></rect>
-  <text x="266" y="83" fill="#e0b57a" font-size="12" font-weight="bold">Chamber</text>
-
-  <text x="36" y="240" fill="#aebccd" font-size="13">Conduits form an unbroken path from a reactor block to each chamber.</text>
-  <text x="36" y="258" fill="#8e9bac" font-size="12">Branch the chain to feed several chambers from one reactor.</text>
-</svg></div>
+<div class="guide-scene" data-scene="{ &quot;height&quot;: 280,
+  &quot;blocks&quot;: [ { &quot;from&quot;: [0,0,0], &quot;to&quot;: [2,2,2], &quot;block&quot;: &quot;REACTOR_POWER&quot; } ],
+  &quot;steps&quot;: [
+    { &quot;text&quot;: &quot;A reactor: one group of Reactor Power blocks.&quot;, &quot;blocks&quot;: [] },
+    { &quot;text&quot;: &quot;Run Reactor Conduits out of the reactor. A chamber placed against the last conduit is a base chamber.&quot;,
+      &quot;blocks&quot;: [ { &quot;from&quot;: [1,3,1], &quot;to&quot;: [1,4,1], &quot;block&quot;: &quot;REACTOR_CONDUIT&quot;, &quot;orient&quot;: 2 },
+                  { &quot;from&quot;: [0,5,0], &quot;to&quot;: [2,5,2], &quot;block&quot;: &quot;MOBILITY_CHAMBER&quot; } ] },
+    { &quot;text&quot;: &quot;Each base chamber gets its own conduit line from the reactor.&quot;,
+      &quot;blocks&quot;: [ { &quot;from&quot;: [3,1,1], &quot;to&quot;: [4,1,1], &quot;block&quot;: &quot;REACTOR_CONDUIT&quot;, &quot;orient&quot;: 4 },
+                  { &quot;from&quot;: [5,0,0], &quot;to&quot;: [5,2,2], &quot;block&quot;: &quot;DEFENCE_CHAMBER&quot; } ] },
+    { &quot;text&quot;: &quot;A conduit from one chamber to another makes the new chamber an upgrade of the first, not a separate base chamber.&quot;,
+      &quot;blocks&quot;: [ { &quot;from&quot;: [5,3,1], &quot;to&quot;: [5,4,1], &quot;block&quot;: &quot;REACTOR_CONDUIT&quot;, &quot;orient&quot;: 2 },
+                  { &quot;from&quot;: [4,5,0], &quot;to&quot;: [6,5,2], &quot;block&quot;: &quot;DEFENCE_CHAMBER&quot; } ] } ] }"></div>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="chamber-capacity">Chamber Capacity<a href="#chamber-capacity" class="hash-link" aria-label="Direct link to Chamber Capacity" title="Direct link to Chamber Capacity" translate="no">​</a></h2>
-<p>Each reactor has a <strong>chamber capacity budget</strong> that grows with both the number of reactor blocks and the reactor level. Each chamber you install costs a portion of that budget. You cannot exceed 100% capacity.</p>
-<ul>
-<li class=""><strong>More reactor blocks</strong> → higher reactor level → more capacity available</li>
-<li class="">Each chamber type has a fixed capacity cost</li>
-<li class="">You can install multiple different chambers as long as the total stays within budget</li>
-</ul>
+<p>Each reactor has a <strong>chamber capacity budget</strong> that remains fixed, regardless of the size of the reactor. Each chamber you install costs a portion of that budget. You cannot exceed 100% capacity.</p>
 <p>Monitor your capacity usage in the ship stats panel.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="chamber-types">Chamber Types<a href="#chamber-types" class="hash-link" aria-label="Direct link to Chamber Types" title="Direct link to Chamber Types" translate="no">​</a></h2>
 
@@ -81,44 +62,15 @@
 
 
 
-<table><thead><tr><th>Chamber</th><th>Effect</th></tr></thead><tbody><tr><td><strong>Mobility</strong></td><td>Increases ship movement speed and agility</td></tr><tr><td><strong>Jump</strong></td><td>Enables the jump drive system (see below)</td></tr><tr><td><strong>Stealth</strong></td><td>Enables cloaking / stealth mode</td></tr><tr><td><strong>Scanner</strong></td><td>Enhances scan range and detection ability</td></tr><tr><td><strong>Logistics</strong></td><td>Improves cargo and logistics handling</td></tr></tbody></table>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="jump-chamber-upgrades">Jump Chamber Upgrades<a href="#jump-chamber-upgrades" class="hash-link" aria-label="Direct link to Jump Chamber Upgrades" title="Direct link to Jump Chamber Upgrades" translate="no">​</a></h2>
-<p>The Jump chamber has a <strong>tiered upgrade path</strong>. Each tier extends jump range and must be built on top of the previous one:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Tier</th><th>Upgrade</th></tr></thead><tbody><tr><td>0</td><td>Base jump capability</td></tr><tr><td>1</td><td>Extended range</td></tr><tr><td>2</td><td>Further range</td></tr><tr><td>3</td><td>Maximum range</td></tr></tbody></table>
-<p>Higher jump tiers cost more capacity and require a higher reactor level to unlock.</p>
+<table><thead><tr><th>Chamber</th><th>Effect</th></tr></thead><tbody><tr><td><strong>Mobility</strong></td><td>Upgrades ship movement speed and agility</td></tr><tr><td><strong>Jump</strong></td><td>Upgrades a ship&#x27;s Jump Drive system</td></tr><tr><td><strong>Stealth</strong></td><td>Enhances a ship&#x27;s Stealth system functionality, such as allowing full invisibility or longer stealth durations</td></tr><tr><td><strong>Recon</strong></td><td>Enhances scan range and detection ability</td></tr><tr><td><strong>Logistics</strong></td><td>Improves cargo and logistics handling</td></tr></tbody></table>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="installing-a-chamber">Installing a Chamber<a href="#installing-a-chamber" class="hash-link" aria-label="Direct link to Installing a Chamber" title="Direct link to Installing a Chamber" translate="no">​</a></h2>
 <ol>
-<li class="">In build mode, place one or more <strong>Reactor Conduit</strong> blocks forming a path from a Reactor Block outward.</li>
+<li class="">In build mode, place one or more <strong>Reactor Conduit</strong> blocks forming a path from a Reactor Block or parent Chamber outward.</li>
 <li class="">Place the <strong>Chamber Block</strong> at the end of the conduit path (touching the last conduit).</li>
 <li class="">The chamber activates automatically when the connection is valid.</li>
 </ol>
 <blockquote>
-<p><strong>Tip:</strong> You can branch conduits to connect multiple chambers to the same reactor, as long as each chamber has an unbroken path back to a Reactor Block.</p>
-</blockquote></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/StarMade-Community/StarMade-Guides/edit/pre/docs/02-ships/04-chambers.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/StarMade-Guides/pre/ships/reactors/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Reactors and Stabilizers</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/StarMade-Guides/pre/ships/thrusters/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Thrusters</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#how-chambers-work" class="table-of-contents__link toc-highlight">How Chambers Work</a></li><li><a href="#chamber-capacity" class="table-of-contents__link toc-highlight">Chamber Capacity</a></li><li><a href="#chamber-types" class="table-of-contents__link toc-highlight">Chamber Types</a></li><li><a href="#jump-chamber-upgrades" class="table-of-contents__link toc-highlight">Jump Chamber Upgrades</a></li><li><a href="#installing-a-chamber" class="table-of-contents__link toc-highlight">Installing a Chamber</a></li></ul></div></div></div></div></main></div></div></div></div>
+<p><strong>Tip:</strong> Give each base chamber its own conduit line to a Reactor Block. A conduit between two chambers makes the second one an upgrade of the first, so it can only be specified from the first chamber&#x27;s tree.</p>
+</blockquote></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/StarMade-Community/StarMade-Guides/edit/pre/docs/02-ships/04-chambers.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/StarMade-Guides/pre/ships/reactors/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Reactors and Stabilizers</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/StarMade-Guides/pre/ships/thrusters/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Thrusters</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#how-chambers-work" class="table-of-contents__link toc-highlight">How Chambers Work</a></li><li><a href="#chamber-capacity" class="table-of-contents__link toc-highlight">Chamber Capacity</a></li><li><a href="#chamber-types" class="table-of-contents__link toc-highlight">Chamber Types</a></li><li><a href="#installing-a-chamber" class="table-of-contents__link toc-highlight">Installing a Chamber</a></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>

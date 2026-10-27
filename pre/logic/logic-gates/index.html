@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.10.2">
 <title data-rh="true">Logic: Gates | StarMade Guides</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://starmade-community.github.io/StarMade-Guides/pre/logic/logic-gates/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Logic: Gates | StarMade Guides"><meta data-rh="true" name="description" content="Building on the basics of activation blocks and connections, StarMade provides four additional logic blocks that let you build complex circuits."><meta data-rh="true" property="og:description" content="Building on the basics of activation blocks and connections, StarMade provides four additional logic blocks that let you build complex circuits."><link data-rh="true" rel="canonical" href="https://starmade-community.github.io/StarMade-Guides/pre/logic/logic-gates/"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/pre/logic/logic-gates/" hreflang="en"><link data-rh="true" rel="alternate" href="https://starmade-community.github.io/StarMade-Guides/pre/logic/logic-gates/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Logic: Gates","item":"https://starmade-community.github.io/StarMade-Guides/pre/logic/logic-gates"}]}</script><link rel="stylesheet" href="/StarMade-Guides/pre/assets/css/styles.1828d92d.css">
-<script src="/StarMade-Guides/pre/assets/js/runtime~main.5e544a29.js" defer="defer"></script>
-<script src="/StarMade-Guides/pre/assets/js/main.8e0d4583.js" defer="defer"></script>
+<script src="/StarMade-Guides/pre/assets/js/runtime~main.11cacee8.js" defer="defer"></script>
+<script src="/StarMade-Guides/pre/assets/js/main.cdc88d8d.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -41,46 +41,6 @@
 
 <table><thead><tr><th>Block</th><th>Behaviour</th></tr></thead><tbody><tr><td><strong>NOT</strong></td><td>Inverts the input signal</td></tr><tr><td><strong>AND</strong></td><td>ON only when ALL inputs are ON</td></tr><tr><td><strong>OR</strong></td><td>ON when ANY input is ON</td></tr><tr><td><strong>DELAY</strong></td><td>Passes the signal with a time delay</td></tr></tbody></table>
 <p>All gate blocks are connected the same way as activation blocks: <code>C</code> to select a source, <code>V</code> to connect to a destination.</p>
-<div class="guide-svg"><svg width="640" height="312" viewBox="0 0 640 312" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
-  <rect x="1" y="1" width="638" height="310" rx="12" fill="#121821" stroke="#2c3b50" stroke-width="2"></rect>
-  <text x="320" y="36" text-anchor="middle" fill="#e8eef7" font-size="22" font-weight="bold">Logic Gate Blocks</text>
-
-  <rect x="28" y="58" width="290" height="108" rx="10" fill="#161e29" stroke="#33445a"></rect>
-  <text x="48" y="86" fill="#7fdcf2" font-size="17" font-weight="bold">NOT</text>
-  <path d="M150 96 L150 148 L196 122 Z" fill="#1b2735" stroke="#4f8fd0" stroke-width="2"></path>
-  <circle cx="204" cy="122" r="7" fill="#161e29" stroke="#4f8fd0" stroke-width="2"></circle>
-  <line x1="120" y1="122" x2="150" y2="122" stroke="#4f8fd0" stroke-width="2"></line>
-  <line x1="211" y1="122" x2="244" y2="122" stroke="#4f8fd0" stroke-width="2"></line>
-  <text x="48" y="118" fill="#aebccd" font-size="13">Inverts the</text>
-  <text x="48" y="136" fill="#aebccd" font-size="13">input signal</text>
-
-  <rect x="322" y="58" width="290" height="108" rx="10" fill="#161e29" stroke="#33445a"></rect>
-  <text x="342" y="86" fill="#7fdcf2" font-size="17" font-weight="bold">AND</text>
-  <path d="M470 96 L470 148 L496 148 A26 26 0 0 0 496 96 Z" fill="#1b2735" stroke="#4f8fd0" stroke-width="2"></path>
-  <line x1="448" y1="108" x2="470" y2="108" stroke="#4f8fd0" stroke-width="2"></line>
-  <line x1="448" y1="136" x2="470" y2="136" stroke="#4f8fd0" stroke-width="2"></line>
-  <line x1="522" y1="122" x2="544" y2="122" stroke="#4f8fd0" stroke-width="2"></line>
-  <text x="342" y="118" fill="#aebccd" font-size="13">ON only when</text>
-  <text x="342" y="136" fill="#aebccd" font-size="13">ALL inputs are ON</text>
-
-  <rect x="28" y="176" width="290" height="108" rx="10" fill="#161e29" stroke="#33445a"></rect>
-  <text x="48" y="204" fill="#7fdcf2" font-size="17" font-weight="bold">OR</text>
-  <path d="M168 210 Q182 240 168 270 Q204 264 222 240 Q204 216 168 210 Z" fill="#1b2735" stroke="#4f8fd0" stroke-width="2"></path>
-  <line x1="146" y1="222" x2="172" y2="222" stroke="#4f8fd0" stroke-width="2"></line>
-  <line x1="146" y1="258" x2="172" y2="258" stroke="#4f8fd0" stroke-width="2"></line>
-  <line x1="222" y1="240" x2="244" y2="240" stroke="#4f8fd0" stroke-width="2"></line>
-  <text x="48" y="236" fill="#aebccd" font-size="13">ON when ANY</text>
-  <text x="48" y="254" fill="#aebccd" font-size="13">input is ON</text>
-
-  <rect x="322" y="176" width="290" height="108" rx="10" fill="#161e29" stroke="#33445a"></rect>
-  <text x="342" y="204" fill="#7fdcf2" font-size="17" font-weight="bold">DELAY</text>
-  <rect x="476" y="214" width="52" height="52" rx="6" fill="#1b2735" stroke="#4f8fd0" stroke-width="2"></rect>
-  <circle cx="502" cy="240" r="17" fill="none" stroke="#4f8fd0" stroke-width="2"></circle>
-  <line x1="502" y1="240" x2="502" y2="228" stroke="#4f8fd0" stroke-width="2"></line>
-  <line x1="502" y1="240" x2="512" y2="246" stroke="#4f8fd0" stroke-width="2"></line>
-  <text x="342" y="236" fill="#aebccd" font-size="13">Passes signal</text>
-  <text x="342" y="254" fill="#aebccd" font-size="13">after a time delay</text>
-</svg></div>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="not-block">NOT Block<a href="#not-block" class="hash-link" aria-label="Direct link to NOT Block" title="Direct link to NOT Block" translate="no">​</a></h2>
 <p>The NOT block <strong>inverts</strong> its input.</p>
 <p><strong>Common use:</strong> Keep a system running by default and shut it off when a condition is met, rather than turning it on.</p>
@@ -92,25 +52,17 @@
 <p><strong>Common use:</strong> A system that activates from multiple independent triggers (e.g. two different switches can each open the same door).</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="delay-block">DELAY Block<a href="#delay-block" class="hash-link" aria-label="Direct link to DELAY Block" title="Direct link to DELAY Block" translate="no">​</a></h2>
 <p>The DELAY block passes its input signal through <strong>after a configurable time delay</strong>.</p>
-<p><strong>Key capability: Loops.</strong> By connecting a DELAY block&#x27;s output back to its own input (or through a chain), you create a <strong>clock</strong> — a continuously oscillating signal.</p>
-<div class="guide-svg"><svg width="600" height="220" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
-  <rect x="1" y="1" width="598" height="218" rx="12" fill="#121821" stroke="#2c3b50" stroke-width="2"></rect>
-  <text x="300" y="36" text-anchor="middle" fill="#e8eef7" font-size="22" font-weight="bold">Building a Clock</text>
-
-  <rect x="120" y="92" width="120" height="56" rx="8" fill="#1b2735" stroke="#4f8fd0" stroke-width="2"></rect>
-  <text x="180" y="126" text-anchor="middle" fill="#7fdcf2" font-size="16" font-weight="bold">DELAY</text>
-
-  <line x1="240" y1="120" x2="288" y2="120" stroke="#4f8fd0" stroke-width="3"></line>
-  <path d="M288 120 L288 60 L96 60 L96 120 L116 120" fill="none" stroke="#4f8fd0" stroke-width="3"></path>
-  <polygon points="116,112 134,120 116,128" fill="#4f8fd0"></polygon>
-  <text x="192" y="52" text-anchor="middle" fill="#8fb6e0" font-size="12" font-weight="bold">output fed back to input</text>
-
-  <line x1="240" y1="120" x2="240" y2="180" stroke="#33445a" stroke-width="2" stroke-dasharray="4 4"></line>
-  <polyline points="330,196 330,168 360,168 360,196 390,196 390,168 420,168 420,196 450,196 450,168 480,168 480,196 510,196 510,168" fill="none" stroke="#5cb87a" stroke-width="3"></polyline>
-  <text x="420" y="146" text-anchor="middle" fill="#9fe6c2" font-size="13" font-weight="bold">oscillating ON / OFF</text>
-
-  <text x="300" y="214" text-anchor="middle" fill="#8e9bac" font-size="12">A clock drives repeating fire sequences, light patterns, and timers.</text>
-</svg></div>
+<p><strong>Key capability: Loops.</strong> By linking a DELAY block and a NOT block into a loop, you create a <strong>clock</strong> — a continuously oscillating signal.</p>
+<div class="guide-scene" data-scene="{ &quot;height&quot;: 220,
+  &quot;blocks&quot;: [ { &quot;from&quot;: [-1,-1,-1], &quot;to&quot;: [3,-1,1], &quot;block&quot;: &quot;GREY_HULL&quot; } ],
+  &quot;steps&quot;: [
+    { &quot;text&quot;: &quot;Place a NOT block and a DELAY block, and link the NOT to the DELAY (C on the NOT, V on the DELAY).&quot;,
+      &quot;blocks&quot;: [ { &quot;at&quot;: [0,0,0], &quot;block&quot;: &quot;NOT_SIGNAL&quot; },
+                  { &quot;at&quot;: [2,0,0], &quot;block&quot;: &quot;DELAY_SIGNAL&quot;, &quot;controller&quot;: [0,0,0] } ] },
+    { &quot;text&quot;: &quot;Link the DELAY back into the NOT. The loop now flips itself ON and OFF, once per delay.&quot;,
+      &quot;blocks&quot;: [ { &quot;at&quot;: [0,0,0], &quot;block&quot;: &quot;NOT_SIGNAL&quot;, &quot;controller&quot;: [2,0,0] } ] },
+    { &quot;text&quot;: &quot;Link anything to the DELAY to drive it with the clock, like this light that now blinks.&quot;,
+      &quot;blocks&quot;: [ { &quot;at&quot;: [2,1,0], &quot;block&quot;: &quot;WHITE_LIGHT&quot;, &quot;controller&quot;: [2,0,0] } ] } ] }"></div>
 <p>Clocks are the foundation of:</p>
 <ul>
 <li class="">Repeating firing sequences</li>
